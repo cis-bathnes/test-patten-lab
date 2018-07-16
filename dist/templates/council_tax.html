@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="../assets/patterns/styles/screen.css">
+	<!-- /toolkit styles -->
+
+	<!-- Fontawesome Styles -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+  <!-- govuk_elements JS is dependant on jQuery so we've included it here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../assets/patterns/scripts/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+</head>
+<body>
+	<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<div id="skiplink-container">
+    	<div>
+        	<a href="#content" class="skiplink">Skip to main content</a>
+    	</div>
+    </div>
+
+		<!-- Menu show/hide JS -->
+		<!-- Adapted from https://www.w3schools.com/howto/howto_js_toggle_class.asp -->
+		<!-- Need to move into menu.js and that file be imported into app.js -->
+		<script>
+		  function showHideMenu(){
+		  var element = document.getElementById("navigation-primary");
+		
+		  if (element.classList) {
+		      element.classList.toggle("navigation-primary--active");
+		  } else {
+		      // For IE9
+		      var classes = element.className.split(" ");
+		      var i = classes.indexOf("navigation-primary--active");
+		
+		      if (i >= 0)
+		          classes.splice(i, 1);
+		      else
+		          classes.push("navigation-primary--active");
+		          element.className = classes.join(" ");
+		  }
+		}
+		</script>
+		<style>
+		  #global-header {
+		  background-color: #fff;
+		  position: relative;
+		}
+		
+		.header-wrapper {
+		  position: relative;
+		  max-width: 960px;
+		  margin: 0 auto;
+		  padding-top: 1em;
+		  padding-bottom: 1em;
+		  padding-left: 15px;
+		  padding-right: 15px;
+		}
+		@media (min-width: 960px) {
+		  .header-wrapper {
+		    padding-left: 0;
+		    padding-right: 0;
+		  }
+		}
+		
+		.header-global {
+		  overflow: hidden;
+		}
+		
+		.header-logo {
+		  width: 128.4px;
+		  height: auto;
+		}
+		.header-logo img {
+		  max-width: 100%;
+		}
+		@media (min-width: 769px) {
+		  .header-logo {
+		    width: 160.5px;
+		    float: left;
+		  }
+		}
+		
+		.header-search {
+		  margin-top: 10px;
+		  margin-bottom: 20px;
+		}
+		@media (min-width: 769px) {
+		  .header-search {
+		    margin-top: 1em;
+		    float: right;
+		    width: 50%;
+		    text-align: right;
+		    margin-top: 12px;
+		    margin-bottom: 0;
+		  }
+		}
+		.header-search .site-search {
+		  position: relative;
+		}
+		.header-search .site-search .form-control {
+		  width: calc(100% - 80px);
+		  border-width: 1px;
+		  border-color: #bfc1c3;
+		  font-size: 16px;
+		  height: 36px;
+		}
+		@media (min-width: 769px) {
+		  .header-search .site-search .form-control {
+		    width: calc(100% - 100px);
+		  }
+		}
+		.header-search .site-search .button {
+		  position: absolute;
+		  top: 0;
+		  right: 45px;
+		  text-indent: -9999px;
+		  background-image: url(../assets/patterns/images/icon-search-2x.png);
+		  background-repeat: no-repeat;
+		  background-position: 55% 50%;
+		  background-size: 52.5% 40%;
+		  box-shadow: none;
+		  width: 36px;
+		  height: 36px;
+		}
+		@media (min-width: 769px) {
+		  .header-search .site-search .button {
+		    right: 0;
+		  }
+		}
+		
+		.header-search--desktop {
+		  display: none;
+		}
+		@media (min-width: 769px) {
+		  .header-search--desktop {
+		    display: block;
+		  }
+		}
+		
+		@media (min-width: 769px) {
+		  .header-search--mobile {
+		    display: none;
+		  }
+		}
+		
+		#global-header-bar {
+		  position: relative;
+		  background-color: #00aeef;
+		  height: 5px;
+		}
+		
+		.header-marque {
+		  position: absolute;
+		  bottom: 0;
+		  right: 15px;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 25px 0 0 25px;
+		  border-color: transparent transparent transparent #00aeef;
+		}
+		
+		.header-commercial {
+		  position: relative;
+		  overflow: hidden;
+		  background-color: #0b0c0c;
+		}
+		.header-commercial .header-wrapper {
+		  padding-top: 0.75em;
+		  padding-bottom: 0.5em;
+		}
+		
+		.header-commercial__logo {
+		  width: 91.42857px;
+		  height: auto;
+		  display: block;
+		}
+		.header-commercial__logo img {
+		  max-width: 100%;
+		}
+		@media (min-width: 769px) {
+		  .header-commercial__logo {
+		    width: 106.66667px;
+		  }
+		}
+		
+		.header-commercial__marque {
+		  position: absolute;
+		  bottom: 0;
+		  right: 15px;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 30px 0 0 30px;
+		  border-color: transparent transparent transparent #fff;
+		}
+		@media (min-width: 960px) {
+		  .header-commercial__marque {
+		    right: 0;
+		  }
+		}
+		
+		</style>
+		<header role="banner" id="global-header">
+		    <div class="header-wrapper">
+		        <div class="header-global">
+		            <div class="header-logo">
+		                <a href="" id="logo" class="content">
+		                    <img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset Council" />
+		                </a>
+		            </div>
+		            <div class="header-search header-search--desktop">
+		                <form id="search" class="site-search" action="" method="">
+		                    <label class="form-label visually-hidden" for="search-site">Search across the site</label>
+		                    <input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+		                    <input class="button" type="submit" value="Search">
+		                </form>
+		            </div>
+		        </div>
+		        <button id="js-header-toggle" class="navigation-trigger" onclick="showHideMenu()">Menu</button>
+		    </div>
+		    <nav role="navigation" id="navigation-primary" class="navigation-primary">
+		        <ul class="navigation-primary-list">
+		            <li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
+		            <li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
+		            <li class="navigation-primary-list__search">
+		                <div class="header-search header-search--mobile">
+		                  <form id="search" class="site-search" action="" method="">
+		                      <label class="form-label visually-hidden" for="search-site">Search across the site</label>
+		                      <input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+		                      <input class="button" type="submit" value="Search">
+		                  </form>
+		                </div>
+		            </li>
+		        </ul>
+		    </nav>
+		    <div class="header-marque"></div>
+		</header>
+		<div id="global-header-bar"></div>
+	<main id="content" role="main">
+		<style>
+
+
+ul.nav-list li{
+    border-bottom: solid 1px #DEE0E2;
+}
+
+</style>
+
+
+<div class="breadcrumb">
+    <ol>
+        <li><a aria-current="false" href="/">Home</a></li>
+        <li><a aria-current="false" href="/">Services</a></li>
+        <li><a aria-current="false" href="/">Schools colleges and learning</a></li>
+        <li><a aria-current="true" href="/">Find a School</a></li>
+    </ol>
+</div>
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-xlarge">Council Tax</h1>
+        <p class="lede">Council Tax is a property based tax payable on domestic (residential) homes. It's a local tax set by councils to help pay for local services, such as schools, libraries, and rubbish collections. The amount you have to pay is based on the value of the property and who lives there. </p>
+<hr>
+
+<ul class="nav-list">
+    <li><a href="paying-your-council-tax.html"><h3 class="heading-medium">Paying your Council Tax</h3></a>
+    <p>Easy online payments and other ways to pay your Council Tax bill.</p></li>
+
+    <li><a href="council-tax-bands-and-amount.html"><h3 class="heading-medium">Council Tax bands and amounts</h3></a>
+    <p>How your Council Tax is worked out, valuation bands (including how to make a free appeal if you think your home is in the wrong band), completion notices and current charges.</p>
+</li>
+
+<li><a href=""><h3 class="heading-medium">Discounts & Exemptions</h3></a>
+<p>Find out if you could reduce the amount of Council Tax you have to pay.</p></li>
+
+<li><a href=""><h3 class="heading-medium">Change of Address</h3></a>
+<p>Use our online forms to let us know if you or your tenants are moving into, within, or out of the B&NES area.</p></li>
+
+<li>
+    <a href=""><h3 class="heading-medium">Information for students</h3></a>
+    <p>Full time students may be exempt from paying Council Tax – find out how to claim your exemption.</p>
+</li>
+
+<li><a href=""><h3 class="heading-medium">Problems paying your Council Tax?</h3></a>
+    <p>Advice if you're having trouble paying your Council Tax, and what happens if you’ve missed a payment.</p></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<div class="breakout-box"><h2 class="heading-large">Council Tax Support Scheme - changes from April 2017</h2>
+<p>From 1st April 2017, new Council Tax Support Scheme rules apply to claimants who are on Universal Credit.</p>
+<p>Find out more about the changes by visiting Council Tax Support Scheme – changes from April 2017.</p></div>
+
+</div>
+<div class="column-one-third">
+      <div class="aside-container">
+          <aside class="aside" role="complementary">
+              <h2 class="font-medium">Related links</h2>
+
+              <nav class="aside__nav" role="navigation">
+                  <ul class="">
+                      <li><a href="paying-your-council-tax.html">Pay your council tax</a></li>
+                      <li><a href="council-tax-bands-and-amount">Council Tax bands and amounts</a></li>
+                      <li><a href="discounsandexemptions.html">Discounts & Exemptions</a></li>
+                      <li><a href="http://bathnes-prototype.surge.sh/index.html">Change of Address</a></li>
+                      <li><a href="">Information for students</a></li>
+                      <li><a href="problems-paying-your-council-tax.html">Problems paying your Council Tax?</a></li>
+                  </ul>
+                  
+              </nav>
+          </aside>
+      </div>
+  </div>
+</div>
+
+	</main>
+
+
+		<footer class="global-footer">
+			<div class="footer-wrapper">
+				
+					<div class="footer-brand">
+						<div class="footer-logo">
+							<img src="/assets/patterns/images/logos/bathnes-logo-mono.png" alt="Bath &amp; North East Somerset Council" />
+						</div>
+		
+						<ul class="footer-list">
+							<li><a href="#">Accessibility</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Disclaimer</a></li>
+							<li><a href="#">Cookies</a></li>
+						</ul>
+		
+						<ul class="footer-list">
+							<li>Copyright © 2018 Bath &amp; North East Somerset Council</li>
+						</ul>
+					</div>
+		
+					<div class="social-links">
+						<h4 class="heading-small">
+							Social media and newsletter signup</h4>
+						<ul class="footer-list">
+							<li><i class="fa fa-envelope-open fa-2x" aria-hidden="true"></i> </li>
+							<li><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
+							<li><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+							<li><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></li>
+							<li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+		
+				</div>
+			</div>
+		</footer>
+	<!-- toolkit scripts -->
+		<script src="../assets/patterns/scripts/app.js"></script>
+	<!-- /toolkit scripts -->
+
+	<!-- if no GOVUK-namespaced module has loaded we can assume JS has failed and remove the class !-->
+	<!-- <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script> -->
+</body>
+</html>

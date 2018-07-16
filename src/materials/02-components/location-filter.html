@@ -1,0 +1,51 @@
+---
+notes: |
+---
+<div class="location-wrapper">
+    <div class="container">
+        <div class="breakout-box breakout-box-location">
+                {{> breadcrumb }}
+            <h1 class="bold-xlarge">Find a place to park</h1>
+            <p class="font-medium">Browse our car parks and  park &amp; ride facilities.</p>
+            <div class="form-wrapper">
+            <div class="form-group">
+                <label class="form-label form-label-bold" for="select-box">Filter by Location</label>
+                <select id="test" class="form-control" onchange="showSelected(this.value)">
+                    <option value="16" selected="selected">Select...</option>
+                    <option value="16">Bath</option>
+                    <option value="17">Keynsham</option>
+                    <option value="18">Rural Locations</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label class="form-label form-label-bold" for="select-box">Filter by Car Park Type</label>
+                <select class="form-control" id="select-box" name="select-box" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="">Select...</option>
+                        <option value="">Short Stay</option>
+                        <option value="">Long Stay</option>
+                        <option value="">Multi Day</option>
+                        <option value="">Park &amp; Ride</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label form-label-bold" for="select-box">Filter by Facilites</label>
+                <select class="form-control" id="select-box" name="select-box" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="">Select...</option>
+                        <option value="">No Height Restrictions</option>
+                        <option value="">Electric Charging Point</option>
+                        <option value="">Disabled Parking Bays</option>
+
+                    </select>
+            </div>
+
+            <div class="clearfix"></div>   
+
+        </div>
+        <a href="#" class="button button-start">See all car parks on a map</a>
+
+        </div>
+    </div>
+</div>

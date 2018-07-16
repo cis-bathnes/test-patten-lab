@@ -1,0 +1,11 @@
+{{#if notes}}
+<div class="ui-item-notes" data-ui-toggle="notes">
+	{{{notes}}}
+</div>
+{{/if}}
+<div class="ui-item-preview">
+	{{{material @key @root}}}
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">{{material @key @root}}</code></pre>
+</div>

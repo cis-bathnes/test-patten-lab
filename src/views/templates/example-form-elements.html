@@ -1,0 +1,887 @@
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        <span class="heading-secondary">Form elements</span>
+        Example: Form elements
+      </h1>
+
+      <form action="/" method="post" class="form">
+
+        <h2 class="heading-medium">
+          The examples below show the spacing between form labels, hint text and error messages
+        </h2>
+
+        <div class="form-section">
+          <p>
+            There should be 10px under the label or legend and the input
+          </p>
+          <!-- Text inside a label -->
+          <div class="form-group">
+            <label class="form-label-bold" for="example-form-label">
+              This is the label text in bold
+            </label>
+            <input class="form-control" id="example-form-label" type="text">
+          </div>
+          <!-- Text inside a legend -->
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  This is the label text in bold
+                </span>
+              </legend>
+              <div class="multiple-choice">
+                <input id="example-radio-yes-no-yes" type="radio" name="example-yes-no-group" value="Yes">
+                <label for="example-radio-yes-no-yes">Yes</label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <p>
+            There should be 10px under the label or legend and the input (when hint text is shown)
+          </p>
+
+          <!-- Hint text outside a label (preference is inside, to be read by AT) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="example-form-label-bold">
+              This is the label text in bold
+            </label>
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <input class="form-control" id="example-form-label-bold" type="text" aria-describedby="form-hint">
+          </div>
+
+          <!-- Text inside a legend -->
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">
+                  This is the label text in bold
+                </span>
+                <span class="form-hint">
+                  This is hint text
+                </span>
+              </legend>
+              <div class="multiple-choice">
+                <input id="radio-yes-no-yes-b" type="radio" name="yes-no-group-b" value="Yes">
+                <label for="radio-yes-no-yes-b">Yes</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">This is the label text in bold</span>
+                <span class="form-hint">This is hint text</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="dob-day">Day</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="dob-month">Month</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="dob-year">Year</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <p>
+            There should be 10px under the label or legend and the input (when an error message is shown) and 15px above the error message.
+          </p>
+
+          <!-- Hint text outside a label (preference is inside, to be read by AT) - error -->
+          <div class="form-group form-group-error">
+            <label class="form-label-bold" for="example-form-control">
+              This is the label text
+            </label>
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control form-control-error" id="example-form-control" type="text" aria-describedby="form-hint error-message">
+          </div>
+
+          <!-- Text inside a legend - error -->
+          <div class="form-group form-group-error">
+            <fieldset>
+
+              <legend>
+                <span class="form-label-bold">
+                  Do you have a National Insurance number?
+                </span>
+                <span class="form-hint">
+                  This is hint text
+                </span>
+                <span class="error-message">
+                  Error message goes here
+                </span>
+              </legend>
+              <div class="multiple-choice">
+                <input id="radio-yes-no-yes-c" type="radio" name="yes-no-group-c" value="Yes">
+                <label for="radio-yes-no-yes-c">Yes</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group form-group-error">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of birth</span>
+                <span class="form-hint">For example, 31 3 1980</span>
+                <span class="error-message">Error message goes here</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="example-dob-day-1">Day</label>
+                  <input class="form-control form-control-error" id="example-dob-day-1" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="example-dob-month-1">Month</label>
+                  <input class="form-control" id="example-dob-month-1" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="example-dob-year-1">Year</label>
+                  <input class="form-control" id="example-dob-year-1" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group form-group-error">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of birth</span>
+                <span class="form-hint">For example, 31 3 1980</span>
+                <span class="error-message">Error message goes here</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="example-dob-day-2">Day</label>
+                  <input class="form-control" id="example-dob-day-2" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="example-dob-month-2">Month</label>
+                  <input class="form-control form-control-error" id="example-dob-month-2" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="example-dob-year-2">Year</label>
+                  <input class="form-control" id="example-dob-year-2" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group form-group-error">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of birth</span>
+                <span class="form-hint">For example, 31 3 1980</span>
+                <span class="error-message">Error message goes here</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="example-dob-day-3">Day</label>
+                  <input class="form-control" id="example-dob-day-3" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="example-dob-month-3">Month</label>
+                  <input class="form-control" id="example-dob-month-3" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="example-dob-year-3">Year</label>
+                  <input class="form-control form-control-error" id="example-dob-year-3" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </div>
+
+        <div class="form-section">
+          <h3 class="heading-medium">
+            These examples show legend text styled to look like a label
+          </h3>
+
+          <!-- Yes or No question (without revealed content ) -->
+          <fieldset class="inline">
+            <legend>
+              <span class="form-label-bold">
+                Do you already have a personal user account?
+              </span>
+            </legend>
+            <div class="multiple-choice">
+              <input id="radio-inline-1a" type="radio" name="radio-inline-group" value="Yes">
+              <label for="radio-inline-1a">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-inline-2a" type="radio" name="radio-inline-group" value="No">
+              <label for="radio-inline-2a">No</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-section">
+          <!-- Yes or No question (select one option to reveal content) -->
+          <fieldset class="inline">
+            <legend>
+              <span class="form-label-bold">
+                This is the label text
+              </span>
+              <span class="form-hint">
+                This is the hint text
+              </span>
+            </legend>
+            <div class="form-group">
+              <div class="multiple-choice">
+                <input id="radio-yes-no-yes-a" type="radio" name="yes-no-group-a" value="Yes">
+                <label data-target="yes-and-do-next" for="radio-yes-no-yes-a">Yes</label>
+              </div>
+              <div class="multiple-choice">
+                <input id="radio-yes-no-no-a" type="radio" name="yes-no-group-a" value="No">
+                <label data-target="no-and-do-next" for="radio-yes-no-no-a">No</label>
+              </div>
+              <div class="panel panel-border-narrow js-hidden" id="yes-and-do-next-a">
+                <label class="form-label" for="yes-next-a">Yes, this next</label>
+                <input class="form-control" name="yes-next" type="text" id="yes-next-a">
+              </div>
+              <div class="panel panel-border-narrow js-hidden" id="no-and-do-next-a">
+                <label class="form-label" for="no-next-a">No, this next</label>
+                <input class="form-control" name="no-next" type="text" id="no-next-a">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-section">
+
+          <h2 class="heading-medium">
+            Example: input type="text" and error
+          </h2>
+
+          <!-- Input type="text" -->
+          <div class="form-group">
+            <label class="form-label" for="input-text-a">
+              This is the label text
+            </label>
+            <input class="form-control" id="input-text-a" type="text">
+          </div>
+
+          <!-- Input type="text" - error -->
+          <div class="form-group form-group-error">
+            <label class="form-label" for="input-text-b">
+              This is the label text
+            </label>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control form-control-error" id="input-text-b" type="text" aria-describedby="error-message">
+          </div>
+
+          <!-- Input type="text" (bold label) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="input-text-c">
+              This is the label text in bold
+            </label>
+            <input class="form-control" id="input-text-c" type="text">
+          </div>
+
+          <!-- Input type="text" - error (bold label) -->
+          <div class="form-group form-group-error">
+            <label class="form-label-bold" for="input-text-d">
+              This is the label text in bold
+            </label>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control form-control-error" id="input-text-d" type="text" aria-describedby="error-message">
+          </div>
+
+          <!-- Input type="text" (bold label with hint text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="input-text-g">
+              This is the label text
+            </label>
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <input class="form-control" id="input-text-g" type="text" aria-describedby="form-hint">
+          </div>
+
+          <!-- Input type="text" - error (bold label with hint text) -->
+          <div class="form-group form-group-error">
+            <label class="form-label-bold" for="input-text-h">
+              This is the label text
+            </label>
+            <span class="form-hint">
+              This is hint text
+            </span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <input class="form-control form-control-error" id="input-text-h" type="text" aria-describedby="form-hint error-message">
+          </div>
+        </div>
+
+        <!-- Input type="text" - size modifiers -->
+        <div class="form-section">
+  <h2 class="heading-medium">
+              Example: input text with form-control classes
+  </h2>
+
+  <div class="form-group">
+    <label class="form-label" for="form-control-1-8">
+      Input with class form-control-1-8 (12.5% width)
+    </label>
+    <input class="form-control form-control-1-8" id="form-control-1-8" type="text" name="form-control-1-8">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="form-control-1-4">
+      Input with class form-control-1-4 (25% width)
+    </label>
+    <input class="form-control form-control-1-4" id="form-control-1-4" type="text" name="form-control-1-4">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="form-control-1-3">
+      Input with class form-control-1-3 (33% width)
+    </label>
+    <input class="form-control form-control-1-3" id="form-control-1-3" type="text" name="form-control-1-3">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="form-control-1-2">
+      Input with class form-control-1-2 (50% width - default form-control size)
+    </label>
+    <input class="form-control form-control-1-2" id="form-control-1-2" type="text" name="form-control-1-2">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="form-control-2-3">
+      Input with class form-control-2-3 (66% width)
+    </label>
+    <input class="form-control form-control-2-3" id="form-control-2-3" type="text" name="form-control-2-3">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="form-control-3-4">
+      Input with class form-control-3-4 (75% width)
+    </label>
+    <input class="form-control form-control-3-4" id="form-control-3-4" type="text" name="form-control-3-4">
+  </div>
+</div>
+
+
+
+        <div class="form-section">
+          <h2 class="heading-medium">
+            Example: textarea and error
+          </h2>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="form-label" for="textarea-a">
+              This is the label text
+            </label>
+            <textarea class="form-control" id="textarea-a" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- Textarea - error -->
+          <div class="form-group form-group-error">
+            <label class="form-label" for="textarea-b">
+              This is the label text
+            </label>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <textarea class="form-control form-control-error" id="textarea-b" cols="30" rows="10" aria-describedby="error-message"></textarea>
+          </div>
+
+          <!-- Textarea (bold label) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="textarea-c">
+              This is the label text in bold
+            </label>
+            <textarea class="form-control" id="textarea-c" cols="30" rows="10"></textarea>
+          </div>
+
+          <!-- Textarea - error (bold label) -->
+          <div class="form-group form-group-error">
+            <label class="form-label-bold" for="textarea-d">
+              This is the label text in bold
+            </label>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <textarea class="form-control form-control-error" id="textarea-d" cols="30" rows="10" aria-describedby="error-message"></textarea>
+          </div>
+
+          <!-- Textarea (bold label, with hint text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="textarea-e">
+              This is the label text
+            </label>
+            <span class="form-hint">This is hint text</span>
+            <textarea class="form-control" id="textarea-e" cols="30" rows="10" aria-describedby="form-hint"></textarea>
+          </div>
+
+          <!-- Textarea - error (bold label, with hint text) -->
+          <div class="form-group form-group-error">
+            <label class="form-label-bold" for="textarea-f">
+              This is the label text
+            </label>
+            <span class="form-hint">This is hint text</span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <textarea class="form-control form-control-error" id="textarea-f" cols="30" rows="10" aria-describedby="form-hint error-message"></textarea>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2 class="heading-medium">
+            Example: select boxes and error
+          </h2>
+
+          <!-- Select box -->
+          <div class="form-group">
+            <label class="form-label" for="select-box-a">This is the label text</label>
+            <select class="form-control" id="select-box-a">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+
+          <!-- Select box - error -->
+          <div class="form-group form-group-error">
+            <label class="form-label" for="select-box-b">
+              This is the label text
+            </label>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <select class="form-control form-control-error" id="select-box-b" aria-describedby="error-message">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <!-- Select box (with bold text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="select-box-c">
+              This is the label text
+            </label>
+            <select class="form-control" id="select-box-c">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+
+          <!-- Select box - error (with bold text) -->
+          <div class="form-group form-group-error">
+            <label class="form-label-bold" for="select-box-d">
+              This is the label text
+            </label>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <select class="form-control form-control-error" id="select-box-d" aria-describedby="error-message">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <!-- Select box (with bold text and hint text) -->
+          <div class="form-group">
+            <label class="form-label-bold" for="select-box-g">
+              This is the label text
+            </label>
+            <span class="form-hint">
+              This the hint text
+            </span>
+            <select class="form-control" id="select-box-g" aria-describedby="form-hint">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+
+          <!-- Select box - error (with bold text and hint text) -->
+          <div class="form-group form-group-error">
+            <label class="form-label-bold" for="select-box-h">
+              This is the label text
+            </label>
+            <span class="form-hint">
+              This is the hint text
+            </span>
+            <span class="error-message">
+              Error message goes here
+            </span>
+            <select class="form-control form-control-error" id="select-box-h" aria-describedby="form-hint error-message">
+              <option>GOV.UK elements option 1</option>
+              <option>GOV.UK elements option 2</option>
+              <option>GOV.UK elements option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <!--File upload -->
+          <div class="form-group">
+  <label class="form-label" for="file-input">
+    Upload a file
+  </label>
+  <input type="file" id="file-input">
+</div>
+
+
+          <!--File upload with error -->
+          <div class="form-group form-group-error">
+  <label class="form-label" for="file-input">
+    Upload a file
+  </label>
+  <span class="error-message">
+    Error message goes here
+  </span>
+  <input type="file" id="file-input" aria-describedby="error-message">
+</div>
+
+        </div>
+
+      </form>
+
+      <div class="form-section">
+        <h3 class="heading-medium">
+          These examples are one-question-per-page examples and use a heading for the question inside the legend of the fieldset.
+        </h3>
+        <!-- "Chunky" Radio buttons, stacked -->
+        <form>
+  <div class="form-group">
+    <fieldset>
+
+      <legend>
+        <h1 class="heading-medium">Where do you live?</h1>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label for="radio-1">Northern Ireland</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+        <label for="radio-2">Isle of Man or the Channel Islands</label>
+      </div>
+      <p class="form-block">or</p>
+      <div class="multiple-choice">
+        <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+        <label for="radio-3">I am a British citizen living abroad</label>
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+      </div>
+
+      <div class="form-section">
+        <!-- "Chunky" Checkboxes, stacked -->
+        <form>
+  <fieldset>
+
+    <legend>
+      <h3 class="heading-medium">Which types of waste do you transport regularly?</h3>
+      <span class="body-text">Select all that apply</span>
+    </legend>
+
+    <div class="multiple-choice">
+      <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+      <label for="waste-type-1">Waste from animal carcasses</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+      <label for="waste-type-2">Waste from mines or quarries</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+      <label for="waste-type-3">Farm or agricultural waste</label>
+    </div>
+
+  </fieldset>
+</form>
+
+      </div>
+
+      <div class="form-section">
+        <!-- Yes or No question (without revealed content ) -->
+        <form>
+  <div class="form-group">
+    <fieldset class="inline">
+
+      <legend>
+        <h1 class="heading-medium">
+          Do you already have a personal user account?
+        </h1>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+        <label for="radio-inline-1">Yes</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+        <label for="radio-inline-2">No</label>
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+      </div>
+
+      <div class="form-section">
+        <!-- Yes or No question (select one option to reveal content) -->
+        <form>
+  <div class="form-group">
+    <fieldset class="inline">
+
+      <legend>
+        <h1 class="heading-medium">
+          Do you yes/no?
+        </h1>
+      </legend>
+
+      <div class="multiple-choice" data-target="yes-and-do-next">
+        <input id="radio-yes-no-yes" type="radio" name="yes-no-group" value="Yes" aria-controls="yes-and-do-next" aria-expanded="false">
+        <label for="radio-yes-no-yes">Yes</label>
+      </div>
+      <div class="multiple-choice" data-target="no-and-do-next">
+        <input id="radio-yes-no-no" type="radio" name="yes-no-group" value="No" aria-controls="no-and-do-next" aria-expanded="false">
+        <label for="radio-yes-no-no">No</label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="yes-and-do-next" aria-hidden="true">
+        <label class="form-label" for="yes-next">Yes, this next</label>
+        <input class="form-control" name="yes-next" type="text" id="yes-next">
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="no-and-do-next" aria-hidden="true">
+        <label class="form-label" for="no-next">No, this next</label>
+        <input class="form-control" name="no-next" type="text" id="no-next">
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+      </div>
+
+      <div class="form-section">
+        <!-- Radio buttons (select one option to reveal content) -->
+        <form>
+  <div class="form-group">
+    <fieldset>
+
+      <legend>
+        <h1 class="heading-medium">
+          How do you want to be contacted?
+        </h1>
+      </legend>
+
+      <div class="multiple-choice" data-target="contact-by-email">
+        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" aria-controls="contact-by-email" aria-expanded="false">
+        <label for="example-contact-by-email">Email</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-email" aria-hidden="true">
+        <label class="form-label" for="contact-email">Email address</label>
+        <input class="form-control" name="contact-email" type="text" id="contact-email">
+      </div>
+
+      <div class="multiple-choice" data-target="contact-by-phone">
+        <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No" aria-controls="contact-by-phone" aria-expanded="false">
+        <label for="example-contact-by-phone">Phone</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-phone" aria-hidden="true">
+        <label class="form-label" for="contact-phone">Phone number</label>
+        <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+      </div>
+
+      <div class="multiple-choice" data-target="contact-by-text">
+        <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No" aria-controls="contact-by-text" aria-expanded="false">
+        <label for="example-contact-by-text">Text message</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="contact-by-text" aria-hidden="true">
+        <label class="form-label" for="contact-text-message">Mobile phone number</label>
+        <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+      </div>
+
+      <div class="form-section">
+        <!-- Radio buttons (select one option to reveal content) with error -->
+        <h1 class="heading-medium" id="example-conditional-errors">
+  Your income
+</h1>
+
+<form>
+  <div class="form-group form-group-error">
+
+    <fieldset>
+
+      <legend>
+        <span class="form-label-bold">How often do you get paid?</span>
+        <span class="error-message">Choose an answer</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="paid-weekly">
+        <input type="radio" name="radio-income-group" value="Yes" id="example-paid-weekly" aria-controls="paid-weekly" aria-expanded="false">
+        <label for="example-paid-weekly">Weekly</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="paid-weekly" aria-hidden="true">
+        <label class="form-label" for="example-paid-weekly-pay">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-weekly-pay" type="text" id="example-paid-weekly-pay">
+      </div>
+
+      <div class="multiple-choice" data-target="paid-fortnightly">
+        <input type="radio" name="radio-income-group" value="Yes" id="example-paid-fortnightly" aria-controls="paid-fortnightly" aria-expanded="false">
+        <label for="example-paid-fortnightly">Fortnightly</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="paid-fortnightly" aria-hidden="true">
+        <label class="form-label" for="example-paid-fortnightly-pay">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-fortnightly-pay" type="text" id="example-paid-fortnightly-pay">
+      </div>
+
+      <div class="multiple-choice" data-target="paid-monthly">
+        <input type="radio" name="radio-income-group" value="Yes" id="example-paid-monthly" aria-controls="paid-monthly" aria-expanded="false">
+        <label for="example-paid-monthly">Monthly</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="paid-monthly" aria-hidden="true">
+        <label class="form-label" for="example-paid-monthly-pay">Monthly take home pay after tax</label>
+        <input class="form-control" name="example-paid-monthly-pay" type="text" id="example-paid-monthly-pay">
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+<h1 class="heading-medium" id="example-conditional-errors-2">
+  Your income
+</h1>
+
+<form>
+  <div class="form-group">
+
+    <fieldset>
+
+      <legend>
+        <span class="form-label-bold">How often do you get paid?</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="paid-weekly-2">
+        <input type="radio" name="radio-income-group-2" value="Yes" id="example-paid-weekly-2" aria-controls="paid-weekly-2" aria-expanded="false">
+        <label for="example-paid-weekly-2">Weekly</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="paid-weekly-2" aria-hidden="true">
+        <label class="form-label" for="example-paid-weekly-pay-2">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-weekly-pay-2" type="text" id="example-paid-weekly-pay-2">
+      </div>
+
+      <div class="multiple-choice" data-target="paid-fortnightly-2">
+        <input type="radio" name="radio-income-group-2" value="Yes" id="example-paid-fortnightly-2" aria-controls="paid-fortnightly-2" aria-expanded="false">
+        <label for="example-paid-fortnightly-2">Fortnightly</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="paid-fortnightly-2" aria-hidden="true">
+        <label class="form-label" for="example-paid-fortnightly-pay-2">Weekly take home pay after tax</label>
+        <input class="form-control" name="example-paid-fortnightly-pay-2" type="text" id="example-paid-fortnightly-pay-2">
+      </div>
+
+      <div class="multiple-choice" data-target="paid-monthly-2">
+        <input type="radio" name="radio-income-group-2" value="Yes" id="example-paid-monthly-2" checked="checked" aria-controls="paid-monthly-2" aria-expanded="true">
+        <label for="example-paid-monthly-2">Monthly</label>
+      </div>
+      <div class="panel panel-border-narrow panel-with-error" id="paid-monthly-2" aria-hidden="false">
+        <div class="form-group form-group-error">
+          <label class="form-label" for="example-paid-monthly-pay-2">
+            Monthly take home pay (after tax)?
+          </label>
+          <span class="error-message">
+            Error message about monthly pay goes here
+          </span>
+          <input class="form-control" name="example-paid-monthly-pay-2" type="text" id="example-paid-monthly-pay-2" aria-describedby="error-message">
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+
+      </div>
+
+      <div class="form-section">
+        <!-- Checkboxes (select more than option to reveal content) -->
+        <form>
+  <div class="form-group">
+    <fieldset>
+
+      <legend>
+        <h1 class="heading-medium">
+          What is your nationality?
+        </h1>
+        <span class="body-text">Select all options that are relevant to you.</span>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="nationalities-british" name="nationalities" type="checkbox" value="British">
+        <label for="nationalities-british">British (including English, Scottish, Welsh and Northern Irish)</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="nationalities-irish" name="nationalities" type="checkbox" value="Irish">
+        <label for="nationalities-irish">Irish</label>
+      </div>
+      <div class="multiple-choice" data-target="example-different-country">
+        <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country" aria-controls="example-different-country" aria-expanded="false">
+        <label for="nationalities-other">Citizen of a different country</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="example-different-country" aria-hidden="true">
+        <label class="form-label" for="nationalities-other-country">Country name</label>
+        <input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
+      </div>
+
+    </fieldset>
+  </div>
+</form>
+
+      </div>
+
+    </div>
+  </div>

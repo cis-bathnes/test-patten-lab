@@ -1,0 +1,69 @@
+language: node_js
+node_js:
+ - "4.4.7"
+notifications:
+  email: false
+before_deploy:
+- test $TRAVIS_TEST_RESULT = 0
+jobs:
+  include:
+    - stage: run tests
+      script:
+        # Ensure Travis aborts without running tests if the lockfile needs updating
+        - set -e
+        - ./scripts/check-lockfile.sh
+        - yarn test
+    - stage: check for new release
+      script:
+      # Ensure Travis aborts without creating a release if version hasn't changed
+      - set -e
+      - ./scripts/check-release-version.sh
+      deploy:
+        # This whole section is only run if check-release-version exits without
+        # error, which only happens when there is a new release to roll out.
+        # 
+        # GitHub releases are created from the tagged commit. All other deploy
+        # providers are only triggered on the master branch.
+        #
+        # Heroku is configured to automatically deploy the following branches
+        # once CI passes:
+        # master         -> http://govuk-elements.herokuapp.com/
+        #                -> http://govuk-elements-review.herokuapp.com/
+        # latest-release -> http://govuk-elements-sass-release.herokuapp.com/
+        
+        # Create a new tag on Github and update the latest-release branch
+        - provider: script
+          script: ./scripts/create-release.sh
+
+        # Update the NPM package (https://www.npmjs.com/package/govuk-elements-sass)
+        - provider: script
+          script: echo "Deploying to npm ..."
+          script: cd packages/govuk-elements-sass/
+
+        - provider: npm
+          email: govuk-dev@digital.cabinet-office.gov.uk
+          api_key:
+            secure: CW79rsUR5MFR+YyIsmwhbrndukNjzoKstp2SKupdEzUYTthnzsDxz2CGgI3SwwIcxPh41onxkDZm5R0ZvxwFQf4R+IJEhM94KqjwLdVE5bkKPD0JNYGbYRTDrTCYb74InvjN6LIhYvQwcKO+ThaiMA1IttEc4vCzKHPKKbPv340=
+
+        # Upload the contents of packages/govuk-elements-sass/ to GitHub releases
+        - provider: script
+          script: echo "Deploying to GitHub releases ..."
+
+        - provider: releases
+          api_key:
+            secure: HZD7iqjcf/Yg792jMqksiVsCSQJSZG2TJ77EIGNh7qsdmCSJneUKPpeohQIEvkpjKiz+RyP4v0UqHx9lxHx7rBDmzOdTUCKAV3biTFvmf/W6IUb4UGXbjsDA5AMlNgpCdy4xT2iYBSyUKRR4qLjLDITduDoRQZFET5Z52nzcJgo=
+          file_glob: true
+          file: packages/govuk-elements-sass/*
+          skip_cleanup: true
+          on:
+            tags: true
+            all_branches: true
+
+  # Allow this stage to fail without breaking the build (as we only release when
+  # the version changes)
+  allow_failures:
+    - stage: check for new release
+sudo: false
+env:
+  global:
+    secure: eFtS+dlf00c3h4Rpp1FSZw6wOmZPmY4lYbqPV6MQa+VUgh+FRbUYOjDJP3UFaTsWNxMIL4mhEKFYLnkVftBdz1FgPjhIO3jNXleGMgVVedtD+qo5hTu1KI39t68K2YcELx9+kzeccX77WVmv/qJTVg7+f84WP9ebzVOJCQprJuw=

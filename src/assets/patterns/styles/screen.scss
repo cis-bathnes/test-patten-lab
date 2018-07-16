@@ -1,0 +1,52 @@
+//-----------
+// Imports from styles folder
+//-----------
+@import 'core/colours';
+@import 'core/accessibility';
+@import 'core/forms';
+@import 'design-patterns/alpha-beta';
+@import 'design-patterns/breadcrumbs';
+@import 'design-patterns/buttons';
+@import 'design-patterns/media-player';
+
+$path:'../images/';
+
+//-----------
+// GOV UK elements and toolkit
+// imported from submodules
+//-----------
+
+// GOV.UK frontend toolkit
+// @import '../govuk_frontend_toolkit/stylesheets/design-patterns/_alpha-beta';
+// @import '../govuk_frontend_toolkit/stylesheets/design-patterns/_breadcrumbs';
+// @import '../govuk_frontend_toolkit/stylesheets/design-patterns/_buttons';
+// @import '../govuk_frontend_toolkit/stylesheets/design-patterns/_media-player';
+@import '../govuk_frontend_toolkit/stylesheets/_conditionals';
+@import '../govuk_frontend_toolkit/stylesheets/_css3';
+@import '../govuk_frontend_toolkit/stylesheets/_device-pixels';
+@import '../govuk_frontend_toolkit/stylesheets/_font_stack';
+@import '../govuk_frontend_toolkit/stylesheets/_grid_layout';
+@import '../govuk_frontend_toolkit/stylesheets/_helpers';
+@import '../govuk_frontend_toolkit/stylesheets/_measurements';
+@import '../govuk_frontend_toolkit/stylesheets/_shims';
+@import '../govuk_frontend_toolkit/stylesheets/_typography';
+@import '../govuk_frontend_toolkit/stylesheets/_url-helpers';
+
+// GOV.UK elements
+@import '../govuk_elements/assets/sass/elements/govuk-template-base';
+@import '../govuk_elements/assets/sass/elements';
+
+
+//-----------
+// Import BATHNES scss components
+//-----------
+// @import 'components/header';
+@import 'components/navigation';
+@import 'components/sections';
+@import 'components/footer';
+@import 'components/aside';
+@import 'components/task-list';
+@import 'components/breadcrumb';
+@import 'components/heroes';
+@import 'components/breakout-box';
+@import 'components/extend'

@@ -1,0 +1,155 @@
+{% extends "layout_example.html" %}
+
+{% block page_title %}Example: Radio buttons and checkboxes — Form elements — GOV.UK elements{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        <span class="heading-secondary">Form elements</span>
+        Example: Radio buttons <br> and checkboxes
+      </h1>
+
+      <div class="text">
+        <p>
+          This test page demonstrates the new <code class="code">.multiple-choice</code> radio buttons and checkboxes, released in GOV.UK elements v3.0.0.
+        </p>
+
+        <p>
+          It also demonstrates setting ARIA attributes when showing and hiding additional content - using <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/javascripts/govuk/show-hide-content.js">show-hide-content.js</a> from the GOV.UK frontend toolkit.
+        </p>
+      </div>
+
+      <form action="/" method="post" class="form">
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">
+                What is your nationality?
+              </h1>
+              <span class="body-text">If you have dual nationality, select all options that are relevant to you.</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input type="checkbox" name="nationality_british" value="British" id="nationality_british">
+              <label for="nationality_british">British</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input type="checkbox" name="nationality_irish" value="Irish" id="nationality_irish">
+              <label for="nationality_irish">Irish</label>
+            </div>
+
+            <div class="multiple-choice" data-target="example_nationality_other">
+              <input type="checkbox" name="nationality_other" value="Wales" id="nationality_other">
+              <label for="nationality_other">Citizen of another country</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="example_nationality_other">
+              <label for="nationality_other_countries" class="form-label">
+                Country name
+              </label>
+              <input class="form-control" type="text" id="nationality_other_countries">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">
+                Where should we send your new passport?
+              </h1>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes">
+              <label for="radio-home-address">Home address</label>
+            </div>
+
+            <div class="multiple-choice" data-target="example-other-address">
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="No">
+              <label for="radio-other-address">Other address</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+
+              <fieldset>
+
+                <legend>
+                  <h2 class="heading-medium">
+                    Your other address
+                  </h2>
+                </legend>
+
+                <div class="form-group form-group-compound">
+                  <label class="form-label" for="address-line-1">Street</label>
+                  <input type="text" class="form-control" id="address-line-1">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label visually-hidden" for="address-line-2">Street</label>
+                  <input type="text" class="form-control" id="address-line-2">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-town">Town or City</label>
+                  <input type="text" class="form-control form-control-1-4" id="address-town">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="address-postcode">Postcode</label>
+                  <input type="text" class="form-control form-control-1-8" id="address-postcode">
+                </div>
+
+              </fieldset>
+
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">
+                Which part of the Housing Act was your licence issued under?
+              </h1>
+              <span class="body-text">Select one of the options below.</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
+              <label for="radio-part-2">
+                <span class="heading-small">Part 2 of the Housing Act 2004</span><br>
+                For properties that are 3 or more stories high and occupied by 5 or more people
+              </label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-part-3" type="radio" name="housing-act" value="Part 3">
+              <label for="radio-part-3">
+                <span class="heading-small">Part 3 of the Housing Act 2004</span><br>
+                For properties that are within a geographical area defined by a local council
+              </label>
+            </div>
+
+          </fieldset>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main><!-- /#content-->
+{% endblock %}

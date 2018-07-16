@@ -1,0 +1,140 @@
+---
+layout: default
+---
+
+{{> breadcrumb }}
+
+<style>
+strong{
+  font-weight: 700;
+}
+
+.govuk-box-highlight {
+    margin: 1em 0;
+    padding: 2em 1em;
+    color: #0b0c0c;
+    background: #DEE0E2;
+    text-align: left;
+    border-bottom: solid 5px grey;
+}
+
+.govuk-box-highlight .heading-xlarge {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.school-details{
+  padding-bottom: 1em;
+  border-bottom: solid 5px #DEE0E2;
+}
+
+</style>
+
+<div class="grid-row">
+<div class="column-full">
+
+        <div class="govuk-box-highlight">
+            <h1 class="heading-xlarge">Find a School</h1>
+            <hr />
+            <div class="form-group">
+    <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" placeholder="Search by school name">
+
+
+
+	<select class="form-control" id="select-box" name="select-box">
+        <option selected="true" disabled="disabled">-- Filter by School Type --</option>
+        <option>Infants</option>
+        <option>Primary</option>
+        <option>BATHNES elements option 3</option>
+    </select>
+
+<select class="form-control" id="select-box" name="select-box">
+    <option selected="true" disabled="disabled">-- Filter bySchool Type --</option>
+    <option>BATHNES elements option 1</option>
+    <option>BATHNES elements option 2</option>
+    <option>BATHNES elements option 3</option>
+</select>
+
+<button class="button button-start">Find</button>
+
+    </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+<div class="grid-row">
+
+  <div class="column-full">
+    <div class="school-details">
+      <a href="school-details.html"><h2 class="heading-large">Beechen Cliff School</h2></a>
+      <div class="grid-row">
+      <div class="column-one-half"><strong>Head Teacher:</strong>
+Mr Andrew Davis
+ </div>
+      <div class="column-one-half"><strong>Telephone:</strong> 01225 480466 </div>
+      <div class="column-one-half"><strong>Location:</strong> Alexandra Park,Bath, BA2 4RE</div>
+      <div class="column-one-half"><strong>Email:</strong> headmaster@beechencliff.org.uk</div>
+      <div class="column-one-half"><strong>School Type:</strong> Secondary </div>
+      <div class="column-one-half"><strong>Website:</strong> www.beechencliff.org.uk </div>
+      </div>
+    </div>
+
+    <div class="school-details">
+      <a href="#"><h2 class="heading-large">Beechen Cliff School</h2></a>
+      <div class="grid-row">
+      <div class="column-one-half"><strong>Head Teacher:</strong>
+Mr Andrew Davis
+ </div>
+      <div class="column-one-half"><strong>Telephone:</strong> 01225 480466 </div>
+      <div class="column-one-half"><strong>Location:</strong> Alexandra Park,Bath, BA2 4RE</div>
+      <div class="column-one-half"><strong>Email:</strong> headmaster@beechencliff.org.uk</div>
+      <div class="column-one-half"><strong>School Type:</strong> Secondary </div>
+      <div class="column-one-half"><strong>Website:</strong> www.beechencliff.org.uk </div>
+      </div>
+    </div>
+
+    <div class="school-details">
+      <a href="#"><h2 class="heading-large">Beechen Cliff School</h2></a>
+      <div class="grid-row">
+      <div class="column-one-half"><strong>Head Teacher:</strong>
+Mr Andrew Davis
+ </div>
+      <div class="column-one-half"><strong>Telephone:</strong> 01225 480466 </div>
+      <div class="column-one-half"><strong>Location:</strong> Alexandra Park,Bath, BA2 4RE</div>
+      <div class="column-one-half"><strong>Email:</strong> headmaster@beechencliff.org.uk</div>
+      <div class="column-one-half"><strong>School Type:</strong> Secondary </div>
+      <div class="column-one-half"><strong>Website:</strong> www.beechencliff.org.uk </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+                <script>
+                function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+
+                    evt.currentTarget.className += " active";
+                }
+
+                // Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+                </script>

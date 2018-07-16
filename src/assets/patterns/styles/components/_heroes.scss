@@ -1,0 +1,63 @@
+//-----------
+// Heroes
+//-----------
+
+.hero {
+    position: relative;
+    background-color: $bathnes-primary-ally;
+    padding: 10% 0;
+    &--alt {
+        background-color: $bathnes-secondary-ally;
+    }
+    &--image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $bathnes-primary-ally;
+            opacity: 0.75;
+        }
+        &.hero--alt {
+            &:after {
+                background-color: $bathnes-secondary-ally;
+            }
+        }
+    }
+}
+
+.hero__caption {
+    max-width: 35em;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    .hero--image & {
+        position: relative;
+        z-index: 2;
+    }
+    @include media($site-width) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.hero__heading {
+    @include core-36;
+    margin-bottom: 0.75em;
+    font-weight: 700;
+    color: #fff;
+    @include media($site-width) {
+        @include core-48;
+        font-weight: 700;
+    }
+}
+
+.hero__description {
+    color: #fff;
+}

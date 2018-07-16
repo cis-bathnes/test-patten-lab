@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="../assets/patterns/styles/screen.css">
+	<!-- /toolkit styles -->
+
+	<!-- Fontawesome Styles -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+  <!-- govuk_elements JS is dependant on jQuery so we've included it here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../assets/patterns/scripts/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+</head>
+<body>
+	<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<div id="skiplink-container">
+    	<div>
+        	<a href="#content" class="skiplink">Skip to main content</a>
+    	</div>
+    </div>
+
+		<!-- Menu show/hide JS -->
+		<!-- Adapted from https://www.w3schools.com/howto/howto_js_toggle_class.asp -->
+		<!-- Need to move into menu.js and that file be imported into app.js -->
+		<script>
+		  function showHideMenu(){
+		  var element = document.getElementById("navigation-primary");
+		
+		  if (element.classList) {
+		      element.classList.toggle("navigation-primary--active");
+		  } else {
+		      // For IE9
+		      var classes = element.className.split(" ");
+		      var i = classes.indexOf("navigation-primary--active");
+		
+		      if (i >= 0)
+		          classes.splice(i, 1);
+		      else
+		          classes.push("navigation-primary--active");
+		          element.className = classes.join(" ");
+		  }
+		}
+		</script>
+		<style>
+		  #global-header {
+		  background-color: #fff;
+		  position: relative;
+		}
+		
+		.header-wrapper {
+		  position: relative;
+		  max-width: 960px;
+		  margin: 0 auto;
+		  padding-top: 1em;
+		  padding-bottom: 1em;
+		  padding-left: 15px;
+		  padding-right: 15px;
+		}
+		@media (min-width: 960px) {
+		  .header-wrapper {
+		    padding-left: 0;
+		    padding-right: 0;
+		  }
+		}
+		
+		.header-global {
+		  overflow: hidden;
+		}
+		
+		.header-logo {
+		  width: 128.4px;
+		  height: auto;
+		}
+		.header-logo img {
+		  max-width: 100%;
+		}
+		@media (min-width: 769px) {
+		  .header-logo {
+		    width: 160.5px;
+		    float: left;
+		  }
+		}
+		
+		.header-search {
+		  margin-top: 10px;
+		  margin-bottom: 20px;
+		}
+		@media (min-width: 769px) {
+		  .header-search {
+		    margin-top: 1em;
+		    float: right;
+		    width: 50%;
+		    text-align: right;
+		    margin-top: 12px;
+		    margin-bottom: 0;
+		  }
+		}
+		.header-search .site-search {
+		  position: relative;
+		}
+		.header-search .site-search .form-control {
+		  width: calc(100% - 80px);
+		  border-width: 1px;
+		  border-color: #bfc1c3;
+		  font-size: 16px;
+		  height: 36px;
+		}
+		@media (min-width: 769px) {
+		  .header-search .site-search .form-control {
+		    width: calc(100% - 100px);
+		  }
+		}
+		.header-search .site-search .button {
+		  position: absolute;
+		  top: 0;
+		  right: 45px;
+		  text-indent: -9999px;
+		  background-image: url(../assets/patterns/images/icon-search-2x.png);
+		  background-repeat: no-repeat;
+		  background-position: 55% 50%;
+		  background-size: 52.5% 40%;
+		  box-shadow: none;
+		  width: 36px;
+		  height: 36px;
+		}
+		@media (min-width: 769px) {
+		  .header-search .site-search .button {
+		    right: 0;
+		  }
+		}
+		
+		.header-search--desktop {
+		  display: none;
+		}
+		@media (min-width: 769px) {
+		  .header-search--desktop {
+		    display: block;
+		  }
+		}
+		
+		@media (min-width: 769px) {
+		  .header-search--mobile {
+		    display: none;
+		  }
+		}
+		
+		#global-header-bar {
+		  position: relative;
+		  background-color: #00aeef;
+		  height: 5px;
+		}
+		
+		.header-marque {
+		  position: absolute;
+		  bottom: 0;
+		  right: 15px;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 25px 0 0 25px;
+		  border-color: transparent transparent transparent #00aeef;
+		}
+		
+		.header-commercial {
+		  position: relative;
+		  overflow: hidden;
+		  background-color: #0b0c0c;
+		}
+		.header-commercial .header-wrapper {
+		  padding-top: 0.75em;
+		  padding-bottom: 0.5em;
+		}
+		
+		.header-commercial__logo {
+		  width: 91.42857px;
+		  height: auto;
+		  display: block;
+		}
+		.header-commercial__logo img {
+		  max-width: 100%;
+		}
+		@media (min-width: 769px) {
+		  .header-commercial__logo {
+		    width: 106.66667px;
+		  }
+		}
+		
+		.header-commercial__marque {
+		  position: absolute;
+		  bottom: 0;
+		  right: 15px;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		  border-width: 30px 0 0 30px;
+		  border-color: transparent transparent transparent #fff;
+		}
+		@media (min-width: 960px) {
+		  .header-commercial__marque {
+		    right: 0;
+		  }
+		}
+		
+		</style>
+		<header role="banner" id="global-header">
+		    <div class="header-wrapper">
+		        <div class="header-global">
+		            <div class="header-logo">
+		                <a href="" id="logo" class="content">
+		                    <img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset Council" />
+		                </a>
+		            </div>
+		            <div class="header-search header-search--desktop">
+		                <form id="search" class="site-search" action="" method="">
+		                    <label class="form-label visually-hidden" for="search-site">Search across the site</label>
+		                    <input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+		                    <input class="button" type="submit" value="Search">
+		                </form>
+		            </div>
+		        </div>
+		        <button id="js-header-toggle" class="navigation-trigger" onclick="showHideMenu()">Menu</button>
+		    </div>
+		    <nav role="navigation" id="navigation-primary" class="navigation-primary">
+		        <ul class="navigation-primary-list">
+		            <li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
+		            <li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
+		            <li class="navigation-primary-list__search">
+		                <div class="header-search header-search--mobile">
+		                  <form id="search" class="site-search" action="" method="">
+		                      <label class="form-label visually-hidden" for="search-site">Search across the site</label>
+		                      <input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+		                      <input class="button" type="submit" value="Search">
+		                  </form>
+		                </div>
+		            </li>
+		        </ul>
+		    </nav>
+		    <div class="header-marque"></div>
+		</header>
+		<div id="global-header-bar"></div>
+	<main id="content" role="main">
+		<style>
+
+
+ul.nav-list li{
+    border-bottom: solid 1px #DEE0E2;
+}
+
+</style>
+
+
+<div class="breadcrumb">
+    <ol>
+        <li><a aria-current="false" href="/">Home</a></li>
+        <li><a aria-current="false" href="/">Services</a></li>
+        <li><a aria-current="false" href="/">Schools colleges and learning</a></li>
+        <li><a aria-current="true" href="/">Find a School</a></li>
+    </ol>
+</div>
+
+<div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-xlarge">Discounts and exemptions</h1>
+
+        <h2 class="heading-small"></h2>
+        <p>
+          You could get a discount on your Council Tax bill if you:
+        </p>
+
+        <ul class="list list-bullet">
+          <li>live alone (the Single Person's Discount),</li>
+          <li>live with people who aren't counted for Council Tax, or</li>
+          <li>have a self-contained annexe which is currently occupied by you, or a member of your family.</li>
+        </ul>
+<a href="/" class="button button-start">More about Council Tax discounts</a>
+
+<hr>
+
+
+<h3 class="heading-medium">Student reductions</h3>
+<p>If you or someone you live with is a student we may be able to reduce your bill. Students who live in halls of residence or ‘student houses’ don't have to pay any Council Tax.</p>
+
+<a class="" href="">More information for students</a>
+
+<h3 class="heading-medium">Reductions for people with disabilities</h3>
+<p>If your home is adapted for a disabled person, you may qualify for a reduction in your Council Tax bill.</p>
+
+<a href="" class="">More about reductions for people with disabilities</a>
+
+<h3 class="heading-medium">Exemptions</h3>
+<p>An exemption from Council Tax means that there is no Council Tax to pay.
+</p>
+<p>If the property is unoccupied it may be exempt indefinitely, or just for a short period of time. Some occupied properties are also exempt, but it depends who lives there.
+</p>
+
+<div class="breakout-box">
+
+
+	<p class="bold">
+        If you own a long-term empty property - we now charge 150% Council Tax on properties that have been empty for two years. This started on 1 April 2013. The aim of this is to try and reduce the number of long-term empty properties in our area so we can get as many as possible back into use for local people.</p>
+</div>
+
+
+<a href="" class="">More about Council Tax exemptions</a>
+
+<hr>
+
+<h2 class="heading-large">Help to pay your bill</h2>
+<h3 class="heading-medium">Council Tax Support</h3>
+<p>If you're on a low income you could qualify for Council Tax Support. This reduces the amount of Council Tax you have to pay and will be taken straight off your bill. If you’re renting your home, you may also be able to claim Housing Benefit.</p>
+<h3 class="heading-medium">Discretionary Council Tax payments</h3>
+<p>The Welfare Support Scheme can provide extra short-term help towards paying your bill if you’re already getting Council Tax Support.</p>
+<p>For more information about Council Tax Support, Housing Benefit and the Welfare Support Scheme, please visit the Benefits section.</p>
+<p class="bold">If you've moved out of your home due to flooding, we may be able to offer you short-term assistance towards your Council Tax bill. </p>
+<p>We will need you to provide the following information in order to assess your claim for assistance:</p>
+<ul class="list list-bullet">
+    <li>The address of the property that has been flooded, and confirmation that this is your main residence.</li>
+    <li>The date the property was flooded, and the date that you moved out.</li>
+    <li>The address where you are currently living.</li>
+    <li>Whether or not your insurance covers Council Tax payments.</li>
+</ul>
+
+<p>To apply, please email <a href="mailto:counciltax@bathnes.gov.uk">counciltax@bathnes.gov.uk</a>, or write to us at Council Tax, Lewis House, Manvers Street, Bath, BA1 1JG.</p>
+<h3 class="heading-medium">If you’ve been granted a discount or exemption already...</h3>
+<p>This will be shown on the front of your Council Tax bill. You must tell us about any changes in your circumstances that may affect your entitlement to a discount or exemption, as soon as they happen. If you don't tell us you may have to pay a penalty.</p>
+<p>We periodically check accounts that have been granted discounts and exemptions, and we reserve the right to use credit reference agencies to validate claims. If we contact you to review your discount or exemption and we don’t hear back from you, we will cancel it.</p>
+<hr>
+<h2 class="heading-large">
+    Council Tax fraud
+</h2>
+<p>Council Tax fraud is when a person deliberately gives incorrect or misleading information in order to pay less or no Council Tax. This could be when a person claims to live in a single-person household when more than one person lives there, or they might claim to be a student when they are not, or claim a discount that they are not entitled to.</p>
+
+<p>If you suspect that someone is fraudulently claiming a Council Tax discount or exemption, please contact us.</p>
+
+<p>If you suspect that someone is claiming benefit fraudulently, please report it to the National Benefit Fraud Hotline online; or by calling 0800 854 440 (textphone 0800 328 0512).</p>
+
+
+</div>
+    <div class="column-one-third">
+        <div class="aside-container">
+            <aside class="aside" role="complementary">
+                <h2 class="font-medium">Related links</h2>
+
+                <nav class="aside__nav" role="navigation">
+                    <ul class="">
+                        <li><a href="paying-your-council-tax.html">Pay your council tax</a></li>
+                        <li><a href="council-tax-bands-and-amount">Council Tax bands and amounts</a></li>
+                        <li><a href="discounsandexemptions.html">Discounts & Exemptions</a></li>
+                        <li><a href="http://bathnes-prototype.surge.sh/index.html">Change of Address</a></li>
+                        <li><a href="">Information for students</a></li>
+                        <li><a href="">Problems paying your Council Tax?</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </div>
+
+	</main>
+
+
+		<footer class="global-footer">
+			<div class="footer-wrapper">
+				
+					<div class="footer-brand">
+						<div class="footer-logo">
+							<img src="/assets/patterns/images/logos/bathnes-logo-mono.png" alt="Bath &amp; North East Somerset Council" />
+						</div>
+		
+						<ul class="footer-list">
+							<li><a href="#">Accessibility</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Disclaimer</a></li>
+							<li><a href="#">Cookies</a></li>
+						</ul>
+		
+						<ul class="footer-list">
+							<li>Copyright © 2018 Bath &amp; North East Somerset Council</li>
+						</ul>
+					</div>
+		
+					<div class="social-links">
+						<h4 class="heading-small">
+							Social media and newsletter signup</h4>
+						<ul class="footer-list">
+							<li><i class="fa fa-envelope-open fa-2x" aria-hidden="true"></i> </li>
+							<li><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
+							<li><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+							<li><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></li>
+							<li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+						</ul>
+					</div>
+		
+				</div>
+			</div>
+		</footer>
+	<!-- toolkit scripts -->
+		<script src="../assets/patterns/scripts/app.js"></script>
+	<!-- /toolkit scripts -->
+
+	<!-- if no GOVUK-namespaced module has loaded we can assume JS has failed and remove the class !-->
+	<!-- <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script> -->
+</body>
+</html>

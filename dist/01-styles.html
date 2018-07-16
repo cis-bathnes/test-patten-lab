@@ -1,0 +1,1475 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Styles | BATHNES Digital Toolkit</title>
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="assets/patterns/styles/screen.css">
+	<!-- /toolkit styles -->
+
+	<!-- Fontawesome Styles -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/ui/styles/ui.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <!-- govuk_elements JS is dependant on jQuery so we've included it here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/patterns/scripts/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+</head>
+<body>
+	<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<div id="skiplink-container">
+    	<div>
+        	<a href="#content" class="skiplink">Skip to main content</a>
+    	</div>
+    </div>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="ui-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="ui-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="ui-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="ui-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="ui-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="ui-menu">
+		
+			<div class="ui-menu__header">
+				<img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset logo" />
+			</div>
+		
+			<div class="ui-controls">
+				<div class="ui-control ui-global-control" data-ui-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#ui-icon-labels" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#ui-icon-notes" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#ui-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="ui-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="01-styles.html" class="ui-menu__heading">Styles</a>
+					<ul>
+						<li>
+							<a href="01-styles.html#colours">Colours</a>
+						</li>
+						<li>
+							<a href="01-styles.html#layouts">Layouts</a>
+						</li>
+						<li>
+							<a href="01-styles.html#logos">Logos</a>
+						</li>
+						<li>
+							<a href="01-styles.html#typography">Typography</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="02-components.html" class="ui-menu__heading">Components</a>
+					<ul>
+						<li>
+							<a href="02-components.html#banners">Banners</a>
+						</li>
+						<li>
+							<a href="02-components.html#breadcrumb">Breadcrumb</a>
+						</li>
+						<li>
+							<a href="02-components.html#breakout-box">Breakout Box</a>
+						</li>
+						<li>
+							<a href="02-components.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="02-components.html#data">Data</a>
+						</li>
+						<li>
+							<a href="02-components.html#errors-validation">Errors Validation</a>
+						</li>
+						<li>
+							<a href="02-components.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="02-components.html#form-elements">Form Elements</a>
+						</li>
+						<li>
+							<a href="02-components.html#headers">Headers</a>
+						</li>
+						<li>
+							<a href="02-components.html#heroes">Heroes</a>
+						</li>
+						<li>
+							<a href="02-components.html#icons-images">Icons Images</a>
+						</li>
+						<li>
+							<a href="02-components.html#location-filter">Location Filter</a>
+						</li>
+						<li>
+							<a href="02-components.html#news">News</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="03-patterns.html" class="ui-menu__heading">Patterns</a>
+					<ul>
+						<li>
+							<a href="03-patterns.html#addresses">Addresses</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#dates">Dates</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#email-address">Email Address</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#gender-or-sex">Gender Or Sex</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#help-text">Help Text</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#names">Names</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#national-insurance-numbers">National Insurance Numbers</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#progress-indicators">Progress Indicators</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="templates.html" class="ui-menu__heading">Templates</a>
+					<ul>
+						<li>
+							<a href="templates/404.html" target="_blank">404</a>
+						</li>
+						<li>
+							<a href="templates/check-before-you-start.html" target="_blank">Check Before You Start</a>
+						</li>
+						<li>
+							<a href="templates/check-your-answers.html" target="_blank">Check Your Answers</a>
+						</li>
+						<li>
+							<a href="templates/commercial-payment-successful.html" target="_blank">Commercial Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/confirmation-pages.html" target="_blank">Confirmation Pages</a>
+						</li>
+						<li>
+							<a href="templates/council_tax.html" target="_blank">Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/council-tax-bands-and-amount.html" target="_blank">Council Tax Bands And Amount</a>
+						</li>
+						<li>
+							<a href="templates/discountsandexemptions.html" target="_blank">Discountsandexemptions</a>
+						</li>
+						<li>
+							<a href="templates/draft-homepage.html" target="_blank">Draft Homepage</a>
+						</li>
+						<li>
+							<a href="templates/education-health-care-plan.html" target="_blank">Education Health Care Plan</a>
+						</li>
+						<li>
+							<a href="templates/example-form-elements.html" target="_blank">Example Form Elements</a>
+						</li>
+						<li>
+							<a href="templates/example-typography.html" target="_blank">Example Typography</a>
+						</li>
+						<li>
+							<a href="templates/feedback-pages.html" target="_blank">Feedback Pages</a>
+						</li>
+						<li>
+							<a href="templates/find-a-school.html" target="_blank">Find A School</a>
+						</li>
+						<li>
+							<a href="templates/find-place-to-park.html" target="_blank">Find Place To Park</a>
+						</li>
+						<li>
+							<a href="templates/grid.html" target="_blank">Grid</a>
+						</li>
+						<li>
+							<a href="templates/hero-template.html" target="_blank">Hero Template</a>
+						</li>
+						<li>
+							<a href="templates/hollies.html" target="_blank">Hollies</a>
+						</li>
+						<li>
+							<a href="templates/manvers-street-car-park.html" target="_blank">Manvers Street Car Park</a>
+						</li>
+						<li>
+							<a href="templates/parking-travel.html" target="_blank">Parking Travel</a>
+						</li>
+						<li>
+							<a href="templates/paying-your-council-tax.html" target="_blank">Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/payment-successful.html" target="_blank">Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/problems-paying-your-council-tax.html" target="_blank">Problems Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/progress-notication-tool.html" target="_blank">Progress Notication Tool</a>
+						</li>
+						<li>
+							<a href="templates/properties-listing.html" target="_blank">Properties Listing</a>
+						</li>
+						<li>
+							<a href="templates/question-pages.html" target="_blank">Question Pages</a>
+						</li>
+						<li>
+							<a href="templates/school-details.html" target="_blank">School Details</a>
+						</li>
+						<li>
+							<a href="templates/sports-and-leisure-centre.html" target="_blank">Sports And Leisure Centre</a>
+						</li>
+						<li>
+							<a href="templates/start-pages.html" target="_blank">Start Pages</a>
+						</li>
+						<li>
+							<a href="templates/task-list-pages.html" target="_blank">Task List Pages</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="ui-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#getting-started">Getting Started</a>
+						</li>
+						<li>
+							<a href="docs.html#including-in-projects">Including In Projects</a>
+						</li>
+						<li>
+							<a href="docs.html#updating-submodules">Updating Submodules</a>
+						</li>
+						<li>
+							<a href="docs.html#working-with-the-toolkit">Working With The Toolkit</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="ui-container">
+			<div class="ui-control-bar">
+				<div class="ui-control ui-menu-toggle">
+					<svg>
+						<use xlink:href="#ui-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+	<main id="content" role="main">
+		
+<h1 class="heading-large" data-ui-toggle="labels">Styles</h1>
+<p data-ui-toggle="labels">Styles comprise of the core parts of the B&amp;NES brand such as colour, typography and the B&amp;NES logos.</p>
+<p data-ui-toggle="labels">Also included is a grid for 2, 3 and 4 column layouts.</p>
+
+
+<div class="ui-item-group" id="colours">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Colours</h2>
+	</div>
+		<div class="ui-item-group" id="colours.colour-palette">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Colour Palette</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-primary"></div>
+	<ul>
+		<li><b>#00aeef</b></li>
+		<li>$bathnes-primary</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-secondary"></div>
+	<ul>
+		<li><b>#00b259</b></li>
+		<li>$bathnes-secondary</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-purple"></div>
+	<ul>
+		<li><b>#5261AC</b></li>
+		<li>$bathnes-purple</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-yellow"></div>
+	<ul>
+		<li><b>#ffbf47</b></li>
+		<li>$bathnes-yellow</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-red"></div>
+	<ul>
+		<li><b>#AF122A</b></li>
+		<li>$bathnes-red</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-grey-1"></div>
+	<ul>
+		<li><b>#6f777b</b></li>
+		<li>$bathnes-grey-1</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-grey-2"></div>
+	<ul>
+		<li><b>#bfc1c3</b></li>
+		<li>$bathnes-grey-2</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-grey-3"></div>
+	<ul>
+		<li><b>#dee0e2</b></li>
+		<li>$bathnes-grey-3</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<div class="swatch swatch-bathnes-grey-4"></div>
+	<ul>
+		<li><b>#f8f8f8</b></li>
+		<li>$bathnes-grey-4</li>
+	</ul>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-primary&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#00aeef&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-primary&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-secondary&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#00b259&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-secondary&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-purple&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#5261AC&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-purple&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-yellow&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#ffbf47&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-yellow&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-red&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#AF122A&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-red&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-grey-1&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#6f777b&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-grey-1&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-grey-2&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#bfc1c3&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-grey-2&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-grey-3&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#dee0e2&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-grey-3&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-bathnes-grey-4&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#f8f8f8&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$bathnes-grey-4&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="colours.colour-uses">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Colour Uses</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use Sass variables in case colour values need to be updated – find these in colours.scss file.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="swatch-wrapper">
+	<h4 class="heading-small">Text</h4>
+
+	<div class="swatch swatch-text-colour"></div>
+	<ul>
+		<li><b>#0B0C0C</b></li>
+		<li>$text-colour</li>
+	</ul>
+
+	<div class="swatch swatch-secondary-text-colour"></div>
+	<ul>
+		<li><b>#6F777B</b></li>
+		<li>$secondary-text-colour</li>
+	</ul>
+
+	<div class="swatch swatch-page-colour"></div>
+
+	<ul>
+		<li><b>#FFFFFF</b></li>
+		<li>$page-colour</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<h4 class="heading-small">Links</h4>
+
+	<div class="swatch swatch-link-colour"></div>
+	<ul>
+		<li><b>#00728F</b></li>
+		<li>$link-colour</li>
+	</ul>
+
+	<div class="swatch swatch-link-hover-colour"></div>
+	<ul>
+		<li><b>#009bc2</b></li>
+		<li>$link-hover-colour</li>
+	</ul>
+
+	<div class="swatch swatch-link-visited-colour"></div>
+	<ul>
+		<li><b>#5461AC</b></li>
+		<li>$link-visited-colour</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<h4 class="heading-small">Backgrounds</h4>
+
+	<div class="swatch swatch-border-colour"></div>
+	<ul>
+		<li><b>#BFC1C3</b></li>
+		<li>$border-colour</li>
+	</ul>
+
+	<div class="swatch swatch-panel-colour"></div>
+	<ul>
+		<li><b>#DEE0E2</b></li>
+		<li>$panel-colour</li>
+	</ul>
+
+	<div class="swatch swatch-highlight-colour"></div>
+	<ul>
+		<li><b>#F8F8F8</b></li>
+		<li>$highlight-colour</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<h4 class="heading-small">Buttons</h4>
+
+	<div class="swatch swatch-button-colour"></div>
+	<ul>
+		<li><b>#00663D</b></li>
+		<li>$button-colour</li>
+	</ul>
+
+	<div class="swatch swatch-button-hover-colour"></div>
+	<ul>
+		<li><b>#004d2e</b></li>
+		<li>$button-hover-colour</li>
+	</ul>
+
+	<div class="swatch swatch-page-colour"></div>
+	<ul>
+		<li><b>#ffffff</b></li>
+		<li>Button text colour</li>
+	</ul>
+</div>
+
+<div class="swatch-wrapper">
+	<h4 class="heading-small">Status</h4>
+	<div class="swatch swatch-focus-colour"></div>
+	<ul>
+		<li><b>#ffdd00</b></li>
+		<li>$focus-colour</li>
+	</ul>
+
+	<div class="swatch swatch-error-colour"></div>
+	<ul>
+		<li><b>#AF122A</b></li>
+		<li>$error-colour</li>
+	</ul>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;h4 class&#x3D;&quot;heading-small&quot;&gt;Text&lt;/h4&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-text-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#0B0C0C&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$text-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-secondary-text-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#6F777B&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$secondary-text-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-page-colour&quot;&gt;&lt;/div&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#FFFFFF&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$page-colour&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;h4 class&#x3D;&quot;heading-small&quot;&gt;Links&lt;/h4&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-link-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#00728F&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$link-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-link-hover-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#009bc2&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$link-hover-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-link-visited-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#5461AC&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$link-visited-colour&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;h4 class&#x3D;&quot;heading-small&quot;&gt;Backgrounds&lt;/h4&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-border-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#BFC1C3&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$border-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-panel-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#DEE0E2&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$panel-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-highlight-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#F8F8F8&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$highlight-colour&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;h4 class&#x3D;&quot;heading-small&quot;&gt;Buttons&lt;/h4&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-button-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#00663D&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$button-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-button-hover-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#004d2e&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$button-hover-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-page-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#ffffff&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;Button text colour&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;swatch-wrapper&quot;&gt;
+	&lt;h4 class&#x3D;&quot;heading-small&quot;&gt;Status&lt;/h4&gt;
+	&lt;div class&#x3D;&quot;swatch swatch-focus-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#ffdd00&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$focus-colour&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class&#x3D;&quot;swatch swatch-error-colour&quot;&gt;&lt;/div&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;#AF122A&lt;/b&gt;&lt;/li&gt;
+		&lt;li&gt;$error-colour&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="layouts">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Layouts</h2>
+	</div>
+		<div class="ui-item-group" id="layouts.01-full-width">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Full Width</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Introduce columns as the content requires it – base column ratios on halves, thirds or quarters of the page width</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="grid-row">
+
+	<div class="column-full">
+		<p>Content</p>
+	</div>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+
+	&lt;div class&#x3D;&quot;column-full&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="layouts.02-halves">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Halves</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="grid-row">
+
+	<div class="column-one-half">
+		<p>Content</p>
+	</div>
+
+	<div class="column-one-half">
+		<p>Content</p>
+	</div>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+
+	&lt;div class&#x3D;&quot;column-one-half&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-one-half&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="layouts.03-thirds">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Thirds</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="grid-row">
+
+	<div class="column-one-third">
+		<p>Content</p>
+	</div>
+
+	<div class="column-one-third">
+		<p>Content</p>
+	</div>
+
+	<div class="column-one-third">
+		<p>Content</p>
+	</div>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+
+	&lt;div class&#x3D;&quot;column-one-third&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-one-third&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-one-third&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="layouts.04-one-third-two-thirds">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">One Third Two Thirds</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="grid-row">
+
+	<div class="column-one-third">
+		<p>Content</p>
+	</div>
+
+	<div class="column-two-thirds">
+		<p>Content</p>
+	</div>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+
+	&lt;div class&#x3D;&quot;column-one-third&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-two-thirds&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="layouts.05-two-thirds-one-third">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Two Thirds One Third</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="grid-row">
+
+	<div class="column-two-thirds">
+		<p>Content</p>
+	</div>
+
+	<div class="column-one-third">
+		<p>Content</p>
+	</div>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+
+	&lt;div class&#x3D;&quot;column-two-thirds&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-one-third&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="layouts.06-quarters">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Quarters</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="grid-row">
+
+	<div class="column-one-quarter">
+		<p>Content</p>
+	</div>
+
+	<div class="column-one-quarter">
+		<p>Content</p>
+	</div>
+
+	<div class="column-one-quarter">
+		<p>Content</p>
+	</div>
+
+	<div class="column-one-quarter">
+		<p>Content</p>
+	</div>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+
+	&lt;div class&#x3D;&quot;column-one-quarter&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-one-quarter&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-one-quarter&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;div class&#x3D;&quot;column-one-quarter&quot;&gt;
+		&lt;p&gt;Content&lt;/p&gt;
+	&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="logos">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Logos</h2>
+	</div>
+		<div class="ui-item-group" id="logos.colour-logo">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Colour Logo</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset logo" />
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;img src&#x3D;&quot;/assets/patterns/images/logos/bathnes-logo-colour.png&quot; alt&#x3D;&quot;Bath &amp; North East Somerset logo&quot; /&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="logos.gold-logo">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Gold Logo</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Used for heritage sites</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<img src="/assets/patterns/images/logos/bathnes-logo-gold.png" alt="Bath & North East Somerset logo" />
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;img src&#x3D;&quot;/assets/patterns/images/logos/bathnes-logo-gold.png&quot; alt&#x3D;&quot;Bath &amp; North East Somerset logo&quot; /&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="logos.mono-logo">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Mono Logo</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<img src="/assets/patterns/images/logos/bathnes-logo-mono.png" alt="Bath & North East Somerset logo" />
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;img src&#x3D;&quot;/assets/patterns/images/logos/bathnes-logo-mono.png&quot; alt&#x3D;&quot;Bath &amp; North East Somerset logo&quot; /&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="logos.white-logo">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">White Logo</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="ui-item-group__reverse">
+	<img src="/assets/patterns/images/logos/bathnes-logo-white.png" alt="Bath & North East Somerset logo" />
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;ui-item-group__reverse&quot;&gt;
+	&lt;img src&#x3D;&quot;/assets/patterns/images/logos/bathnes-logo-white.png&quot; alt&#x3D;&quot;Bath &amp; North East Somerset logo&quot; /&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="typography">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Typography</h2>
+	</div>
+		<div class="ui-item-group" id="typography.01-headings">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Headings</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use GDS Transport Website Bold</li>
+<li>Use sentence case for headings</li>
+<li>Use headings consistently to create a clear hierarchy</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<h1 class="heading-xlarge">A 48px Bold heading</h1>
+
+<h2 class="heading-large">A 36px Bold heading</h2>
+
+<h3 class="heading-medium">A 24px Bold heading</h3>
+
+<h4 class="heading-small">A 19px Bold heading</h4>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;h1 class&#x3D;&quot;heading-xlarge&quot;&gt;A 48px Bold heading&lt;/h1&gt;
+
+&lt;h2 class&#x3D;&quot;heading-large&quot;&gt;A 36px Bold heading&lt;/h2&gt;
+
+&lt;h3 class&#x3D;&quot;heading-medium&quot;&gt;A 24px Bold heading&lt;/h3&gt;
+
+&lt;h4 class&#x3D;&quot;heading-small&quot;&gt;A 19px Bold heading&lt;/h4&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="typography.02-lead-paragraph">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Lead Paragraph</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use 24px for a lead paragraph</li>
+<li>There should only be one lead paragraph per page</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<p class="lede">
+	A 24px lead paragraph with some longer text so that you can see how it wraps.
+</p>
+
+<p>
+	A 19px body copy paragraph with some longer text so that you can see how it wraps.
+</p>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;p class&#x3D;&quot;lede&quot;&gt;
+	A 24px lead paragraph with some longer text so that you can see how it wraps.
+&lt;/p&gt;
+
+&lt;p&gt;
+	A 19px body copy paragraph with some longer text so that you can see how it wraps.
+&lt;/p&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="typography.03-body-copy">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Body Copy</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Avoid using bold and italics</li>
+<li>Use 19px for body copy – 16px for smaller screens</li>
+<li>Use smaller sizes only if there’s a user need (eg 16px, 14px, 12px)</li>
+<li>Make sure lines of text don’t exceed 75 characters, as they become harder to read beyond that point</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<p>
+	A 19px body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+</p>
+
+<p class="font-xsmall">
+	A 16px supporting text paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+</p>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;p&gt;
+	A 19px body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+&lt;/p&gt;
+
+&lt;p class&#x3D;&quot;font-xsmall&quot;&gt;
+	A 16px supporting text paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+&lt;/p&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="typography.04-links">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Links</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Links within body copy should be blue and underlined</li>
+<li>Links without surrounding text should not have a full stop at the end</li>
+<li>Link colours can be found in the colour palette</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<p>
+	<a href="#">A 19px link without surrounding text</a>
+</p>
+
+<p>
+	<a href="#">A 19px body copy link</a> with surrounding text which shows the link in more context.
+</p>
+
+<a href="#" class="link-back">Back</a>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;p&gt;
+	&lt;a href&#x3D;&quot;#&quot;&gt;A 19px link without surrounding text&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;a href&#x3D;&quot;#&quot;&gt;A 19px body copy link&lt;/a&gt; with surrounding text which shows the link in more context.
+&lt;/p&gt;
+
+&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;link-back&quot;&gt;Back&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="typography.05-lists">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Lists</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>List items start with a lowercase letter and have no full stop at the end</li>
+<li>See the style guide to check how to punctuate numbered lists</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<ul class="list list-bullet">
+	<li>here is a bulleted list</li>
+	<li>this is another item in the list</li>
+	<li>and another item with a bit more text</li>
+</ul>
+
+<ol class="list list-number">
+	<li>Understand that this is a numbered list.</li>
+	<li>Follow the second step in this numbered list.</li>
+	<li>Make sure each item is a full sentence ending with a full stop.</li>
+</ol>
+
+<ul class="list">
+	<li><a href="#">Related link</a></li>
+	<li><a href="#">Another related link</a></li>
+	<li><a href="#">And another link</a></li>
+	<li><a href="#" class="bold-xsmall" aria-label="View more [title of section]">View more</a></li>
+</ul>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;ul class&#x3D;&quot;list list-bullet&quot;&gt;
+	&lt;li&gt;here is a bulleted list&lt;/li&gt;
+	&lt;li&gt;this is another item in the list&lt;/li&gt;
+	&lt;li&gt;and another item with a bit more text&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class&#x3D;&quot;list list-number&quot;&gt;
+	&lt;li&gt;Understand that this is a numbered list.&lt;/li&gt;
+	&lt;li&gt;Follow the second step in this numbered list.&lt;/li&gt;
+	&lt;li&gt;Make sure each item is a full sentence ending with a full stop.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul class&#x3D;&quot;list&quot;&gt;
+	&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Related link&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Another related link&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;And another link&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;bold-xsmall&quot; aria-label&#x3D;&quot;View more [title of section]&quot;&gt;View more&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="typography.06-inset-text">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Inset Text</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use bordered inset text to draw attention to important content on the page.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="panel panel-border-wide">
+	<p>
+		It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+	</p>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;panel panel-border-wide&quot;&gt;
+	&lt;p&gt;
+		It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+	&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="typography.07-legal-text">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Legal Text</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="notice">
+	<i class="icon icon-important">
+        <span class="visually-hidden">Warning</span>
+    </i>
+	<strong class="bold-small">
+        You can be fined up to £5,000 if you don’t register.
+    </strong>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;notice&quot;&gt;
+	&lt;i class&#x3D;&quot;icon icon-important&quot;&gt;
+        &lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Warning&lt;/span&gt;
+    &lt;/i&gt;
+	&lt;strong class&#x3D;&quot;bold-small&quot;&gt;
+        You can be fined up to £5,000 if you don’t register.
+    &lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="typography.08-hidden-text">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Hidden Text</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use this to make your page easier to scan, only showing contextual information when required.</li>
+<li>Click on &quot;Help with nationality&quot; to see how this works.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<details>
+
+	<summary><span class="summary">Help with nationality</span></summary>
+
+	<div class="panel panel-border-narrow">
+
+		<p>
+			If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+		</p>
+
+		<p>
+			We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+		</p>
+
+	</div>
+
+</details>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;details&gt;
+
+	&lt;summary&gt;&lt;span class&#x3D;&quot;summary&quot;&gt;Help with nationality&lt;/span&gt;&lt;/summary&gt;
+
+	&lt;div class&#x3D;&quot;panel panel-border-narrow&quot;&gt;
+
+		&lt;p&gt;
+			If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+		&lt;/p&gt;
+
+		&lt;p&gt;
+			We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+		&lt;/p&gt;
+
+	&lt;/div&gt;
+
+&lt;/details&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+	</main>
+
+
+		</div>
+		<script src="assets/ui/scripts/ui.js"></script>
+
+	<!-- toolkit scripts -->
+		<script src="assets/patterns/scripts/app.js"></script>
+	<!-- /toolkit scripts -->
+
+	<!-- if no GOVUK-namespaced module has loaded we can assume JS has failed and remove the class !-->
+	<!-- <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script> -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+---
+title: Documentation | BATHNES Digital Toolkit
+fabricator: true
+---
+
+<h1 class="heading-large">Documentation</h1>
+<p>Documentation and guidance for the toolkit.</p>
+<p>If you need help contact <a href="mailto:cis@bathnes.gov.uk">cis@bathnes.gov.uk</a></p>
+
+{{#each docs}}
+
+	<div class="ui-item-group ui-typeset">
+		<h2 id="{{@key}}" class="heading-medium ui-item-heading"><a href="#{{@key}}">{{name}}</a></h2>
+		{{{content}}}
+	</div>
+
+{{/each}}

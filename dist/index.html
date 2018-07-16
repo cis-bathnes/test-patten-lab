@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Overview | BATHNES Digital Toolkit</title>
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="assets/patterns/styles/screen.css">
+	<!-- /toolkit styles -->
+
+	<!-- Fontawesome Styles -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/ui/styles/ui.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <!-- govuk_elements JS is dependant on jQuery so we've included it here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/patterns/scripts/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+</head>
+<body>
+	<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<div id="skiplink-container">
+    	<div>
+        	<a href="#content" class="skiplink">Skip to main content</a>
+    	</div>
+    </div>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="ui-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="ui-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="ui-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="ui-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="ui-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="ui-menu">
+		
+			<div class="ui-menu__header">
+				<img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset logo" />
+			</div>
+		
+			<div class="ui-controls">
+				<div class="ui-control ui-global-control" data-ui-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#ui-icon-labels" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#ui-icon-notes" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#ui-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="ui-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="01-styles.html" class="ui-menu__heading">Styles</a>
+					<ul>
+						<li>
+							<a href="01-styles.html#colours">Colours</a>
+						</li>
+						<li>
+							<a href="01-styles.html#layouts">Layouts</a>
+						</li>
+						<li>
+							<a href="01-styles.html#logos">Logos</a>
+						</li>
+						<li>
+							<a href="01-styles.html#typography">Typography</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="02-components.html" class="ui-menu__heading">Components</a>
+					<ul>
+						<li>
+							<a href="02-components.html#banners">Banners</a>
+						</li>
+						<li>
+							<a href="02-components.html#breadcrumb">Breadcrumb</a>
+						</li>
+						<li>
+							<a href="02-components.html#breakout-box">Breakout Box</a>
+						</li>
+						<li>
+							<a href="02-components.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="02-components.html#data">Data</a>
+						</li>
+						<li>
+							<a href="02-components.html#errors-validation">Errors Validation</a>
+						</li>
+						<li>
+							<a href="02-components.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="02-components.html#form-elements">Form Elements</a>
+						</li>
+						<li>
+							<a href="02-components.html#headers">Headers</a>
+						</li>
+						<li>
+							<a href="02-components.html#heroes">Heroes</a>
+						</li>
+						<li>
+							<a href="02-components.html#icons-images">Icons Images</a>
+						</li>
+						<li>
+							<a href="02-components.html#location-filter">Location Filter</a>
+						</li>
+						<li>
+							<a href="02-components.html#news">News</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="03-patterns.html" class="ui-menu__heading">Patterns</a>
+					<ul>
+						<li>
+							<a href="03-patterns.html#addresses">Addresses</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#dates">Dates</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#email-address">Email Address</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#gender-or-sex">Gender Or Sex</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#help-text">Help Text</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#names">Names</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#national-insurance-numbers">National Insurance Numbers</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#progress-indicators">Progress Indicators</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="templates.html" class="ui-menu__heading">Templates</a>
+					<ul>
+						<li>
+							<a href="templates/404.html" target="_blank">404</a>
+						</li>
+						<li>
+							<a href="templates/check-before-you-start.html" target="_blank">Check Before You Start</a>
+						</li>
+						<li>
+							<a href="templates/check-your-answers.html" target="_blank">Check Your Answers</a>
+						</li>
+						<li>
+							<a href="templates/commercial-payment-successful.html" target="_blank">Commercial Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/confirmation-pages.html" target="_blank">Confirmation Pages</a>
+						</li>
+						<li>
+							<a href="templates/council_tax.html" target="_blank">Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/council-tax-bands-and-amount.html" target="_blank">Council Tax Bands And Amount</a>
+						</li>
+						<li>
+							<a href="templates/discountsandexemptions.html" target="_blank">Discountsandexemptions</a>
+						</li>
+						<li>
+							<a href="templates/draft-homepage.html" target="_blank">Draft Homepage</a>
+						</li>
+						<li>
+							<a href="templates/education-health-care-plan.html" target="_blank">Education Health Care Plan</a>
+						</li>
+						<li>
+							<a href="templates/example-form-elements.html" target="_blank">Example Form Elements</a>
+						</li>
+						<li>
+							<a href="templates/example-typography.html" target="_blank">Example Typography</a>
+						</li>
+						<li>
+							<a href="templates/feedback-pages.html" target="_blank">Feedback Pages</a>
+						</li>
+						<li>
+							<a href="templates/find-a-school.html" target="_blank">Find A School</a>
+						</li>
+						<li>
+							<a href="templates/find-place-to-park.html" target="_blank">Find Place To Park</a>
+						</li>
+						<li>
+							<a href="templates/grid.html" target="_blank">Grid</a>
+						</li>
+						<li>
+							<a href="templates/hero-template.html" target="_blank">Hero Template</a>
+						</li>
+						<li>
+							<a href="templates/hollies.html" target="_blank">Hollies</a>
+						</li>
+						<li>
+							<a href="templates/manvers-street-car-park.html" target="_blank">Manvers Street Car Park</a>
+						</li>
+						<li>
+							<a href="templates/parking-travel.html" target="_blank">Parking Travel</a>
+						</li>
+						<li>
+							<a href="templates/paying-your-council-tax.html" target="_blank">Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/payment-successful.html" target="_blank">Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/problems-paying-your-council-tax.html" target="_blank">Problems Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/progress-notication-tool.html" target="_blank">Progress Notication Tool</a>
+						</li>
+						<li>
+							<a href="templates/properties-listing.html" target="_blank">Properties Listing</a>
+						</li>
+						<li>
+							<a href="templates/question-pages.html" target="_blank">Question Pages</a>
+						</li>
+						<li>
+							<a href="templates/school-details.html" target="_blank">School Details</a>
+						</li>
+						<li>
+							<a href="templates/sports-and-leisure-centre.html" target="_blank">Sports And Leisure Centre</a>
+						</li>
+						<li>
+							<a href="templates/start-pages.html" target="_blank">Start Pages</a>
+						</li>
+						<li>
+							<a href="templates/task-list-pages.html" target="_blank">Task List Pages</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="ui-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#getting-started">Getting Started</a>
+						</li>
+						<li>
+							<a href="docs.html#including-in-projects">Including In Projects</a>
+						</li>
+						<li>
+							<a href="docs.html#updating-submodules">Updating Submodules</a>
+						</li>
+						<li>
+							<a href="docs.html#working-with-the-toolkit">Working With The Toolkit</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="ui-container">
+			<div class="ui-control-bar">
+				<div class="ui-control ui-menu-toggle">
+					<svg>
+						<use xlink:href="#ui-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+	<main id="content" role="main">
+		<div class="ui-typeset">
+  <h1 class="heading-large">BATHNES Digital Toolkit</h1>
+  <p>A digital toolkit for Bath and North East Somerset Council, created to enable internal and external developers to create high quality experiences more easily.</p>
+  <p>This toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts. It contains real working examples, code snippets, documentation, and style guidelines.</p>
+  <h3 class="heading-medium">Usage</h3>
+  <p>The toolkit is based around the following elements, in order of granularity:</p>
+  <ul class="list list-bullet">
+  	<li><strong>Styles</strong>: The core parts of the design and brand; colour, logos, layouts, typography</li>
+  	<li><strong>Components</strong>: Groups of elements that can be used in a design</li>
+  	<li><strong>Patterns</strong>: Design solutions to common problems</li>
+  	<li><strong>Templates</strong>: Example page templates</li>
+  </ul>
+  <p>To update or make changes run <code>npm install</code> in the root folder on your local machine will output changes from the <code>src</code> folder to the <code>dist folder</code>. The <code>dist</code> folder can then be pushed to a live server.</p>
+  <h3 class="heading-medium">Help</h3>
+  <p>For help in using the toolkit please see the <a href="docs.html">Documentation</a></p>
+  <p>For more information, support etc. contact <a href="mailto:cis@bathnes.gov.uk?subject=query%20from%20the%20B&amp;NES%20toolkit">cis@bathnes.gov.uk</a></p>
+  <hr>
+  <h4 class="heading-medium">Why not just a link to CSS and JS files?</h4>
+  <p>Because by providing a design system made up of styles, compononents and patterns we can create high quality web sites that to a standard. They will look similar, work the same and provide people using it with a familiar experience regardles of the touchpoint. It will also speed up development as you can copy HTML from this toolkit and drop it into your designs. It's been tested in multiple browsers, devices and for accessibility to <a href="https://www.w3.org/TR/WCAG20/">AA level</a>.</p>
+  <hr>
+  <h4>How is this used by https://style.bathnes.gov.uk/?</h4>
+  <p><a href="https://style.bathnes.gov.uk/">https://style.bathnes.gov.uk/</a> is the publicly available online reference site for this toolkit. It shows the contents of the <code>dist</code> folder.</p>
+  <hr>
+  <h4>Folder structure</h4>
+  <p>Within the repo we have the following folder structure:</p>
+  <ul>
+    <li><strong>dist</strong> - holds the processed code for the public toolkit and should be uploaded to <a href="https://style.bathnes.gov.uk/">https://style.bathnes.gov.uk</a></li>
+    <li><strong>govuk_elements</strong> - <a href="https://github.com/alphagov/govuk_elements">The GovUK Elements</a> added as a GIT submodule</li>
+    <li><strong>govuk_frontend_toolkit</strong> - The <a href="https://github.com/alphagov/govuk_frontend_toolkit">GovUK Frontend Toolkit</a> added as a GIT submodule</li>
+    <li><strong>node_modules</strong> - holds node files used to work the toolkit when editing it. Updated by running <code>npm install</code></li>
+    <li><strong>src</strong> - the working folder for the toolkit</li>
+  </ul>
+  <p>To update or edit the toolkit you'll need to run <code>npm install</code> and work out of the src folder. Lets look at its contents:</p>
+  <ul>
+    <li><strong>assets</strong>
+      <ul>
+        <li><strong>patterns</strong>
+          <ul>
+            <li><strong>images</strong> - holds images for the toolkit</li>
+            <li><strong>scripts</strong> - holds JavaScript used in the toolkit
+              <ul>
+                <li><strong>app.js</strong> - file used for JS, also imports JS from the GovUK Elements and Frontend Toolkit repos. Outputs to the dist folder for inclusion in projects.</li>
+              </ul>
+            </li>
+            <li><strong>styles</strong>
+              <ul>
+                <li><strong>components</strong> - SCSS files for components</li>
+                <li><strong>core</strong> - core SCSS files for accessibility, colour, and forms that builds upon the GovUK assets</li>
+                <li><strong>design-patterns</strong> - SCSS files for specific design patterns</li>
+              </ul>
+              <li><strong>screen.scss</strong> - files used to pull together all SCSS files including those from the GovUK Elements and Frontend Toolkit. Outputs to the dist folder for inclusion in projects.</li>
+            </li>
+          </ul>
+        </li>
+        <li><strong>ui</strong> - contains SCSS and JS for the toolkit framework including the navigation menu and style used to present and explain the styles, components and patterns within.</li>
+      </ul>
+    </li>
+    <li><strong>Data</strong> - holds .yml files to store data models in.</li>
+    <li><strong>Docs</strong> - contains Markdown files to appear in the docs section of the toolkit.</li>
+    <li><strong>Materials - contains all HTML for the toolkit, split into the following:</strong>
+      <ul>
+        <li><strong>01-styles</strong> - holds all HTML for styles including colours, layouts, logos and typography</li>
+        <li><strong>02-components</strong> - holds all HTML for components</li>
+        <li><strong>03-patterns</strong> - holds all HTML for patterns</li>
+      </ul>
+    </li>
+    <li><strong>Views</strong> - contains full HTML pages for the toolkit
+      <ul>
+        <li><strong>layouts</strong> - holds page layouts for the toolkit (default.html) plus commercial and hero HTML pages</li>
+        <li><strong>templates</strong> - holds HTML templates we've included from GovUK assets</li>
+        <li><strong>01-styles.html</strong> - page that shows all styles</li>
+        <li><strong>02-components.html</strong> - page that shows all components</li>
+        <li><strong>03-patterns.html</strong> - page that shows all patterns</li>
+        <li><strong>docs.html</strong> - page that shows all docs</li>
+        <li><strong>index.html</strong> - toolkit homepage (this page)</li>
+        <li><strong>templates.html</strong> - page that shows all the standalone templates</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+	</main>
+
+
+		</div>
+		<script src="assets/ui/scripts/ui.js"></script>
+
+	<!-- toolkit scripts -->
+		<script src="assets/patterns/scripts/app.js"></script>
+	<!-- /toolkit scripts -->
+
+	<!-- if no GOVUK-namespaced module has loaded we can assume JS has failed and remove the class !-->
+	<!-- <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script> -->
+</body>
+</html>

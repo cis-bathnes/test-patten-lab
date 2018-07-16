@@ -1,0 +1,121 @@
+// find a car park 
+
+.listing.car-parks {
+  border-bottom: solid 1px #ccc;
+  padding: 1em .5em; 
+}
+
+.breakout-box-twitter-update {
+  background: $bathnes-red;
+  color: $bathnes-white;
+  border: none;
+  position: relative;
+
+  i{
+    position: absolute;
+    top:10px;
+    right:10px;
+  }
+
+}
+
+.breakout-box{
+
+h4.font-medium {
+  margin-top: .5em;}
+
+
+
+.clearfix{
+  clear: both;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include media($site-width) {
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+    .form-group {
+      float:  left;
+      width:  100%;
+      background:  #ffffffbd;
+      padding: 1em;
+      @include media($site-width){
+      width: 31%;
+      }
+    }
+
+    .form-control{
+      width: 100%;
+    }
+
+    }
+   
+}
+
+.breakout-box.breakout-box-location {
+  margin: 0;
+}
+
+.location-wrapper{
+  background: $link-colour;
+
+  .breadcrumb a{
+    color: $bathnes-white;
+  }
+
+  .container{
+    padding-bottom:0; 
+  }
+}
+
+
+.breakout-box.breakout-box-location {background: #f4f4f461;border:  none;}
+
+
+// Footer
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    @media (min-width: 1020px){
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between;
+}
+
+.footer-brand{
+  margin-top: 2em;
+  @include media(desktop){
+    margin-top: 0;
+  }
+}
+
+.footer-logo{
+  width: 100%;
+    padding: 0;
+    @include media(desktop){
+      padding: 0;
+    }
+  img{
+    width: 128.4px;
+  }
+}
+}
+
+// container to be used as a wrapper outside of the main container id
+
+.container{
+  @extend %site-width-container;
+  @extend %contain-floats;
+  padding-bottom: $gutter;
+
+  @include media(desktop) {
+    padding-bottom: $gutter * 3;
+  }
+
+}

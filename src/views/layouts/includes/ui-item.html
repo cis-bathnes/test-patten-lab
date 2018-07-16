@@ -1,0 +1,22 @@
+<div class="ui-item-group" id="{{@key}}">
+
+{{#if items}}
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">{{name}}</h2>
+	</div>
+	{{#each items}}
+		<div class="ui-item-group" id="{{@key}}">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">{{name}}</h3>
+				{{> ui-item-controls}}
+			</div>{{> ui-item-content this}}
+		</div>
+	{{/each}}
+{{else}}
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">{{name}}</h2>
+		{{> ui-item-controls}}
+	</div>{{> ui-item-content this}}
+{{/if}}
+
+</div>

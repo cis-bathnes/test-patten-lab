@@ -1,0 +1,22 @@
+---
+notes: |
+    If you don’t need an exact date and you’re asking for one that users might struggle to remember (for example ‘the date you lost your passport’), make sure you allow them to enter an approximate date, like ‘June 1983’.
+---
+
+<div class="form-group">
+    <fieldset>
+        <legend>
+            <span class="form-hint">If you're not sure tell is roughly when you think you last had it</span>
+        </legend>
+        <div class="form-date">
+            <div class="form-group form-group-month">
+                <label class="form-label" for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+                <label class="form-label" for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+        </div>
+    </fieldset>
+</div>

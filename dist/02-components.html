@@ -1,0 +1,3351 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Components | BATHNES Digital Toolkit</title>
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="assets/patterns/styles/screen.css">
+	<!-- /toolkit styles -->
+
+	<!-- Fontawesome Styles -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/ui/styles/ui.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <!-- govuk_elements JS is dependant on jQuery so we've included it here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/patterns/scripts/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+</head>
+<body>
+	<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<div id="skiplink-container">
+    	<div>
+        	<a href="#content" class="skiplink">Skip to main content</a>
+    	</div>
+    </div>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="ui-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="ui-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="ui-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="ui-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="ui-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="ui-menu">
+		
+			<div class="ui-menu__header">
+				<img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset logo" />
+			</div>
+		
+			<div class="ui-controls">
+				<div class="ui-control ui-global-control" data-ui-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#ui-icon-labels" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#ui-icon-notes" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#ui-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="ui-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="01-styles.html" class="ui-menu__heading">Styles</a>
+					<ul>
+						<li>
+							<a href="01-styles.html#colours">Colours</a>
+						</li>
+						<li>
+							<a href="01-styles.html#layouts">Layouts</a>
+						</li>
+						<li>
+							<a href="01-styles.html#logos">Logos</a>
+						</li>
+						<li>
+							<a href="01-styles.html#typography">Typography</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="02-components.html" class="ui-menu__heading">Components</a>
+					<ul>
+						<li>
+							<a href="02-components.html#banners">Banners</a>
+						</li>
+						<li>
+							<a href="02-components.html#breadcrumb">Breadcrumb</a>
+						</li>
+						<li>
+							<a href="02-components.html#breakout-box">Breakout Box</a>
+						</li>
+						<li>
+							<a href="02-components.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="02-components.html#data">Data</a>
+						</li>
+						<li>
+							<a href="02-components.html#errors-validation">Errors Validation</a>
+						</li>
+						<li>
+							<a href="02-components.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="02-components.html#form-elements">Form Elements</a>
+						</li>
+						<li>
+							<a href="02-components.html#headers">Headers</a>
+						</li>
+						<li>
+							<a href="02-components.html#heroes">Heroes</a>
+						</li>
+						<li>
+							<a href="02-components.html#icons-images">Icons Images</a>
+						</li>
+						<li>
+							<a href="02-components.html#location-filter">Location Filter</a>
+						</li>
+						<li>
+							<a href="02-components.html#news">News</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="03-patterns.html" class="ui-menu__heading">Patterns</a>
+					<ul>
+						<li>
+							<a href="03-patterns.html#addresses">Addresses</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#dates">Dates</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#email-address">Email Address</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#gender-or-sex">Gender Or Sex</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#help-text">Help Text</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#names">Names</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#national-insurance-numbers">National Insurance Numbers</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#progress-indicators">Progress Indicators</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="templates.html" class="ui-menu__heading">Templates</a>
+					<ul>
+						<li>
+							<a href="templates/404.html" target="_blank">404</a>
+						</li>
+						<li>
+							<a href="templates/check-before-you-start.html" target="_blank">Check Before You Start</a>
+						</li>
+						<li>
+							<a href="templates/check-your-answers.html" target="_blank">Check Your Answers</a>
+						</li>
+						<li>
+							<a href="templates/commercial-payment-successful.html" target="_blank">Commercial Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/confirmation-pages.html" target="_blank">Confirmation Pages</a>
+						</li>
+						<li>
+							<a href="templates/council_tax.html" target="_blank">Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/council-tax-bands-and-amount.html" target="_blank">Council Tax Bands And Amount</a>
+						</li>
+						<li>
+							<a href="templates/discountsandexemptions.html" target="_blank">Discountsandexemptions</a>
+						</li>
+						<li>
+							<a href="templates/draft-homepage.html" target="_blank">Draft Homepage</a>
+						</li>
+						<li>
+							<a href="templates/education-health-care-plan.html" target="_blank">Education Health Care Plan</a>
+						</li>
+						<li>
+							<a href="templates/example-form-elements.html" target="_blank">Example Form Elements</a>
+						</li>
+						<li>
+							<a href="templates/example-typography.html" target="_blank">Example Typography</a>
+						</li>
+						<li>
+							<a href="templates/feedback-pages.html" target="_blank">Feedback Pages</a>
+						</li>
+						<li>
+							<a href="templates/find-a-school.html" target="_blank">Find A School</a>
+						</li>
+						<li>
+							<a href="templates/find-place-to-park.html" target="_blank">Find Place To Park</a>
+						</li>
+						<li>
+							<a href="templates/grid.html" target="_blank">Grid</a>
+						</li>
+						<li>
+							<a href="templates/hero-template.html" target="_blank">Hero Template</a>
+						</li>
+						<li>
+							<a href="templates/hollies.html" target="_blank">Hollies</a>
+						</li>
+						<li>
+							<a href="templates/manvers-street-car-park.html" target="_blank">Manvers Street Car Park</a>
+						</li>
+						<li>
+							<a href="templates/parking-travel.html" target="_blank">Parking Travel</a>
+						</li>
+						<li>
+							<a href="templates/paying-your-council-tax.html" target="_blank">Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/payment-successful.html" target="_blank">Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/problems-paying-your-council-tax.html" target="_blank">Problems Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/progress-notication-tool.html" target="_blank">Progress Notication Tool</a>
+						</li>
+						<li>
+							<a href="templates/properties-listing.html" target="_blank">Properties Listing</a>
+						</li>
+						<li>
+							<a href="templates/question-pages.html" target="_blank">Question Pages</a>
+						</li>
+						<li>
+							<a href="templates/school-details.html" target="_blank">School Details</a>
+						</li>
+						<li>
+							<a href="templates/sports-and-leisure-centre.html" target="_blank">Sports And Leisure Centre</a>
+						</li>
+						<li>
+							<a href="templates/start-pages.html" target="_blank">Start Pages</a>
+						</li>
+						<li>
+							<a href="templates/task-list-pages.html" target="_blank">Task List Pages</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="ui-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#getting-started">Getting Started</a>
+						</li>
+						<li>
+							<a href="docs.html#including-in-projects">Including In Projects</a>
+						</li>
+						<li>
+							<a href="docs.html#updating-submodules">Updating Submodules</a>
+						</li>
+						<li>
+							<a href="docs.html#working-with-the-toolkit">Working With The Toolkit</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="ui-container">
+			<div class="ui-control-bar">
+				<div class="ui-control ui-menu-toggle">
+					<svg>
+						<use xlink:href="#ui-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+	<main id="content" role="main">
+		
+<h1 class="heading-large" data-ui-toggle="labels">Components</h1>
+<p data-ui-toggle="labels">Components are groups of items that follow the basic style of the toolkit.</p>
+<p data-ui-toggle="labels">They are the building blocks of the patterns and templates.</p>
+
+
+<div class="ui-item-group" id="banners">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Banners</h2>
+	</div>
+		<div class="ui-item-group" id="banners.01-alpha-banner">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Alpha Banner</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Banners indicate that a site is part of an Alpha or Beta phase of a project. They can also solicit feedback.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="phase-banner">
+	<p>
+		<strong class="phase-tag">ALPHA</strong>
+		<span>This is a new service – <a href="#" aria-label="your website feedback">your feedback</a> will help us to improve it.</span>
+	</p>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;phase-banner&quot;&gt;
+	&lt;p&gt;
+		&lt;strong class&#x3D;&quot;phase-tag&quot;&gt;ALPHA&lt;/strong&gt;
+		&lt;span&gt;This is a new service – &lt;a href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;your website feedback&quot;&gt;your feedback&lt;/a&gt; will help us to improve it.&lt;/span&gt;
+	&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="banners.02-beta-banner">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Beta Banner</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Banners indicate that a site is part of an Alpha or Beta phase of a project. They can also solicit feedback.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="phase-banner">
+	<p>
+		<strong class="phase-tag">BETA</strong>
+		<span>This is a new service – <a href="#" aria-label="your website feedback">your feedback</a> will help us to improve it.</span>
+	</p>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;phase-banner&quot;&gt;
+	&lt;p&gt;
+		&lt;strong class&#x3D;&quot;phase-tag&quot;&gt;BETA&lt;/strong&gt;
+		&lt;span&gt;This is a new service – &lt;a href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;your website feedback&quot;&gt;your feedback&lt;/a&gt; will help us to improve it.&lt;/span&gt;
+	&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="banners.03-alpha-tag">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Alpha Tag</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<strong class="phase-tag">ALPHA</strong>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;strong class&#x3D;&quot;phase-tag&quot;&gt;ALPHA&lt;/strong&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="banners.04-beta-tag">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Beta Tag</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<strong class="phase-tag">BETA</strong>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;strong class&#x3D;&quot;phase-tag&quot;&gt;BETA&lt;/strong&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="breadcrumb">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">Breadcrumb</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-preview">
+	<div class="breadcrumb">
+	<ol>
+		<li><a aria-current="false" href="/">Home</a></li>
+		<li><a aria-current="false" href="/">Services</a></li>
+		<li><a aria-current="false" href="/">Schools colleges and learning</a></li>
+		<li><a aria-current="true" href="/">Find a School</a></li>
+	</ol>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;breadcrumb&quot;&gt;
+	&lt;ol&gt;
+		&lt;li&gt;&lt;a aria-current&#x3D;&quot;false&quot; href&#x3D;&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a aria-current&#x3D;&quot;false&quot; href&#x3D;&quot;/&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a aria-current&#x3D;&quot;false&quot; href&#x3D;&quot;/&quot;&gt;Schools colleges and learning&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a aria-current&#x3D;&quot;true&quot; href&#x3D;&quot;/&quot;&gt;Find a School&lt;/a&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="ui-item-group" id="breakout-box">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Breakout Box</h2>
+	</div>
+		<div class="ui-item-group" id="breakout-box.01-breakout-box">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Breakout Box</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use this to highlight important information on the page, Please only use this sparingly.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="breakout-box">
+
+	<p>
+		If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+	</p>
+
+	<p>
+		We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+	</p>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;breakout-box&quot;&gt;
+
+	&lt;p&gt;
+		If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+	&lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="breakout-box.02-breakout-box-alt-primary">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Breakout Box Alt Primary</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use this to highlight important information on the page, Please only use this sparingly.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="breakout-box breakout-box-alt-primary">
+
+	<p>
+		If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+	</p>
+
+	<p>
+		We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+	</p>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;breakout-box breakout-box-alt-primary&quot;&gt;
+
+	&lt;p&gt;
+		If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+	&lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="breakout-box.03-breakout-box-alt-secondary">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Breakout Box Alt Secondary</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use this to highlight important information on the page, Please only use this sparingly.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="breakout-box breakout-box-alt-secondary">
+
+	<p>
+		If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+	</p>
+
+	<p>
+		We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+	</p>
+
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;breakout-box breakout-box-alt-secondary&quot;&gt;
+
+	&lt;p&gt;
+		If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+	&lt;/p&gt;
+
+	&lt;p&gt;
+		We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+	&lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="buttons">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Buttons</h2>
+	</div>
+		<div class="ui-item-group" id="buttons.01-button-text">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Button Text</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Button text should be short and describe the action the button performs.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<input class="button" type="submit" value="Save and continue">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;input class&#x3D;&quot;button&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Save and continue&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="buttons.02-start-now-button">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Start Now Button</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Launch your service with a Start now button.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<a class="button button-start" href="#" role="button">Start now</a>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;a class&#x3D;&quot;button button-start&quot; href&#x3D;&quot;#&quot; role&#x3D;&quot;button&quot;&gt;Start now&lt;/a&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="buttons.03-disabled-buttons">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Disabled Buttons</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Don’t disable buttons, unless there’s a good reason to</li>
+<li>If you have to disable buttons, make sure they look like you can’t click them (use 50% opacity)</li>
+<li>Use the aria-disabled attribute for older screen readers</li>
+<li>An example of a useful disabled option is a calendar with greyed out days where no bookings are available</li>
+<li>Provide another way for the user to continue, add an error message or text to explain why the button is disabled</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<input class="button" type="submit" value="Save and continue" disabled="disabled" aria-disabled="true">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;input class&#x3D;&quot;button&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Save and continue&quot; disabled&#x3D;&quot;disabled&quot; aria-disabled&#x3D;&quot;true&quot;&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="data">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Data</h2>
+	</div>
+		<div class="ui-item-group" id="data.01-numeric-tabular-data">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Numeric Tabular Data</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>When comparing rows of numbers, align numbers to the right in table cells</li>
+<li>Use the GOV UK frontend toolkit’s tabular numbers to allow numbers of the same width to be more easily compared</li>
+<li>This solution does not change layout, or respond, to different screen widths</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<table>
+	<thead>
+		<tr>
+			<th scope="col">Month you apply</th>
+			<th class="numeric" scope="col">Rate for vehicles</th>
+			<th class="numeric" scope="col">Rate for bicycles</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">January</th>
+			<td class="numeric">£165.00</td>
+			<td class="numeric">£85.00</td>
+		</tr>
+		<tr>
+			<th scope="row">February</th>
+			<td class="numeric">£165.00</td>
+			<td class="numeric">£85.00</td>
+		</tr>
+		<tr>
+			<th scope="row">March</th>
+			<td class="numeric">£151.25</td>
+			<td class="numeric">£77.90</td>
+		</tr>
+		<tr>
+			<th scope="row">April</th>
+			<td class="numeric">£136.10</td>
+			<td class="numeric">£70.10</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th scope&#x3D;&quot;col&quot;&gt;Month you apply&lt;/th&gt;
+			&lt;th class&#x3D;&quot;numeric&quot; scope&#x3D;&quot;col&quot;&gt;Rate for vehicles&lt;/th&gt;
+			&lt;th class&#x3D;&quot;numeric&quot; scope&#x3D;&quot;col&quot;&gt;Rate for bicycles&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th scope&#x3D;&quot;row&quot;&gt;January&lt;/th&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£165.00&lt;/td&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£85.00&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope&#x3D;&quot;row&quot;&gt;February&lt;/th&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£165.00&lt;/td&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£85.00&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope&#x3D;&quot;row&quot;&gt;March&lt;/th&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£151.25&lt;/td&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£77.90&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope&#x3D;&quot;row&quot;&gt;April&lt;/th&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£136.10&lt;/td&gt;
+			&lt;td class&#x3D;&quot;numeric&quot;&gt;£70.10&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="data.02-data-in-a-table">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Data In A Table</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Not all content in tables should be right aligned.</li>
+<li>Use a caption to describe the table in the same way you would use a heading. It can help users find, navigate and understand tables.</li>
+<li>This solution does not change layout, or respond, to different screen widths</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<table>
+	<caption class="heading-small">Dates and amounts</caption>
+	<tbody>
+		<tr>
+			<td>First 6 weeks</td>
+			<td>£109.80 per week</td>
+		</tr>
+		<tr>
+			<td>Next 33 weeks</td>
+			<td>£109.80 per week</td>
+		</tr>
+		<tr>
+			<td>Total estimated pay</td>
+			<td>£4,282.20</td>
+		</tr>
+		<tr>
+			<td>Tell the mother’s employer</td>
+			<td>28 days before they want to start maternity pay</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;table&gt;
+	&lt;caption class&#x3D;&quot;heading-small&quot;&gt;Dates and amounts&lt;/caption&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;First 6 weeks&lt;/td&gt;
+			&lt;td&gt;£109.80 per week&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Next 33 weeks&lt;/td&gt;
+			&lt;td&gt;£109.80 per week&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Total estimated pay&lt;/td&gt;
+			&lt;td&gt;£4,282.20&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Tell the mother’s employer&lt;/td&gt;
+			&lt;td&gt;28 days before they want to start maternity pay&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="data.03-data-visualisation">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Data Visualisation</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Data is recommended as an alternative to using images</li>
+<li>For screen readers, ensure the data value appears first so it makes sense when read aloud</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="data">
+	<span class="data-item bold-xlarge">56/154</span>
+	<span class="data-item bold-xsmall">on GOV.UK</span>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;data&quot;&gt;
+	&lt;span class&#x3D;&quot;data-item bold-xlarge&quot;&gt;56/154&lt;/span&gt;
+	&lt;span class&#x3D;&quot;data-item bold-xsmall&quot;&gt;on GOV.UK&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="errors-validation">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Errors Validation</h2>
+	</div>
+		<div class="ui-item-group" id="errors-validation.error-message-and-summary-box">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Error Message And Summary Box</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Show an error summary at the top of the page</li>
+<li>Include a heading to alert the user to the error</li>
+<li>Link to each of the problematic questions</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+	<h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Message to alert the user to a problem goes here</h2>
+	<p>Optional description of the errors and how to correct them</p>
+	<ul class="error-summary-list">
+		<li><a href="#example-personal-details">Descriptive link to the question with an error</a></li>
+	</ul>
+</div>
+
+<h1 class="heading-large">Check your personal details</h1>
+<p>Look at your name, signature and other details.</p>
+<form>
+	<div class="form-group form-group-error">
+		<fieldset>
+			<legend id="example-personal-details">
+				<span class="form-label-bold">Are your personal details correct and up-to-date?</span>
+				<span class="error-message">Error message about personal details goes here</span>
+			</legend>
+			<div class="multiple-choice">
+				<input id="personal_details_yes" type="radio" name="personalDetails" value="Yes">
+				<label for="personal_details_yes">Yes, my personal details are correct</label>
+			</div>
+
+			<div class="multiple-choice">
+				<input id="personal_details_no" type="radio" name="personalDetails" value="No">
+				<label for="personal_details_no">No, some details are wrong or have changed</label>
+			</div>
+		</fieldset>
+	</div>
+	<input class="button" type="submit" value="Continue">
+</form>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;error-summary&quot; role&#x3D;&quot;alert&quot; aria-labelledby&#x3D;&quot;error-summary-heading-example-1&quot; tabindex&#x3D;&quot;-1&quot;&gt;
+	&lt;h2 class&#x3D;&quot;heading-medium error-summary-heading&quot; id&#x3D;&quot;error-summary-heading-example-1&quot;&gt;Message to alert the user to a problem goes here&lt;/h2&gt;
+	&lt;p&gt;Optional description of the errors and how to correct them&lt;/p&gt;
+	&lt;ul class&#x3D;&quot;error-summary-list&quot;&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#example-personal-details&quot;&gt;Descriptive link to the question with an error&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h1 class&#x3D;&quot;heading-large&quot;&gt;Check your personal details&lt;/h1&gt;
+&lt;p&gt;Look at your name, signature and other details.&lt;/p&gt;
+&lt;form&gt;
+	&lt;div class&#x3D;&quot;form-group form-group-error&quot;&gt;
+		&lt;fieldset&gt;
+			&lt;legend id&#x3D;&quot;example-personal-details&quot;&gt;
+				&lt;span class&#x3D;&quot;form-label-bold&quot;&gt;Are your personal details correct and up-to-date?&lt;/span&gt;
+				&lt;span class&#x3D;&quot;error-message&quot;&gt;Error message about personal details goes here&lt;/span&gt;
+			&lt;/legend&gt;
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;personal_details_yes&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;personalDetails&quot; value&#x3D;&quot;Yes&quot;&gt;
+				&lt;label for&#x3D;&quot;personal_details_yes&quot;&gt;Yes, my personal details are correct&lt;/label&gt;
+			&lt;/div&gt;
+
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;personal_details_no&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;personalDetails&quot; value&#x3D;&quot;No&quot;&gt;
+				&lt;label for&#x3D;&quot;personal_details_no&quot;&gt;No, some details are wrong or have changed&lt;/label&gt;
+			&lt;/div&gt;
+		&lt;/fieldset&gt;
+	&lt;/div&gt;
+	&lt;input class&#x3D;&quot;button&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Continue&quot;&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="errors-validation.highlight-errors">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Highlight Errors</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Write a message that helps the user to understand why the error occurred and what to do about it</li>
+<li>Put the message in the <code>&lt;label&gt;</code> or <code>&lt;legend&gt;</code> for the question, after the question text, in red</li>
+<li>Use a red border to visually connect the message and the question it belongs to</li>
+<li>If the error relates to specific text fields within the question, give these a red border as well</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+	<h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">Message to alert the user to a problem goes here</h2>
+	<p>Optional description of the errors and how to correct them</p>
+	<ul class="error-summary-list">
+		<li><a href="#example-full-name">Descriptive link to the question with an error</a></li>
+		<li><a href="#example-ni-number">Descriptive link to the question with an error</a></li>
+	</ul>
+</div>
+
+<h1 class="heading-large">Your personal details</h1>
+<div class="form-group form-group-error">
+	<label for="example-full-name" id="error-full-name">
+        <span class="form-label-bold">Full name</span>
+    </label>
+	<span class="form-hint">As shown on your birth certificate or passport</span>
+	<span class="error-message">Error message about full name goes here</span>
+	<input class="form-control form-control-error" id="example-full-name" type="text" name="fullName" value="" aria-describedby="form-hint error-message">
+</div>
+<div class="form-group form-group-error">
+	<label for="example-ni-number" id="error-ni-number">
+        <span class="form-label-bold">National Insurance number</span>
+    </label>
+	<span class="form-hint">
+        It’s on your National Insurance card, benefit letter, payslip or P60.
+        <br>
+        For example, ‘QQ 12 34 56 C’.
+    </span>
+	<span class="error-message">Error message about National Insurance number goes here</span>
+	<input class="form-control form-control-error" id="example-ni-number" type="text" name="niNo" value="" aria-describedby="form-hint error-message">
+</div>
+<input class="button" type="submit" value="Continue">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;error-summary&quot; role&#x3D;&quot;alert&quot; aria-labelledby&#x3D;&quot;error-summary-heading-example-2&quot; tabindex&#x3D;&quot;-1&quot;&gt;
+	&lt;h2 class&#x3D;&quot;heading-medium error-summary-heading&quot; id&#x3D;&quot;error-summary-heading-example-2&quot;&gt;Message to alert the user to a problem goes here&lt;/h2&gt;
+	&lt;p&gt;Optional description of the errors and how to correct them&lt;/p&gt;
+	&lt;ul class&#x3D;&quot;error-summary-list&quot;&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#example-full-name&quot;&gt;Descriptive link to the question with an error&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href&#x3D;&quot;#example-ni-number&quot;&gt;Descriptive link to the question with an error&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h1 class&#x3D;&quot;heading-large&quot;&gt;Your personal details&lt;/h1&gt;
+&lt;div class&#x3D;&quot;form-group form-group-error&quot;&gt;
+	&lt;label for&#x3D;&quot;example-full-name&quot; id&#x3D;&quot;error-full-name&quot;&gt;
+        &lt;span class&#x3D;&quot;form-label-bold&quot;&gt;Full name&lt;/span&gt;
+    &lt;/label&gt;
+	&lt;span class&#x3D;&quot;form-hint&quot;&gt;As shown on your birth certificate or passport&lt;/span&gt;
+	&lt;span class&#x3D;&quot;error-message&quot;&gt;Error message about full name goes here&lt;/span&gt;
+	&lt;input class&#x3D;&quot;form-control form-control-error&quot; id&#x3D;&quot;example-full-name&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;fullName&quot; value&#x3D;&quot;&quot; aria-describedby&#x3D;&quot;form-hint error-message&quot;&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group form-group-error&quot;&gt;
+	&lt;label for&#x3D;&quot;example-ni-number&quot; id&#x3D;&quot;error-ni-number&quot;&gt;
+        &lt;span class&#x3D;&quot;form-label-bold&quot;&gt;National Insurance number&lt;/span&gt;
+    &lt;/label&gt;
+	&lt;span class&#x3D;&quot;form-hint&quot;&gt;
+        It’s on your National Insurance card, benefit letter, payslip or P60.
+        &lt;br&gt;
+        For example, ‘QQ 12 34 56 C’.
+    &lt;/span&gt;
+	&lt;span class&#x3D;&quot;error-message&quot;&gt;Error message about National Insurance number goes here&lt;/span&gt;
+	&lt;input class&#x3D;&quot;form-control form-control-error&quot; id&#x3D;&quot;example-ni-number&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;niNo&quot; value&#x3D;&quot;&quot; aria-describedby&#x3D;&quot;form-hint error-message&quot;&gt;
+&lt;/div&gt;
+&lt;input class&#x3D;&quot;button&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Continue&quot;&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="footer">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">Footer</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-preview">
+	<footer class="global-footer">
+	<div class="footer-wrapper">
+
+		<div class="footer-brand">
+			<div class="footer-logo">
+				<img src="/assets/patterns/images/logos/bathnes-logo-mono.png" alt="Bath &amp; North East Somerset Council" />
+			</div>
+
+			<ul class="footer-list">
+				<li><a href="#">Accessibility</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Disclaimer</a></li>
+				<li><a href="#">Cookies</a></li>
+			</ul>
+
+			<ul class="footer-list">
+				<li>Copyright © 2018 Bath &amp; North East Somerset Council</li>
+			</ul>
+		</div>
+
+		<div class="social-links">
+			<h4 class="heading-small">
+				Social media and newsletter signup</h4>
+			<ul class="footer-list">
+				<li><i class="fa fa-envelope-open fa-2x" aria-hidden="true"></i> </li>
+				<li><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
+				<li><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+				<li><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></li>
+				<li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+			</ul>
+		</div>
+
+	</div>
+	</div>
+</footer>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;footer class&#x3D;&quot;global-footer&quot;&gt;
+	&lt;div class&#x3D;&quot;footer-wrapper&quot;&gt;
+
+		&lt;div class&#x3D;&quot;footer-brand&quot;&gt;
+			&lt;div class&#x3D;&quot;footer-logo&quot;&gt;
+				&lt;img src&#x3D;&quot;/assets/patterns/images/logos/bathnes-logo-mono.png&quot; alt&#x3D;&quot;Bath &amp;amp; North East Somerset Council&quot; /&gt;
+			&lt;/div&gt;
+
+			&lt;ul class&#x3D;&quot;footer-list&quot;&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Accessibility&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Disclaimer&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Cookies&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+
+			&lt;ul class&#x3D;&quot;footer-list&quot;&gt;
+				&lt;li&gt;Copyright © 2018 Bath &amp;amp; North East Somerset Council&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;social-links&quot;&gt;
+			&lt;h4 class&#x3D;&quot;heading-small&quot;&gt;
+				Social media and newsletter signup&lt;/h4&gt;
+			&lt;ul class&#x3D;&quot;footer-list&quot;&gt;
+				&lt;li&gt;&lt;i class&#x3D;&quot;fa fa-envelope-open fa-2x&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt; &lt;/li&gt;
+				&lt;li&gt;&lt;i class&#x3D;&quot;fa fa-facebook fa-2x&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;i class&#x3D;&quot;fa fa-twitter fa-2x&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;i class&#x3D;&quot;fa fa-youtube fa-2x&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;i class&#x3D;&quot;fa fa-instagram fa-2x&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="ui-item-group" id="form-elements">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Form Elements</h2>
+	</div>
+		<div class="ui-item-group" id="form-elements.01-labels">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Labels</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>All form fields should be given labels</li>
+<li>Don’t hide labels, unless the surrounding context makes them unnecessary</li>
+<li>Labels should be aligned above their fields</li>
+<li>Label text should be short, direct and in sentence case</li>
+<li>Avoid colons at the end of labels</li>
+<li>Labels should be associated with form fields using the for attribute</li>
+</ul>
+<p><strong>Note:</strong> When building out forms make sure each form field has it's own unique ID.</p>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label" for="full-name-f1">Full name</label>
+<input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;full-name-f1&quot;&gt;Full name&lt;/label&gt;
+&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;full-name-f1&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;full-name-f1&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.02-textarea">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Textarea</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Make the height of a textarea proportional to the amount of text to be entered.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label" for="textarea">
+    Why can't you provide a National Insurance number?
+</label>
+<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;textarea&quot;&gt;
+    Why can&#x27;t you provide a National Insurance number?
+&lt;/label&gt;
+&lt;textarea class&#x3D;&quot;form-control form-control-3-4&quot; name&#x3D;&quot;textarea&quot; id&#x3D;&quot;textarea&quot; rows&#x3D;&quot;5&quot;&gt;&lt;/textarea&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.03-hint-text">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Hint Text</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Don’t use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
+<li>Use hint text for supporting contextual help, this will always be shown</li>
+<li>Hint text should sit above a form field</li>
+<li>Ensure hint text can be read correctly by screen readers</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label" for="ni-number">
+    National Insurance number
+</label>
+<span class="form-hint">
+    It's on your National Insurance card, benefit letter, payslip or P60.
+    <br>
+    For example, ‘QQ 12 34 56 C’.
+</span>
+<input class="form-control" id="ni-number" type="text" name="ni-number" aria-describedby="form-hint">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;ni-number&quot;&gt;
+    National Insurance number
+&lt;/label&gt;
+&lt;span class&#x3D;&quot;form-hint&quot;&gt;
+    It&#x27;s on your National Insurance card, benefit letter, payslip or P60.
+    &lt;br&gt;
+    For example, ‘QQ 12 34 56 C’.
+&lt;/span&gt;
+&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;ni-number&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;ni-number&quot; aria-describedby&#x3D;&quot;form-hint&quot;&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.04-form-elements-spacing">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Form Elements Spacing</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Ensure there is sufficient spacing between form elements.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<!-- Use .form-group to create spacing when wrapping label and input pairs -->
+<div class="form-group">
+	<label class="form-label" for="first-name-2">First name</label>
+	<input class="form-control" id="first-name-2" name="first-name-2" type="text">
+</div>
+<div class="form-group">
+	<label class="form-label" for="last-name-2">Last name</label>
+	<input class="form-control" id="last-name-2" name="last-name-2" type="text">
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;!-- Use .form-group to create spacing when wrapping label and input pairs --&gt;
+&lt;div class&#x3D;&quot;form-group&quot;&gt;
+	&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;first-name-2&quot;&gt;First name&lt;/label&gt;
+	&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;first-name-2&quot; name&#x3D;&quot;first-name-2&quot; type&#x3D;&quot;text&quot;&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;form-group&quot;&gt;
+	&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;last-name-2&quot;&gt;Last name&lt;/label&gt;
+	&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;last-name-2&quot; name&#x3D;&quot;last-name-2&quot; type&#x3D;&quot;text&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.05-file-upload">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">File Upload</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>A control that lets the user select a file.</li>
+<li>We recommend using a native input using type=&quot;file&quot;, rather than a custom implementation.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="form-group">
+	<label class="form-label" for="file-input">
+        Upload a file
+    </label>
+	<input type="file" id="file-input">
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+	&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;file-input&quot;&gt;
+        Upload a file
+    &lt;/label&gt;
+	&lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;file-input&quot;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.06-select-boxes">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Select Boxes</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Avoid using select boxes (drop-down lists) - use radio buttons or checkboxes instead.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="form-group">
+	<label class="form-label" for="select-box">This is the label text</label>
+	<select class="form-control" id="select-box" name="select-box">
+        <option>BATHNES elements option 1</option>
+        <option>BATHNES elements option 2</option>
+        <option>BATHNES elements option 3</option>
+    </select>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+	&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;select-box&quot;&gt;This is the label text&lt;/label&gt;
+	&lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;select-box&quot; name&#x3D;&quot;select-box&quot;&gt;
+        &lt;option&gt;BATHNES elements option 1&lt;/option&gt;
+        &lt;option&gt;BATHNES elements option 2&lt;/option&gt;
+        &lt;option&gt;BATHNES elements option 3&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.07-radio-buttons-inline">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Radio Buttons Inline</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use these to let users choose a single option from a list</li>
+<li>For more than two options, radio buttons should be stacked</li>
+<li>Radio buttons with large hit areas are easier to select with a mouse or touch devices</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<form>
+	<div class="form-group">
+		<fieldset class="inline">
+
+			<legend>
+				<h1 class="heading-medium">
+					Do you already have a personal user account?
+				</h1>
+			</legend>
+
+			<div class="multiple-choice">
+				<input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+				<label for="radio-inline-1">Yes</label>
+			</div>
+			<div class="multiple-choice">
+				<input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+				<label for="radio-inline-2">No</label>
+			</div>
+
+		</fieldset>
+	</div>
+</form>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;form&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;fieldset class&#x3D;&quot;inline&quot;&gt;
+
+			&lt;legend&gt;
+				&lt;h1 class&#x3D;&quot;heading-medium&quot;&gt;
+					Do you already have a personal user account?
+				&lt;/h1&gt;
+			&lt;/legend&gt;
+
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-inline-1&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-inline-group&quot; value&#x3D;&quot;Yes&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-inline-1&quot;&gt;Yes&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-inline-2&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-inline-group&quot; value&#x3D;&quot;No&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-inline-2&quot;&gt;No&lt;/label&gt;
+			&lt;/div&gt;
+
+		&lt;/fieldset&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.08-radio-buttons-stacked">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Radio Buttons Stacked</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<form>
+	<div class="form-group">
+		<fieldset>
+
+			<legend>
+				<h1 class="heading-medium">Where do you live?</h1>
+			</legend>
+
+			<div class="multiple-choice">
+				<input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+				<label for="radio-1">Northern Ireland</label>
+			</div>
+			<div class="multiple-choice">
+				<input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+				<label for="radio-2">Isle of Man or the Channel Islands</label>
+			</div>
+			<p class="form-block">or</p>
+			<div class="multiple-choice">
+				<input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+				<label for="radio-3">I am a British citizen living abroad</label>
+			</div>
+
+		</fieldset>
+	</div>
+</form>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;form&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;fieldset&gt;
+
+			&lt;legend&gt;
+				&lt;h1 class&#x3D;&quot;heading-medium&quot;&gt;Where do you live?&lt;/h1&gt;
+			&lt;/legend&gt;
+
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-1&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-group&quot; value&#x3D;&quot;Northern Ireland&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-1&quot;&gt;Northern Ireland&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-2&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-group&quot; value&#x3D;&quot;Isle of Man or the Channel Islands&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-2&quot;&gt;Isle of Man or the Channel Islands&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;p class&#x3D;&quot;form-block&quot;&gt;or&lt;/p&gt;
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-3&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-group&quot; value&#x3D;&quot;I am a British citizen living abroad&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-3&quot;&gt;I am a British citizen living abroad&lt;/label&gt;
+			&lt;/div&gt;
+
+		&lt;/fieldset&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.09-radio-button-disabled">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Radio Button Disabled</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="multiple-choice">
+	<input id="radio-disabled-example" type="radio" name="radio-disabled-group" value="Isle of Man or the Channel Islands" disabled>
+	<label for="radio-disabled-example">Isle of Man or the Channel Islands</label>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+	&lt;input id&#x3D;&quot;radio-disabled-example&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-disabled-group&quot; value&#x3D;&quot;Isle of Man or the Channel Islands&quot; disabled&gt;
+	&lt;label for&#x3D;&quot;radio-disabled-example&quot;&gt;Isle of Man or the Channel Islands&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.10-checkboxes">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Checkboxes</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Use these to select either on/off toggles or multiple selections</li>
+<li>Make it clear with words when users can select one or multiple options</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<form>
+	<fieldset>
+
+		<legend>
+			<h3 class="heading-medium">Which types of waste do you transport regularly?</h3>
+			<span class="body-text">Select all that apply</span>
+		</legend>
+
+		<div class="multiple-choice">
+			<input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+			<label for="waste-type-1">Waste from animal carcasses</label>
+		</div>
+		<div class="multiple-choice">
+			<input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+			<label for="waste-type-2">Waste from mines or quarries</label>
+		</div>
+		<div class="multiple-choice">
+			<input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+			<label for="waste-type-3">Farm or agricultural waste</label>
+		</div>
+
+	</fieldset>
+</form>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;form&gt;
+	&lt;fieldset&gt;
+
+		&lt;legend&gt;
+			&lt;h3 class&#x3D;&quot;heading-medium&quot;&gt;Which types of waste do you transport regularly?&lt;/h3&gt;
+			&lt;span class&#x3D;&quot;body-text&quot;&gt;Select all that apply&lt;/span&gt;
+		&lt;/legend&gt;
+
+		&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+			&lt;input id&#x3D;&quot;waste-type-1&quot; name&#x3D;&quot;waste-types&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;waste-animal&quot;&gt;
+			&lt;label for&#x3D;&quot;waste-type-1&quot;&gt;Waste from animal carcasses&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+			&lt;input id&#x3D;&quot;waste-type-2&quot; name&#x3D;&quot;waste-types&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;waste-mines&quot;&gt;
+			&lt;label for&#x3D;&quot;waste-type-2&quot;&gt;Waste from mines or quarries&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+			&lt;input id&#x3D;&quot;waste-type-3&quot; name&#x3D;&quot;waste-types&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;waste-farm-agricultural&quot;&gt;
+			&lt;label for&#x3D;&quot;waste-type-3&quot;&gt;Farm or agricultural waste&lt;/label&gt;
+		&lt;/div&gt;
+
+	&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.11-checkboxes-disabled">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Checkboxes Disabled</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="multiple-choice">
+	<input id="checkbox-disabled-example" name="checkbox-disabled-group" type="checkbox" value="waste-farm-agricultural" disabled>
+	<label for="checkbox-disabled-example">Farm or agricultural waste</label>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+	&lt;input id&#x3D;&quot;checkbox-disabled-example&quot; name&#x3D;&quot;checkbox-disabled-group&quot; type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;waste-farm-agricultural&quot; disabled&gt;
+	&lt;label for&#x3D;&quot;checkbox-disabled-example&quot;&gt;Farm or agricultural waste&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.12-conditionally-revealing-content">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Conditionally Revealing Content</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Reveal additional questions, depending on the context</li>
+<li>A left border is used to emphasise this supporting information</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<form>
+	<div class="form-group">
+		<fieldset>
+
+			<legend>
+				<h1 class="heading-medium">
+					How do you want to be contacted?
+				</h1>
+			</legend>
+
+			<div class="multiple-choice" data-target="contact-by-email">
+				<input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+				<label for="example-contact-by-email">Email</label>
+			</div>
+			<div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+				<label class="form-label" for="contact-email">Email address</label>
+				<input class="form-control" name="contact-email" type="text" id="contact-email">
+			</div>
+
+			<div class="multiple-choice" data-target="contact-by-phone">
+				<input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+				<label for="example-contact-by-phone">Phone</label>
+			</div>
+			<div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+				<label class="form-label" for="contact-phone">Phone number</label>
+				<input class="form-control" name="contact-phone" type="text" id="contact-phone">
+			</div>
+
+			<div class="multiple-choice" data-target="contact-by-text">
+				<input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+				<label for="example-contact-by-text">Text message</label>
+			</div>
+			<div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+				<label class="form-label" for="contact-text-message">Mobile phone number</label>
+				<input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+			</div>
+
+		</fieldset>
+	</div>
+</form>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;form&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;fieldset&gt;
+
+			&lt;legend&gt;
+				&lt;h1 class&#x3D;&quot;heading-medium&quot;&gt;
+					How do you want to be contacted?
+				&lt;/h1&gt;
+			&lt;/legend&gt;
+
+			&lt;div class&#x3D;&quot;multiple-choice&quot; data-target&#x3D;&quot;contact-by-email&quot;&gt;
+				&lt;input id&#x3D;&quot;example-contact-by-email&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-contact-group&quot; value&#x3D;&quot;Yes&quot;&gt;
+				&lt;label for&#x3D;&quot;example-contact-by-email&quot;&gt;Email&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;panel panel-border-narrow js-hidden&quot; id&#x3D;&quot;contact-by-email&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;contact-email&quot;&gt;Email address&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; name&#x3D;&quot;contact-email&quot; type&#x3D;&quot;text&quot; id&#x3D;&quot;contact-email&quot;&gt;
+			&lt;/div&gt;
+
+			&lt;div class&#x3D;&quot;multiple-choice&quot; data-target&#x3D;&quot;contact-by-phone&quot;&gt;
+				&lt;input id&#x3D;&quot;example-contact-by-phone&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-contact-group&quot; value&#x3D;&quot;No&quot;&gt;
+				&lt;label for&#x3D;&quot;example-contact-by-phone&quot;&gt;Phone&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;panel panel-border-narrow js-hidden&quot; id&#x3D;&quot;contact-by-phone&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;contact-phone&quot;&gt;Phone number&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; name&#x3D;&quot;contact-phone&quot; type&#x3D;&quot;text&quot; id&#x3D;&quot;contact-phone&quot;&gt;
+			&lt;/div&gt;
+
+			&lt;div class&#x3D;&quot;multiple-choice&quot; data-target&#x3D;&quot;contact-by-text&quot;&gt;
+				&lt;input id&#x3D;&quot;example-contact-by-text&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-contact-group&quot; value&#x3D;&quot;No&quot;&gt;
+				&lt;label for&#x3D;&quot;example-contact-by-text&quot;&gt;Text message&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;panel panel-border-narrow js-hidden&quot; id&#x3D;&quot;contact-by-text&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;contact-text-message&quot;&gt;Mobile phone number&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; name&#x3D;&quot;contact-text-message&quot; type&#x3D;&quot;text&quot; id&#x3D;&quot;contact-text-message&quot;&gt;
+			&lt;/div&gt;
+
+		&lt;/fieldset&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.13-date">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Date</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="form-group">
+	<fieldset>
+		<legend>
+			<span class="form-label-bold">This is the label text in bold</span>
+			<span class="form-hint">This is hint text</span>
+		</legend>
+		<div class="form-date">
+			<div class="form-group form-group-day">
+				<label class="form-label" for="dob-day">Day</label>
+				<input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+			</div>
+			<div class="form-group form-group-month">
+				<label class="form-label" for="dob-month">Month</label>
+				<input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+			</div>
+			<div class="form-group form-group-year">
+				<label class="form-label" for="dob-year">Year</label>
+				<input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+			</div>
+		</div>
+	</fieldset>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;
+			&lt;span class&#x3D;&quot;form-label-bold&quot;&gt;This is the label text in bold&lt;/span&gt;
+			&lt;span class&#x3D;&quot;form-hint&quot;&gt;This is hint text&lt;/span&gt;
+		&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-date&quot;&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-day&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-day&quot;&gt;Day&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-day&quot; name&#x3D;&quot;dob-day&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;31&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-month&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-month&quot;&gt;Month&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-month&quot; name&#x3D;&quot;dob-month&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;12&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-year&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-year&quot;&gt;Year&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-year&quot; name&#x3D;&quot;dob-year&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;2016&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="form-elements.14-password">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Password</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>Make sure you:</p>
+<ul>
+<li>Set a minimum length of at least 8 characters</li>
+<li>Don’t set a maximum length</li>
+<li>Explain the constraints to users</li>
+<li>Use a blacklist of commonly used passwords</li>
+</ul>
+<p>Guidance on the use of passwords can be found here: <a href="https://www.gov.uk/service-manual/design/passwords">https://www.gov.uk/service-manual/design/passwords</a></p>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label" for="password-f1">Password</label>
+<input class="form-control" id="password-f1" type="password" name="password-f1">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;password-f1&quot;&gt;Password&lt;/label&gt;
+&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;password-f1&quot; type&#x3D;&quot;password&quot; name&#x3D;&quot;password-f1&quot;&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="headers">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Headers</h2>
+	</div>
+		<div class="ui-item-group" id="headers.01-standard-header">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Standard Header</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Used for presenting template examples in this toolkit</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<!-- Menu show/hide JS -->
+<!-- Adapted from https://www.w3schools.com/howto/howto_js_toggle_class.asp -->
+<!-- Need to move into menu.js and that file be imported into app.js -->
+<script>
+	function showHideMenu() {
+		var element = document.getElementById("navigation-primary");
+
+		if (element.classList) {
+			element.classList.toggle("navigation-primary--active");
+		} else {
+			// For IE9
+			var classes = element.className.split(" ");
+			var i = classes.indexOf("navigation-primary--active");
+
+			if (i >= 0)
+				classes.splice(i, 1);
+			else
+				classes.push("navigation-primary--active");
+			element.className = classes.join(" ");
+		}
+	}
+</script>
+<style>
+	#global-header {
+		background-color: #fff;
+		position: relative;
+	}
+
+	.header-wrapper {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media (min-width: 960px) {
+		.header-wrapper {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.header-global {
+		overflow: hidden;
+	}
+
+	.header-logo {
+		width: 128.4px;
+		height: auto;
+	}
+
+	.header-logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-logo {
+			width: 160.5px;
+			float: left;
+		}
+	}
+
+	.header-search {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search {
+			margin-top: 1em;
+			float: right;
+			width: 50%;
+			text-align: right;
+			margin-top: 12px;
+			margin-bottom: 0;
+		}
+	}
+
+	.header-search .site-search {
+		position: relative;
+	}
+
+	.header-search .site-search .form-control {
+		width: calc(100% - 80px);
+		border-width: 1px;
+		border-color: #bfc1c3;
+		font-size: 16px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .form-control {
+			width: calc(100% - 100px);
+		}
+	}
+
+	.header-search .site-search .button {
+		position: absolute;
+		top: 0;
+		right: 45px;
+		text-indent: -9999px;
+		background-image: url(../assets/patterns/images/icon-search-2x.png);
+		background-repeat: no-repeat;
+		background-position: 55% 50%;
+		background-size: 52.5% 40%;
+		box-shadow: none;
+		width: 36px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .button {
+			right: 0;
+		}
+	}
+
+	.header-search--desktop {
+		display: none;
+	}
+
+	@media (min-width: 769px) {
+		.header-search--desktop {
+			display: block;
+		}
+	}
+
+	@media (min-width: 769px) {
+		.header-search--mobile {
+			display: none;
+		}
+	}
+
+	#global-header-bar {
+		position: relative;
+		background-color: #00aeef;
+		height: 5px;
+	}
+
+	.header-marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 25px 0 0 25px;
+		border-color: transparent transparent transparent #00aeef;
+	}
+
+	.header-commercial {
+		position: relative;
+		overflow: hidden;
+		background-color: #0b0c0c;
+	}
+
+	.header-commercial .header-wrapper {
+		padding-top: 0.75em;
+		padding-bottom: 0.5em;
+	}
+
+	.header-commercial__logo {
+		width: 91.42857px;
+		height: auto;
+		display: block;
+	}
+
+	.header-commercial__logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-commercial__logo {
+			width: 106.66667px;
+		}
+	}
+
+	.header-commercial__marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 30px 0 0 30px;
+		border-color: transparent transparent transparent #fff;
+	}
+
+	@media (min-width: 960px) {
+		.header-commercial__marque {
+			right: 0;
+		}
+	}
+</style>
+<header role="banner" id="global-header">
+	<div class="header-wrapper">
+		<div class="header-global">
+			<div class="header-logo">
+				<a href="" id="logo" class="content">
+                    <img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset Council" />
+                </a>
+			</div>
+			<div class="header-search header-search--desktop">
+				<form id="search" class="site-search" action="" method="">
+					<label class="form-label visually-hidden" for="search-site">Search across the site</label>
+					<input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+					<input class="button" type="submit" value="Search">
+				</form>
+			</div>
+		</div>
+		<button id="js-header-toggle" class="navigation-trigger" onclick="showHideMenu()">Menu</button>
+	</div>
+	<nav role="navigation" id="navigation-primary" class="navigation-primary">
+		<ul class="navigation-primary-list">
+			<li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
+			<li class="navigation-primary-list__item"><a href="#">Navigation label</a></li>
+			<li class="navigation-primary-list__search">
+				<div class="header-search header-search--mobile">
+					<form id="search" class="site-search" action="" method="">
+						<label class="form-label visually-hidden" for="search-site">Search across the site</label>
+						<input class="form-control" id="search-site" type="text" name="search-site" placeholder="Search bathnes.gov.uk">
+						<input class="button" type="submit" value="Search">
+					</form>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	<div class="header-marque"></div>
+</header>
+<div id="global-header-bar"></div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;!-- Menu show/hide JS --&gt;
+&lt;!-- Adapted from https://www.w3schools.com/howto/howto_js_toggle_class.asp --&gt;
+&lt;!-- Need to move into menu.js and that file be imported into app.js --&gt;
+&lt;script&gt;
+	function showHideMenu() {
+		var element &#x3D; document.getElementById(&quot;navigation-primary&quot;);
+
+		if (element.classList) {
+			element.classList.toggle(&quot;navigation-primary--active&quot;);
+		} else {
+			// For IE9
+			var classes &#x3D; element.className.split(&quot; &quot;);
+			var i &#x3D; classes.indexOf(&quot;navigation-primary--active&quot;);
+
+			if (i &gt;&#x3D; 0)
+				classes.splice(i, 1);
+			else
+				classes.push(&quot;navigation-primary--active&quot;);
+			element.className &#x3D; classes.join(&quot; &quot;);
+		}
+	}
+&lt;/script&gt;
+&lt;style&gt;
+	#global-header {
+		background-color: #fff;
+		position: relative;
+	}
+
+	.header-wrapper {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media (min-width: 960px) {
+		.header-wrapper {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.header-global {
+		overflow: hidden;
+	}
+
+	.header-logo {
+		width: 128.4px;
+		height: auto;
+	}
+
+	.header-logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-logo {
+			width: 160.5px;
+			float: left;
+		}
+	}
+
+	.header-search {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search {
+			margin-top: 1em;
+			float: right;
+			width: 50%;
+			text-align: right;
+			margin-top: 12px;
+			margin-bottom: 0;
+		}
+	}
+
+	.header-search .site-search {
+		position: relative;
+	}
+
+	.header-search .site-search .form-control {
+		width: calc(100% - 80px);
+		border-width: 1px;
+		border-color: #bfc1c3;
+		font-size: 16px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .form-control {
+			width: calc(100% - 100px);
+		}
+	}
+
+	.header-search .site-search .button {
+		position: absolute;
+		top: 0;
+		right: 45px;
+		text-indent: -9999px;
+		background-image: url(../assets/patterns/images/icon-search-2x.png);
+		background-repeat: no-repeat;
+		background-position: 55% 50%;
+		background-size: 52.5% 40%;
+		box-shadow: none;
+		width: 36px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .button {
+			right: 0;
+		}
+	}
+
+	.header-search--desktop {
+		display: none;
+	}
+
+	@media (min-width: 769px) {
+		.header-search--desktop {
+			display: block;
+		}
+	}
+
+	@media (min-width: 769px) {
+		.header-search--mobile {
+			display: none;
+		}
+	}
+
+	#global-header-bar {
+		position: relative;
+		background-color: #00aeef;
+		height: 5px;
+	}
+
+	.header-marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 25px 0 0 25px;
+		border-color: transparent transparent transparent #00aeef;
+	}
+
+	.header-commercial {
+		position: relative;
+		overflow: hidden;
+		background-color: #0b0c0c;
+	}
+
+	.header-commercial .header-wrapper {
+		padding-top: 0.75em;
+		padding-bottom: 0.5em;
+	}
+
+	.header-commercial__logo {
+		width: 91.42857px;
+		height: auto;
+		display: block;
+	}
+
+	.header-commercial__logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-commercial__logo {
+			width: 106.66667px;
+		}
+	}
+
+	.header-commercial__marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 30px 0 0 30px;
+		border-color: transparent transparent transparent #fff;
+	}
+
+	@media (min-width: 960px) {
+		.header-commercial__marque {
+			right: 0;
+		}
+	}
+&lt;/style&gt;
+&lt;header role&#x3D;&quot;banner&quot; id&#x3D;&quot;global-header&quot;&gt;
+	&lt;div class&#x3D;&quot;header-wrapper&quot;&gt;
+		&lt;div class&#x3D;&quot;header-global&quot;&gt;
+			&lt;div class&#x3D;&quot;header-logo&quot;&gt;
+				&lt;a href&#x3D;&quot;&quot; id&#x3D;&quot;logo&quot; class&#x3D;&quot;content&quot;&gt;
+                    &lt;img src&#x3D;&quot;/assets/patterns/images/logos/bathnes-logo-colour.png&quot; alt&#x3D;&quot;Bath &amp; North East Somerset Council&quot; /&gt;
+                &lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;header-search header-search--desktop&quot;&gt;
+				&lt;form id&#x3D;&quot;search&quot; class&#x3D;&quot;site-search&quot; action&#x3D;&quot;&quot; method&#x3D;&quot;&quot;&gt;
+					&lt;label class&#x3D;&quot;form-label visually-hidden&quot; for&#x3D;&quot;search-site&quot;&gt;Search across the site&lt;/label&gt;
+					&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;search-site&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;search-site&quot; placeholder&#x3D;&quot;Search bathnes.gov.uk&quot;&gt;
+					&lt;input class&#x3D;&quot;button&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Search&quot;&gt;
+				&lt;/form&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;button id&#x3D;&quot;js-header-toggle&quot; class&#x3D;&quot;navigation-trigger&quot; onclick&#x3D;&quot;showHideMenu()&quot;&gt;Menu&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;nav role&#x3D;&quot;navigation&quot; id&#x3D;&quot;navigation-primary&quot; class&#x3D;&quot;navigation-primary&quot;&gt;
+		&lt;ul class&#x3D;&quot;navigation-primary-list&quot;&gt;
+			&lt;li class&#x3D;&quot;navigation-primary-list__item&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Navigation label&lt;/a&gt;&lt;/li&gt;
+			&lt;li class&#x3D;&quot;navigation-primary-list__item&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Navigation label&lt;/a&gt;&lt;/li&gt;
+			&lt;li class&#x3D;&quot;navigation-primary-list__search&quot;&gt;
+				&lt;div class&#x3D;&quot;header-search header-search--mobile&quot;&gt;
+					&lt;form id&#x3D;&quot;search&quot; class&#x3D;&quot;site-search&quot; action&#x3D;&quot;&quot; method&#x3D;&quot;&quot;&gt;
+						&lt;label class&#x3D;&quot;form-label visually-hidden&quot; for&#x3D;&quot;search-site&quot;&gt;Search across the site&lt;/label&gt;
+						&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;search-site&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;search-site&quot; placeholder&#x3D;&quot;Search bathnes.gov.uk&quot;&gt;
+						&lt;input class&#x3D;&quot;button&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Search&quot;&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	&lt;div class&#x3D;&quot;header-marque&quot;&gt;&lt;/div&gt;
+&lt;/header&gt;
+&lt;div id&#x3D;&quot;global-header-bar&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="headers.02-commercial-header">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Commercial Header</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>To be used on commercial sites</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<style>
+	#global-header {
+		background-color: #fff;
+		position: relative;
+	}
+
+	.header-wrapper {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media (min-width: 960px) {
+		.header-wrapper {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.header-global {
+		overflow: hidden;
+	}
+
+	.header-logo {
+		width: 128.4px;
+		height: auto;
+	}
+
+	.header-logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-logo {
+			width: 160.5px;
+			float: left;
+		}
+	}
+
+	.header-search {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search {
+			margin-top: 1em;
+			float: right;
+			width: 50%;
+			text-align: right;
+			margin-top: 12px;
+			margin-bottom: 0;
+		}
+	}
+
+	.header-search .site-search {
+		position: relative;
+	}
+
+	.header-search .site-search .form-control {
+		width: calc(100% - 80px);
+		border-width: 1px;
+		border-color: #bfc1c3;
+		font-size: 16px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .form-control {
+			width: calc(100% - 100px);
+		}
+	}
+
+	.header-search .site-search .button {
+		position: absolute;
+		top: 0;
+		right: 45px;
+		text-indent: -9999px;
+		background-image: url(../assets/patterns/images/icon-search-2x.png);
+		background-repeat: no-repeat;
+		background-position: 55% 50%;
+		background-size: 52.5% 40%;
+		box-shadow: none;
+		width: 36px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .button {
+			right: 0;
+		}
+	}
+
+	.header-search--desktop {
+		display: none;
+	}
+
+	@media (min-width: 769px) {
+		.header-search--desktop {
+			display: block;
+		}
+	}
+
+	@media (min-width: 769px) {
+		.header-search--mobile {
+			display: none;
+		}
+	}
+
+	#global-header-bar {
+		position: relative;
+		background-color: #00aeef;
+		height: 5px;
+	}
+
+	.header-marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 25px 0 0 25px;
+		border-color: transparent transparent transparent #00aeef;
+	}
+
+	.header-commercial {
+		position: relative;
+		overflow: hidden;
+		background-color: #0b0c0c;
+	}
+
+	.header-commercial .header-wrapper {
+		padding-top: 0.75em;
+		padding-bottom: 0.5em;
+	}
+
+	.header-commercial__logo {
+		width: 91.42857px;
+		height: auto;
+		display: block;
+	}
+
+	.header-commercial__logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-commercial__logo {
+			width: 106.66667px;
+		}
+	}
+
+	.header-commercial__marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 30px 0 0 30px;
+		border-color: transparent transparent transparent #fff;
+	}
+
+	@media (min-width: 960px) {
+		.header-commercial__marque {
+			right: 0;
+		}
+	}
+</style>
+<div class="header-commercial">
+	<div class="header-wrapper">
+		<div class="header-commercial__logo">
+			<img src="/assets/patterns/images/logos/bathnes-logo-white.png" alt="Bath & North East Somerset Council" />
+		</div>
+		<div class="header-commercial__marque"></div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;style&gt;
+	#global-header {
+		background-color: #fff;
+		position: relative;
+	}
+
+	.header-wrapper {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media (min-width: 960px) {
+		.header-wrapper {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.header-global {
+		overflow: hidden;
+	}
+
+	.header-logo {
+		width: 128.4px;
+		height: auto;
+	}
+
+	.header-logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-logo {
+			width: 160.5px;
+			float: left;
+		}
+	}
+
+	.header-search {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search {
+			margin-top: 1em;
+			float: right;
+			width: 50%;
+			text-align: right;
+			margin-top: 12px;
+			margin-bottom: 0;
+		}
+	}
+
+	.header-search .site-search {
+		position: relative;
+	}
+
+	.header-search .site-search .form-control {
+		width: calc(100% - 80px);
+		border-width: 1px;
+		border-color: #bfc1c3;
+		font-size: 16px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .form-control {
+			width: calc(100% - 100px);
+		}
+	}
+
+	.header-search .site-search .button {
+		position: absolute;
+		top: 0;
+		right: 45px;
+		text-indent: -9999px;
+		background-image: url(../assets/patterns/images/icon-search-2x.png);
+		background-repeat: no-repeat;
+		background-position: 55% 50%;
+		background-size: 52.5% 40%;
+		box-shadow: none;
+		width: 36px;
+		height: 36px;
+	}
+
+	@media (min-width: 769px) {
+		.header-search .site-search .button {
+			right: 0;
+		}
+	}
+
+	.header-search--desktop {
+		display: none;
+	}
+
+	@media (min-width: 769px) {
+		.header-search--desktop {
+			display: block;
+		}
+	}
+
+	@media (min-width: 769px) {
+		.header-search--mobile {
+			display: none;
+		}
+	}
+
+	#global-header-bar {
+		position: relative;
+		background-color: #00aeef;
+		height: 5px;
+	}
+
+	.header-marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 25px 0 0 25px;
+		border-color: transparent transparent transparent #00aeef;
+	}
+
+	.header-commercial {
+		position: relative;
+		overflow: hidden;
+		background-color: #0b0c0c;
+	}
+
+	.header-commercial .header-wrapper {
+		padding-top: 0.75em;
+		padding-bottom: 0.5em;
+	}
+
+	.header-commercial__logo {
+		width: 91.42857px;
+		height: auto;
+		display: block;
+	}
+
+	.header-commercial__logo img {
+		max-width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.header-commercial__logo {
+			width: 106.66667px;
+		}
+	}
+
+	.header-commercial__marque {
+		position: absolute;
+		bottom: 0;
+		right: 15px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 30px 0 0 30px;
+		border-color: transparent transparent transparent #fff;
+	}
+
+	@media (min-width: 960px) {
+		.header-commercial__marque {
+			right: 0;
+		}
+	}
+&lt;/style&gt;
+&lt;div class&#x3D;&quot;header-commercial&quot;&gt;
+	&lt;div class&#x3D;&quot;header-wrapper&quot;&gt;
+		&lt;div class&#x3D;&quot;header-commercial__logo&quot;&gt;
+			&lt;img src&#x3D;&quot;/assets/patterns/images/logos/bathnes-logo-white.png&quot; alt&#x3D;&quot;Bath &amp; North East Somerset Council&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;header-commercial__marque&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="heroes">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Heroes</h2>
+	</div>
+		<div class="ui-item-group" id="heroes.01-standard-hero">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Standard Hero</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="hero">
+	<div class="hero__caption">
+		<h1 class="hero__heading">A heading of some kind</h1>
+		<div class="hero__description">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;hero&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__caption&quot;&gt;
+		&lt;h1 class&#x3D;&quot;hero__heading&quot;&gt;A heading of some kind&lt;/h1&gt;
+		&lt;div class&#x3D;&quot;hero__description&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="heroes.02-standard-hero-alt">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Standard Hero Alt</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="hero hero--alt">
+	<div class="hero__caption">
+		<h1 class="hero__heading">A heading of some kind</h1>
+		<div class="hero__description">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;hero hero--alt&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__caption&quot;&gt;
+		&lt;h1 class&#x3D;&quot;hero__heading&quot;&gt;A heading of some kind&lt;/h1&gt;
+		&lt;div class&#x3D;&quot;hero__description&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="heroes.03-image-hero">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Image Hero</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="hero hero--image" style="background-image: url(/assets/patterns/images/hero-placeholder.jpg);">
+	<div class="hero__caption">
+		<h1 class="hero__heading">A heading of some kind</h1>
+		<div class="hero__description">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;hero hero--image&quot; style&#x3D;&quot;background-image: url(/assets/patterns/images/hero-placeholder.jpg);&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__caption&quot;&gt;
+		&lt;h1 class&#x3D;&quot;hero__heading&quot;&gt;A heading of some kind&lt;/h1&gt;
+		&lt;div class&#x3D;&quot;hero__description&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="heroes.04-image-hero-alt">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Image Hero Alt</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="hero hero--image hero--alt" style="background-image: url(/assets/patterns/images/hero-placeholder.jpg);">
+	<div class="hero__caption">
+		<h1 class="hero__heading">A heading of some kind</h1>
+		<div class="hero__description">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;hero hero--image hero--alt&quot; style&#x3D;&quot;background-image: url(/assets/patterns/images/hero-placeholder.jpg);&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__caption&quot;&gt;
+		&lt;h1 class&#x3D;&quot;hero__heading&quot;&gt;A heading of some kind&lt;/h1&gt;
+		&lt;div class&#x3D;&quot;hero__description&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="heroes.05-hero-homepage">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Hero Homepage</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="hero hero--image hero--alt" style="background-image: url(/assets/patterns/images/hero-placeholder.jpg);">
+	<div class="hero__caption">
+		<h1 class="hero__heading">A heading of some kind</h1>
+		<div class="hero__description">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;hero hero--image hero--alt&quot; style&#x3D;&quot;background-image: url(/assets/patterns/images/hero-placeholder.jpg);&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__caption&quot;&gt;
+		&lt;h1 class&#x3D;&quot;hero__heading&quot;&gt;A heading of some kind&lt;/h1&gt;
+		&lt;div class&#x3D;&quot;hero__description&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="heroes.06-image-properties">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Image Properties</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="hero hero--image hero--alt" style="background-image: url(/assets/patterns/images/hero-placeholder.jpg);">
+	<div class="hero__caption">
+		<h1 class="hero__heading">A heading of some kind</h1>
+		<div class="hero__description">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;hero hero--image hero--alt&quot; style&#x3D;&quot;background-image: url(/assets/patterns/images/hero-placeholder.jpg);&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__caption&quot;&gt;
+		&lt;h1 class&#x3D;&quot;hero__heading&quot;&gt;A heading of some kind&lt;/h1&gt;
+		&lt;div class&#x3D;&quot;hero__description&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="heroes.07-image-map">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Image Map</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="hero hero--image hero--alt" style="background-image: url(/assets/patterns/images/hero-placeholder.jpg);">
+	<div class="hero__caption">
+		<h1 class="hero__heading">A heading of some kind</h1>
+		<div class="hero__description">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;hero hero--image hero--alt&quot; style&#x3D;&quot;background-image: url(/assets/patterns/images/hero-placeholder.jpg);&quot;&gt;
+	&lt;div class&#x3D;&quot;hero__caption&quot;&gt;
+		&lt;h1 class&#x3D;&quot;hero__heading&quot;&gt;A heading of some kind&lt;/h1&gt;
+		&lt;div class&#x3D;&quot;hero__description&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="icons-images">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Icons Images</h2>
+	</div>
+		<div class="ui-item-group" id="icons-images.icons">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Icons</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>If icons are needed ensure they are clear, simple and accompanied by relevant text</li>
+<li>Don’t hide functionality under icons</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="notice">
+	<i class="icon icon-important">
+        <span class="visually-hidden">Warning</span>
+    </i>
+	<strong class="bold-small">
+        You can be fined up to £5,000 if you don’t register.
+    </strong>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;notice&quot;&gt;
+	&lt;i class&#x3D;&quot;icon icon-important&quot;&gt;
+        &lt;span class&#x3D;&quot;visually-hidden&quot;&gt;Warning&lt;/span&gt;
+    &lt;/i&gt;
+	&lt;strong class&#x3D;&quot;bold-small&quot;&gt;
+        You can be fined up to £5,000 if you don’t register.
+    &lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="icons-images.images">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Images</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<ul>
+<li>Images should help give context to the text and therefore be related.</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="grid-row">
+	<div class="column-one-half">
+		<img src="/assets/patterns/images/examples/3by2.jpg" alt="3:2">
+	</div>
+	<div class="column-one-half">
+		<img src="/assets/patterns/images/examples/larry-the-cat.jpg" alt="">
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+	&lt;div class&#x3D;&quot;column-one-half&quot;&gt;
+		&lt;img src&#x3D;&quot;/assets/patterns/images/examples/3by2.jpg&quot; alt&#x3D;&quot;3:2&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class&#x3D;&quot;column-one-half&quot;&gt;
+		&lt;img src&#x3D;&quot;/assets/patterns/images/examples/larry-the-cat.jpg&quot; alt&#x3D;&quot;&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="location-filter">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">Location Filter</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-preview">
+	<div class="location-wrapper">
+	<div class="container">
+		<div class="breakout-box breakout-box-location">
+			<div class="breadcrumb">
+				<ol>
+					<li><a aria-current="false" href="/">Home</a></li>
+					<li><a aria-current="false" href="/">Services</a></li>
+					<li><a aria-current="false" href="/">Schools colleges and learning</a></li>
+					<li><a aria-current="true" href="/">Find a School</a></li>
+				</ol>
+			</div>
+			<h1 class="bold-xlarge">Find a place to park</h1>
+			<p class="font-medium">Browse our car parks and park &amp; ride facilities.</p>
+			<div class="form-wrapper">
+				<div class="form-group">
+					<label class="form-label form-label-bold" for="select-box">Filter by Location</label>
+					<select id="test" class="form-control" onchange="showSelected(this.value)">
+                    <option value="16" selected="selected">Select...</option>
+                    <option value="16">Bath</option>
+                    <option value="17">Keynsham</option>
+                    <option value="18">Rural Locations</option>
+                </select>
+				</div>
+
+
+				<div class="form-group">
+					<label class="form-label form-label-bold" for="select-box">Filter by Car Park Type</label>
+					<select class="form-control" id="select-box" name="select-box" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="">Select...</option>
+                        <option value="">Short Stay</option>
+                        <option value="">Long Stay</option>
+                        <option value="">Multi Day</option>
+                        <option value="">Park &amp; Ride</option>
+                    </select>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label form-label-bold" for="select-box">Filter by Facilites</label>
+					<select class="form-control" id="select-box" name="select-box" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="">Select...</option>
+                        <option value="">No Height Restrictions</option>
+                        <option value="">Electric Charging Point</option>
+                        <option value="">Disabled Parking Bays</option>
+
+                    </select>
+				</div>
+
+				<div class="clearfix"></div>
+
+			</div>
+			<a href="#" class="button button-start">See all car parks on a map</a>
+
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;location-wrapper&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;div class&#x3D;&quot;breakout-box breakout-box-location&quot;&gt;
+			&lt;div class&#x3D;&quot;breadcrumb&quot;&gt;
+				&lt;ol&gt;
+					&lt;li&gt;&lt;a aria-current&#x3D;&quot;false&quot; href&#x3D;&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a aria-current&#x3D;&quot;false&quot; href&#x3D;&quot;/&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a aria-current&#x3D;&quot;false&quot; href&#x3D;&quot;/&quot;&gt;Schools colleges and learning&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a aria-current&#x3D;&quot;true&quot; href&#x3D;&quot;/&quot;&gt;Find a School&lt;/a&gt;&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/div&gt;
+			&lt;h1 class&#x3D;&quot;bold-xlarge&quot;&gt;Find a place to park&lt;/h1&gt;
+			&lt;p class&#x3D;&quot;font-medium&quot;&gt;Browse our car parks and park &amp;amp; ride facilities.&lt;/p&gt;
+			&lt;div class&#x3D;&quot;form-wrapper&quot;&gt;
+				&lt;div class&#x3D;&quot;form-group&quot;&gt;
+					&lt;label class&#x3D;&quot;form-label form-label-bold&quot; for&#x3D;&quot;select-box&quot;&gt;Filter by Location&lt;/label&gt;
+					&lt;select id&#x3D;&quot;test&quot; class&#x3D;&quot;form-control&quot; onchange&#x3D;&quot;showSelected(this.value)&quot;&gt;
+                    &lt;option value&#x3D;&quot;16&quot; selected&#x3D;&quot;selected&quot;&gt;Select...&lt;/option&gt;
+                    &lt;option value&#x3D;&quot;16&quot;&gt;Bath&lt;/option&gt;
+                    &lt;option value&#x3D;&quot;17&quot;&gt;Keynsham&lt;/option&gt;
+                    &lt;option value&#x3D;&quot;18&quot;&gt;Rural Locations&lt;/option&gt;
+                &lt;/select&gt;
+				&lt;/div&gt;
+
+
+				&lt;div class&#x3D;&quot;form-group&quot;&gt;
+					&lt;label class&#x3D;&quot;form-label form-label-bold&quot; for&#x3D;&quot;select-box&quot;&gt;Filter by Car Park Type&lt;/label&gt;
+					&lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;select-box&quot; name&#x3D;&quot;select-box&quot; onchange&#x3D;&quot;this.options[this.selectedIndex].value &amp;&amp; (window.location &#x3D; this.options[this.selectedIndex].value);&quot;&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Select...&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Short Stay&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Long Stay&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Multi Day&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Park &amp;amp; Ride&lt;/option&gt;
+                    &lt;/select&gt;
+				&lt;/div&gt;
+
+				&lt;div class&#x3D;&quot;form-group&quot;&gt;
+					&lt;label class&#x3D;&quot;form-label form-label-bold&quot; for&#x3D;&quot;select-box&quot;&gt;Filter by Facilites&lt;/label&gt;
+					&lt;select class&#x3D;&quot;form-control&quot; id&#x3D;&quot;select-box&quot; name&#x3D;&quot;select-box&quot; onchange&#x3D;&quot;this.options[this.selectedIndex].value &amp;&amp; (window.location &#x3D; this.options[this.selectedIndex].value);&quot;&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Select...&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;No Height Restrictions&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Electric Charging Point&lt;/option&gt;
+                        &lt;option value&#x3D;&quot;&quot;&gt;Disabled Parking Bays&lt;/option&gt;
+
+                    &lt;/select&gt;
+				&lt;/div&gt;
+
+				&lt;div class&#x3D;&quot;clearfix&quot;&gt;&lt;/div&gt;
+
+			&lt;/div&gt;
+			&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;button button-start&quot;&gt;See all car parks on a map&lt;/a&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="ui-item-group" id="news">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">News</h2>
+	</div>
+		<div class="ui-item-group" id="news.news-and-events">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">News And Events</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-preview">
+	<div class="news-events">
+	<div class="container">
+		<div class="grid-row">
+			<div class="column-half"></div>
+			<div class="column-quater">
+
+			</div>
+			<div class="column-quater">
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;news-events&quot;&gt;
+	&lt;div class&#x3D;&quot;container&quot;&gt;
+		&lt;div class&#x3D;&quot;grid-row&quot;&gt;
+			&lt;div class&#x3D;&quot;column-half&quot;&gt;&lt;/div&gt;
+			&lt;div class&#x3D;&quot;column-quater&quot;&gt;
+
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;column-quater&quot;&gt;
+
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+	</main>
+
+
+		</div>
+		<script src="assets/ui/scripts/ui.js"></script>
+
+	<!-- toolkit scripts -->
+		<script src="assets/patterns/scripts/app.js"></script>
+	<!-- /toolkit scripts -->
+
+	<!-- if no GOVUK-namespaced module has loaded we can assume JS has failed and remove the class !-->
+	<!-- <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script> -->
+</body>
+</html>

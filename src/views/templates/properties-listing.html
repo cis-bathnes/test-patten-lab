@@ -1,0 +1,187 @@
+---
+layout: properties-listing
+---
+
+{{> breadcrumb }}
+
+<style>
+strong{
+  font-weight: 700;
+}
+
+.hero{
+  padding:5% 0;
+}
+
+.property-liting{
+  border: solid 1px #BFC1C3;
+  display: flex;
+  margin-top: 2%;
+  flex-direction: column;
+}
+
+.property-price{
+  background:#DEE0E2;
+}
+
+
+.property-image{
+  height:150px;
+  flex-grow: 1;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.property-description{
+flex-basis: 100%;
+padding:15px;
+align-self: center;
+}
+
+@media (min-width: 960px){
+
+  .property-liting{
+    flex-direction: row-reverse;
+  }
+
+
+.property-image{
+  height:unset;
+flex-basis: 35%;
+}
+
+
+.property-description{
+flex-basis: 65%;
+padding:15px;
+align-self: center;
+}
+
+}
+
+
+.property-price{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.price{
+  padding:15px;
+  flex-basis: 50%;
+}
+
+.property-contact{
+  flex-basis: 50%;
+}
+
+.property-contact img{
+  float:left;
+  padding-right: 10px;
+}
+
+.property-price span{
+  display: block;
+}
+
+</style>
+
+
+<div class="grid-row">
+  <div class="column-full">
+
+    <div class="property-liting">
+      <div class="property-image" style="background-image: url(/assets/patterns/images/hero-placeholder.jpg);">
+      </div>
+      <div class="property-description">
+      <a href=""><h4 class="bold-medium">94-96 Walcot Street Bath BA1 5BG</h4></a>
+      <p class="font-xsmall">The property is Grade II Listed and benefits from an attractive wide frontage onto Walcot Street. The ground floor has a dual entrance from the street and offers generous sales space with ancillary accommodation at the rear. The basement, first and second floors provide additional storage space.</p>
+</div>
+</div>
+
+      <div class="property-price">
+        <div class="price">
+        <span class="bold-xlarge">£3,950,000</span>
+        <span class="bold-xsmall">For sale</span>
+      </div>
+      <div class="property-contact">
+        <img src="/assets/patterns/images/carter-jonas.jpeg" alt="">
+        <p class="bold-small">01225 333000</p>
+      </div>
+
+      </div>
+
+
+      <div class="property-liting">
+        <div class="property-image" style="background-image: url(/assets/patterns/images/96-walcot.jpg);">
+        </div>
+        <div class="property-description">
+        <a href=""><h4 class="bold-medium">94-96 Walcot Street Bath BA1 5BG</h4></a>
+        <p class="font-xsmall">The property is Grade II Listed and benefits from an attractive wide frontage onto Walcot Street. The ground floor has a dual entrance from the street and offers generous sales space with ancillary accommodation at the rear. The basement, first and second floors provide additional storage space.</p>
+      </div>
+      </div>
+
+        <div class="property-price">
+          <div class="price">
+          <span class="bold-xlarge">£3,950,000</span>
+          <span class="bold-xsmall">For sale</span>
+        </div>
+        <div class="property-contact">
+          <img src="/assets/patterns/images/carter-jonas.jpeg" alt="">
+          <p class="bold-small">01225 333000</p>
+        </div>
+
+        </div>
+
+
+
+        <div class="property-liting">
+          <div class="property-image" style="background-image: url(/assets/patterns/images/hero-placeholder.jpg);">
+          </div>
+          <div class="property-description">
+          <a href=""><h4 class="bold-medium">94-96 Walcot Street Bath BA1 5BG</h4></a>
+          <p class="font-xsmall">The property is Grade II Listed and benefits from an attractive wide frontage onto Walcot Street. The ground floor has a dual entrance from the street and offers generous sales space with ancillary accommodation at the rear. The basement, first and second floors provide additional storage space.</p>
+        </div>
+        </div>
+
+          <div class="property-price">
+            <div class="price">
+            <span class="bold-xlarge">£3,950,000</span>
+            <span class="bold-xsmall">For sale</span>
+          </div>
+          <div class="property-contact">
+            <img src="/assets/patterns/images/carter-jonas.jpeg" alt="">
+            <p class="bold-small">01225 333000</p>
+          </div>
+
+          </div>
+
+
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+                <script>
+                function openCity(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+
+                    evt.currentTarget.className += " active";
+                }
+
+                // Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+                </script>

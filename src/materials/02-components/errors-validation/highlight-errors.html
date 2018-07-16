@@ -1,0 +1,39 @@
+---
+notes: |
+    - Write a message that helps the user to understand why the error occurred and what to do about it
+    - Put the message in the ```<label>``` or ```<legend>``` for the question, after the question text, in red
+    - Use a red border to visually connect the message and the question it belongs to
+    - If the error relates to specific text fields within the question, give these a red border as well
+---
+
+<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+    <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">Message to alert the user to a problem goes here</h2>
+    <p>Optional description of the errors and how to correct them</p>
+    <ul class="error-summary-list">
+        <li><a href="#example-full-name">Descriptive link to the question with an error</a></li>
+        <li><a href="#example-ni-number">Descriptive link to the question with an error</a></li>
+    </ul>
+</div>
+
+<h1 class="heading-large">Your personal details</h1>
+<div class="form-group form-group-error">
+    <label for="example-full-name" id="error-full-name">
+        <span class="form-label-bold">Full name</span>
+    </label>
+    <span class="form-hint">As shown on your birth certificate or passport</span>
+    <span class="error-message">Error message about full name goes here</span>
+    <input class="form-control form-control-error" id="example-full-name" type="text" name="fullName" value="" aria-describedby="form-hint error-message">
+</div>
+<div class="form-group form-group-error">
+    <label for="example-ni-number" id="error-ni-number">
+        <span class="form-label-bold">National Insurance number</span>
+    </label>
+    <span class="form-hint">
+        It’s on your National Insurance card, benefit letter, payslip or P60.
+        <br>
+        For example, ‘QQ 12 34 56 C’.
+    </span>
+    <span class="error-message">Error message about National Insurance number goes here</span>
+    <input class="form-control form-control-error" id="example-ni-number" type="text" name="niNo" value="" aria-describedby="form-hint error-message">
+</div>
+<input class="button" type="submit" value="Continue">

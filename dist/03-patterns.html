@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Patterns | BATHNES Digital Toolkit</title>
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="assets/patterns/styles/screen.css">
+	<!-- /toolkit styles -->
+
+	<!-- Fontawesome Styles -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/ui/styles/ui.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <!-- govuk_elements JS is dependant on jQuery so we've included it here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/patterns/scripts/vendor/jquery-1.11.0.min.js"><\/script>');</script>
+
+</head>
+<body>
+	<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+	<div id="skiplink-container">
+    	<div>
+        	<a href="#content" class="skiplink">Skip to main content</a>
+    	</div>
+    </div>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="ui-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="ui-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="ui-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="ui-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="ui-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="ui-menu">
+		
+			<div class="ui-menu__header">
+				<img src="/assets/patterns/images/logos/bathnes-logo-colour.png" alt="Bath & North East Somerset logo" />
+			</div>
+		
+			<div class="ui-controls">
+				<div class="ui-control ui-global-control" data-ui-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#ui-icon-labels" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#ui-icon-notes" />
+					</svg>
+				</div>
+				<div class="ui-control ui-global-control" data-ui-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#ui-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="ui-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="01-styles.html" class="ui-menu__heading">Styles</a>
+					<ul>
+						<li>
+							<a href="01-styles.html#colours">Colours</a>
+						</li>
+						<li>
+							<a href="01-styles.html#layouts">Layouts</a>
+						</li>
+						<li>
+							<a href="01-styles.html#logos">Logos</a>
+						</li>
+						<li>
+							<a href="01-styles.html#typography">Typography</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="02-components.html" class="ui-menu__heading">Components</a>
+					<ul>
+						<li>
+							<a href="02-components.html#banners">Banners</a>
+						</li>
+						<li>
+							<a href="02-components.html#breadcrumb">Breadcrumb</a>
+						</li>
+						<li>
+							<a href="02-components.html#breakout-box">Breakout Box</a>
+						</li>
+						<li>
+							<a href="02-components.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="02-components.html#data">Data</a>
+						</li>
+						<li>
+							<a href="02-components.html#errors-validation">Errors Validation</a>
+						</li>
+						<li>
+							<a href="02-components.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="02-components.html#form-elements">Form Elements</a>
+						</li>
+						<li>
+							<a href="02-components.html#headers">Headers</a>
+						</li>
+						<li>
+							<a href="02-components.html#heroes">Heroes</a>
+						</li>
+						<li>
+							<a href="02-components.html#icons-images">Icons Images</a>
+						</li>
+						<li>
+							<a href="02-components.html#location-filter">Location Filter</a>
+						</li>
+						<li>
+							<a href="02-components.html#news">News</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="03-patterns.html" class="ui-menu__heading">Patterns</a>
+					<ul>
+						<li>
+							<a href="03-patterns.html#addresses">Addresses</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#dates">Dates</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#email-address">Email Address</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#gender-or-sex">Gender Or Sex</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#help-text">Help Text</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#names">Names</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#national-insurance-numbers">National Insurance Numbers</a>
+						</li>
+						<li>
+							<a href="03-patterns.html#progress-indicators">Progress Indicators</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="templates.html" class="ui-menu__heading">Templates</a>
+					<ul>
+						<li>
+							<a href="templates/404.html" target="_blank">404</a>
+						</li>
+						<li>
+							<a href="templates/check-before-you-start.html" target="_blank">Check Before You Start</a>
+						</li>
+						<li>
+							<a href="templates/check-your-answers.html" target="_blank">Check Your Answers</a>
+						</li>
+						<li>
+							<a href="templates/commercial-payment-successful.html" target="_blank">Commercial Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/confirmation-pages.html" target="_blank">Confirmation Pages</a>
+						</li>
+						<li>
+							<a href="templates/council_tax.html" target="_blank">Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/council-tax-bands-and-amount.html" target="_blank">Council Tax Bands And Amount</a>
+						</li>
+						<li>
+							<a href="templates/discountsandexemptions.html" target="_blank">Discountsandexemptions</a>
+						</li>
+						<li>
+							<a href="templates/draft-homepage.html" target="_blank">Draft Homepage</a>
+						</li>
+						<li>
+							<a href="templates/education-health-care-plan.html" target="_blank">Education Health Care Plan</a>
+						</li>
+						<li>
+							<a href="templates/example-form-elements.html" target="_blank">Example Form Elements</a>
+						</li>
+						<li>
+							<a href="templates/example-typography.html" target="_blank">Example Typography</a>
+						</li>
+						<li>
+							<a href="templates/feedback-pages.html" target="_blank">Feedback Pages</a>
+						</li>
+						<li>
+							<a href="templates/find-a-school.html" target="_blank">Find A School</a>
+						</li>
+						<li>
+							<a href="templates/find-place-to-park.html" target="_blank">Find Place To Park</a>
+						</li>
+						<li>
+							<a href="templates/grid.html" target="_blank">Grid</a>
+						</li>
+						<li>
+							<a href="templates/hero-template.html" target="_blank">Hero Template</a>
+						</li>
+						<li>
+							<a href="templates/hollies.html" target="_blank">Hollies</a>
+						</li>
+						<li>
+							<a href="templates/manvers-street-car-park.html" target="_blank">Manvers Street Car Park</a>
+						</li>
+						<li>
+							<a href="templates/parking-travel.html" target="_blank">Parking Travel</a>
+						</li>
+						<li>
+							<a href="templates/paying-your-council-tax.html" target="_blank">Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/payment-successful.html" target="_blank">Payment Successful</a>
+						</li>
+						<li>
+							<a href="templates/problems-paying-your-council-tax.html" target="_blank">Problems Paying Your Council Tax</a>
+						</li>
+						<li>
+							<a href="templates/progress-notication-tool.html" target="_blank">Progress Notication Tool</a>
+						</li>
+						<li>
+							<a href="templates/properties-listing.html" target="_blank">Properties Listing</a>
+						</li>
+						<li>
+							<a href="templates/question-pages.html" target="_blank">Question Pages</a>
+						</li>
+						<li>
+							<a href="templates/school-details.html" target="_blank">School Details</a>
+						</li>
+						<li>
+							<a href="templates/sports-and-leisure-centre.html" target="_blank">Sports And Leisure Centre</a>
+						</li>
+						<li>
+							<a href="templates/start-pages.html" target="_blank">Start Pages</a>
+						</li>
+						<li>
+							<a href="templates/task-list-pages.html" target="_blank">Task List Pages</a>
+						</li>
+					</ul>
+				</li>
+		
+				<li>
+					<a href="docs.html" class="ui-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#getting-started">Getting Started</a>
+						</li>
+						<li>
+							<a href="docs.html#including-in-projects">Including In Projects</a>
+						</li>
+						<li>
+							<a href="docs.html#updating-submodules">Updating Submodules</a>
+						</li>
+						<li>
+							<a href="docs.html#working-with-the-toolkit">Working With The Toolkit</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="ui-container">
+			<div class="ui-control-bar">
+				<div class="ui-control ui-menu-toggle">
+					<svg>
+						<use xlink:href="#ui-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+	<main id="content" role="main">
+		
+<h1 class="heading-large" data-ui-toggle="labels">Patterns</h1>
+<p data-ui-toggle="labels">Design patterns - standardised solutions to common design problems.</p>
+<p data-ui-toggle="labels">Usually made up of combinations of components</p>
+
+
+<div class="ui-item-group" id="addresses">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Addresses</h2>
+	</div>
+		<div class="ui-item-group" id="addresses.01-free-text-box">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Free Text Box</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>Use a free text box if you expect a broad range of address formats and you don’t need to use specific sub-parts of the address (for example, street or postcode).</p>
+<p><strong>Advantages of a free text box</strong></p>
+<p>A free text box:</p>
+<ul>
+<li>can handle any possible address format</li>
+<li>allows users to copy and paste addresses from their clipboard</li>
+<li>means users don’t have to work out which part of the address goes in which field</li>
+</ul>
+<p><strong>Disadvantages of a free text box</strong></p>
+<p>A free text box:</p>
+<ul>
+<li>makes it hard for you to separate an address into sub-parts, and impossible to do with 100% accuracy</li>
+<li>might not be compatible with legacy backend systems that use multi-field addresses</li>
+<li>can’t help users look up an address</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label" for="textarea">Full Address</label>
+<textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;textarea&quot;&gt;Full Address&lt;/label&gt;
+&lt;textarea class&#x3D;&quot;form-control form-control-3-4&quot; name&#x3D;&quot;textarea&quot; id&#x3D;&quot;textarea&quot; rows&#x3D;&quot;5&quot;&gt;&lt;/textarea&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="addresses.02-multiple-fields">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Multiple Fields</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>Only use multiple address fields when you know which regions the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside the UK.</p>
+<p><strong>Advantages of multiple fields</strong></p>
+<p>Multiple fields mean:</p>
+<ul>
+<li>you can easily extract and use specific parts of an address (for example, street names or postcodes)</li>
+<li>you can give help for individual fields</li>
+<li>you can validate each part of the address separately</li>
+<li>users can complete the form using their browser’s auto-complete function</li>
+</ul>
+<p><strong>Disadvantages of multiple fields</strong></p>
+<p>Multiple fields have these disadvantages:</p>
+<ul>
+<li>it’s hard to find a single format that works for all addresses</li>
+<li>there’s no guarantee that users will use the fields the way you think they will</li>
+<li>users can’t easily paste addresses from their clipboard</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<form>
+	<fieldset>
+		<legend>
+			<h1 class="heading-medium">Home address</h1>
+		</legend>
+		<div class="form-group-related">
+			<fieldset>
+				<legend class="form-label">Building and Street</legend>
+				<label for="building-street-f1" class="visually-hidden">Address Line 1</label>
+				<input class="form-control" id="building-street-f1" type="text" name="building-street-f1">
+				<label for="building-street-f2" class="visually-hidden">Address Line 2</label>
+				<input class="form-control" id="building-street-f2" type="text" name="building-street-f2">
+			</fieldset>
+		</div>
+		<div class="form-group-related">
+			<label class="form-label" for="town-city-f1">Town or City</label>
+			<input class="form-control" id="town-city-f1" type="text" name="town-city-f1">
+		</div>
+		<div class="form-group-related">
+			<label class="form-label" for="county-f1">County (optional)</label>
+			<input class="form-control" id="county-f1" type="text" name="county-f1">
+		</div>
+		<div class="form-group-related">
+			<label class="form-label" for="postcode-f1">Postcode</label>
+			<input class="form-control form-control-1-4" id="postcode-f1" type="text" name="postcode-f1">
+		</div>
+	</fieldset>
+</form>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;form&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;
+			&lt;h1 class&#x3D;&quot;heading-medium&quot;&gt;Home address&lt;/h1&gt;
+		&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group-related&quot;&gt;
+			&lt;fieldset&gt;
+				&lt;legend class&#x3D;&quot;form-label&quot;&gt;Building and Street&lt;/legend&gt;
+				&lt;label for&#x3D;&quot;building-street-f1&quot; class&#x3D;&quot;visually-hidden&quot;&gt;Address Line 1&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;building-street-f1&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;building-street-f1&quot;&gt;
+				&lt;label for&#x3D;&quot;building-street-f2&quot; class&#x3D;&quot;visually-hidden&quot;&gt;Address Line 2&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;building-street-f2&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;building-street-f2&quot;&gt;
+			&lt;/fieldset&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-group-related&quot;&gt;
+			&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;town-city-f1&quot;&gt;Town or City&lt;/label&gt;
+			&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;town-city-f1&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;town-city-f1&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-group-related&quot;&gt;
+			&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;county-f1&quot;&gt;County (optional)&lt;/label&gt;
+			&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;county-f1&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;county-f1&quot;&gt;
+		&lt;/div&gt;
+		&lt;div class&#x3D;&quot;form-group-related&quot;&gt;
+			&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;postcode-f1&quot;&gt;Postcode&lt;/label&gt;
+			&lt;input class&#x3D;&quot;form-control form-control-1-4&quot; id&#x3D;&quot;postcode-f1&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;postcode-f1&quot;&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="addresses.03-address-lookup">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Address Lookup</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>An address lookup (sometimes called a ‘postcode lookup’) lets users specify a UK address by entering their postcode (and optionally their street name or number) and selecting their address from a list.</p>
+<p><strong>Advantages of address lookup</strong></p>
+<p>Using an address lookup means that:</p>
+<ul>
+<li>people entering UK addresses don’t have to enter as much information manually</li>
+<li>there’s less chance of mis-typed UK addresses</li>
+</ul>
+<p><strong>If you use an address lookup</strong></p>
+<p>When using an address lookup you should:</p>
+<ul>
+<li>make it clear that the address lookup only works for UK addresses</li>
+<li>provide a manual option for people with international addresses or addresses that are missing or badly formed in the Royal Mail database</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<div class="postcode-search-form" data-module="track-submit" data-track-category="postcodeSearch:local_transaction" data-track-action="postcodeSearchStarted">
+	<form method="post" id="local-locator-form" class="find-location-for-service">
+		<fieldset>
+			<legend class="visuallyhidden">Postcode lookup</legend>
+
+			<div class="ask_location">
+				<label class="form-label" for="postcode">Enter a postcode</label>
+				<span class="form-hint">
+                    For example SW1A 2AA
+                </span>
+				<input class="form-control form-control-1-4" id="postcode" name="postcode" type="text" aria-invalid="false" value="">
+				<button type="submit" class="button">Find</button>
+				<p>
+					<a target="_blank" id="postcode-finder-link" rel="external" href="http://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a>
+				</p>
+			</div>
+		</fieldset>
+	</form>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;postcode-search-form&quot; data-module&#x3D;&quot;track-submit&quot; data-track-category&#x3D;&quot;postcodeSearch:local_transaction&quot; data-track-action&#x3D;&quot;postcodeSearchStarted&quot;&gt;
+	&lt;form method&#x3D;&quot;post&quot; id&#x3D;&quot;local-locator-form&quot; class&#x3D;&quot;find-location-for-service&quot;&gt;
+		&lt;fieldset&gt;
+			&lt;legend class&#x3D;&quot;visuallyhidden&quot;&gt;Postcode lookup&lt;/legend&gt;
+
+			&lt;div class&#x3D;&quot;ask_location&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;postcode&quot;&gt;Enter a postcode&lt;/label&gt;
+				&lt;span class&#x3D;&quot;form-hint&quot;&gt;
+                    For example SW1A 2AA
+                &lt;/span&gt;
+				&lt;input class&#x3D;&quot;form-control form-control-1-4&quot; id&#x3D;&quot;postcode&quot; name&#x3D;&quot;postcode&quot; type&#x3D;&quot;text&quot; aria-invalid&#x3D;&quot;false&quot; value&#x3D;&quot;&quot;&gt;
+				&lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;button&quot;&gt;Find&lt;/button&gt;
+				&lt;p&gt;
+					&lt;a target&#x3D;&quot;_blank&quot; id&#x3D;&quot;postcode-finder-link&quot; rel&#x3D;&quot;external&quot; href&#x3D;&quot;http://www.royalmail.com/find-a-postcode&quot;&gt;Find a postcode on Royal Mail&#x27;s postcode finder&lt;/a&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/fieldset&gt;
+	&lt;/form&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="dates">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Dates</h2>
+	</div>
+		<div class="ui-item-group" id="dates.approximate-dates">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Approximate Dates</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>If you don’t need an exact date and you’re asking for one that users might struggle to remember (for example ‘the date you lost your passport’), make sure you allow them to enter an approximate date, like ‘June 1983’.</p>
+
+</div>
+<div class="ui-item-preview">
+	<div class="form-group">
+	<fieldset>
+		<legend>
+			<span class="form-hint">If you're not sure tell is roughly when you think you last had it</span>
+		</legend>
+		<div class="form-date">
+			<div class="form-group form-group-month">
+				<label class="form-label" for="dob-month">Month</label>
+				<input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+			</div>
+			<div class="form-group form-group-year">
+				<label class="form-label" for="dob-year">Year</label>
+				<input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+			</div>
+		</div>
+	</fieldset>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;
+			&lt;span class&#x3D;&quot;form-hint&quot;&gt;If you&#x27;re not sure tell is roughly when you think you last had it&lt;/span&gt;
+		&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-date&quot;&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-month&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-month&quot;&gt;Month&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-month&quot; name&#x3D;&quot;dob-month&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;12&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-year&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-year&quot;&gt;Year&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-year&quot; name&#x3D;&quot;dob-year&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;2016&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="dates.memorable-dates">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Memorable Dates</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>To ask for memorable dates, like dates of birth, use text fields for users to complete.</p>
+<p>Use 3 fields as it’ll be easier for you to validate each part rather than trying to review a single field.</p>
+<p>Don’t automatically tab users between fields because this can clash with normal keyboard controls and confuse people.</p>
+<p>Calendar controls (visual calendars which can be used to select dates) aren’t particularly useful for known dates and some users struggle to select date boxes.</p>
+<p><strong>Triggering the iPhone numeric keyboard</strong></p>
+<p>To trigger the numeric keyboard on iPhones, add a pattern attribute to the input element like this: pattern=&quot;[0-9]*&quot;</p>
+
+</div>
+<div class="ui-item-preview">
+	<div class="form-group">
+	<fieldset>
+		<legend>
+			<span class="form-label-bold">Date of birth</span>
+			<span class="form-hint">For example, 31 8 1970</span>
+		</legend>
+		<div class="form-date">
+			<div class="form-group form-group-day">
+				<label class="form-label" for="dob-day">Day</label>
+				<input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+			</div>
+			<div class="form-group form-group-month">
+				<label class="form-label" for="dob-month">Month</label>
+				<input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+			</div>
+			<div class="form-group form-group-year">
+				<label class="form-label" for="dob-year">Year</label>
+				<input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+			</div>
+		</div>
+	</fieldset>
+</div>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;div class&#x3D;&quot;form-group&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;
+			&lt;span class&#x3D;&quot;form-label-bold&quot;&gt;Date of birth&lt;/span&gt;
+			&lt;span class&#x3D;&quot;form-hint&quot;&gt;For example, 31 8 1970&lt;/span&gt;
+		&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-date&quot;&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-day&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-day&quot;&gt;Day&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-day&quot; name&#x3D;&quot;dob-day&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;31&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-month&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-month&quot;&gt;Month&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-month&quot; name&#x3D;&quot;dob-month&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;12&quot;&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;form-group form-group-year&quot;&gt;
+				&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;dob-year&quot;&gt;Year&lt;/label&gt;
+				&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;dob-year&quot; name&#x3D;&quot;dob-year&quot; type&#x3D;&quot;number&quot; pattern&#x3D;&quot;[0-9]*&quot; min&#x3D;&quot;0&quot; max&#x3D;&quot;2016&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="email-address">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">Email Address</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#ui-icon-notes" />
+				</svg>
+			</span>
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>When asking users for their email address, you should:</p>
+<ul>
+<li>make the field long enough</li>
+<li>make it clear why you’re asking</li>
+<li>help users to enter a valid email address</li>
+</ul>
+<p>You may also need to check that users have access to the email account they give you.</p>
+<p><strong>Make the field long enough</strong></p>
+<p>Make sure the field is long enough to accommodate at least 95% of your users’ email addresses.</p>
+<p>You can analyse your user data to establish what this is. A good rule of thumb is 30 characters.</p>
+<p><strong>Tell users why you want the email address</strong></p>
+<p>Make it clear what the email address will be used for so that:</p>
+<ul>
+<li>users feel confident that you’re not going to abuse it</li>
+<li>users with multiple email addresses can choose which one to give you</li>
+</ul>
+<p><strong>Help users to enter a valid email address</strong></p>
+<p>Help your users to enter a valid email address by:</p>
+<ul>
+<li>checking that what they’ve entered is in the format of an email address allowing users to paste the email address</li>
+<li>using the type=“email” attribute so that devices display the correct keyboard</li>
+<li>play their address back to them so they can check and change it</li>
+</ul>
+<p>You can also check for common misspellings of popular email providers (for example ‘<a href="http://homtail.com">homtail.com</a>’ instead of ‘<a href="http://hotmail.com">hotmail.com</a>’). Warn users if you detect one, but allow them to proceed in case it’s a genuine email address.</p>
+<p>Some services ask users to repeat their email address. This adds work for the user and should not be implemented unless your research has shown it to be effective.</p>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label-bold" for="email-address">
+    Email address
+    <span class="form-hint">
+        We'll only use this to send you a receipt
+    </span>
+</label>
+<input class="form-control" id="email-address" type="email" name="email-address">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label-bold&quot; for&#x3D;&quot;email-address&quot;&gt;
+    Email address
+    &lt;span class&#x3D;&quot;form-hint&quot;&gt;
+        We&#x27;ll only use this to send you a receipt
+    &lt;/span&gt;
+&lt;/label&gt;
+&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;email-address&quot; type&#x3D;&quot;email&quot; name&#x3D;&quot;email-address&quot;&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="ui-item-group" id="gender-or-sex">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">Gender Or Sex</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#ui-icon-notes" />
+				</svg>
+			</span>
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>If you have to ask about gender, you should:</p>
+<ul>
+<li>list the fields in alphabetical order: ‘Female’, ‘Male’, ‘Unspecified’</li>
+<li>do research to test that this works for your users</li>
+</ul>
+<p><strong>Avoid using pronouns</strong></p>
+<p>You should address the user as ‘you’ where possible and avoid using gendered pronouns like ‘he’ and ‘she’.</p>
+<p>In some cases you may need to use pronouns, for example if your service allows people to jointly apply for something.</p>
+<p><strong>Don’t use titles to guess gender</strong></p>
+<p>You shouldn’t guess someone’s gender based on a title because:</p>
+<ul>
+<li>some titles aren’t gendered (for example Dr, Rev, Major)</li>
+<li>titles can be changed by deed poll to one that’s different from a person’s gender or sex</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<form>
+	<div class="form-group">
+		<fieldset>
+
+			<legend>
+				<h1 class="heading-medium">What is your gender?</h1>
+			</legend>
+
+			<div class="multiple-choice">
+				<input id="radio-1" type="radio" name="radio-group" value="Female">
+				<label for="radio-1">Female</label>
+			</div>
+			<div class="multiple-choice">
+				<input id="radio-2" type="radio" name="radio-group" value="Male">
+				<label for="radio-2">Male</label>
+			</div>
+			<div class="multiple-choice">
+				<input id="radio-3" type="radio" name="radio-group" value="Unspecified">
+				<label for="radio-3">Unspecified</label>
+			</div>
+
+		</fieldset>
+	</div>
+</form>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;form&gt;
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;fieldset&gt;
+
+			&lt;legend&gt;
+				&lt;h1 class&#x3D;&quot;heading-medium&quot;&gt;What is your gender?&lt;/h1&gt;
+			&lt;/legend&gt;
+
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-1&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-group&quot; value&#x3D;&quot;Female&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-1&quot;&gt;Female&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-2&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-group&quot; value&#x3D;&quot;Male&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-2&quot;&gt;Male&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;multiple-choice&quot;&gt;
+				&lt;input id&#x3D;&quot;radio-3&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-group&quot; value&#x3D;&quot;Unspecified&quot;&gt;
+				&lt;label for&#x3D;&quot;radio-3&quot;&gt;Unspecified&lt;/label&gt;
+			&lt;/div&gt;
+
+		&lt;/fieldset&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="ui-item-group" id="help-text">
+
+	<div class="ui-item-heading-group">
+		<h2 class="heading-medium ui-item-heading" data-ui-toggle="labels">Help Text</h2>
+	</div>
+		<div class="ui-item-group" id="help-text.expanding-help-text">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Expanding Help Text</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>Expanding help text is a short link that expands into more detailed help when a user clicks on it.</p>
+<p>Use expanding help text to make your page easier to scan, but don’t hide help if a majority of users will need it.</p>
+<p>Make sure the link text is written so that users can quickly work out if they need to click on it.</p>
+
+</div>
+<div class="ui-item-preview">
+	<details>
+
+	<summary><span class="summary">Where fo I find my registration number?</span></summary>
+
+	<div class="panel panel-border-narrow">
+
+		<p>It's on the first page of the confirmation letter we sent you, in the top right corner.</p>
+
+	</div>
+
+</details>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;details&gt;
+
+	&lt;summary&gt;&lt;span class&#x3D;&quot;summary&quot;&gt;Where fo I find my registration number?&lt;/span&gt;&lt;/summary&gt;
+
+	&lt;div class&#x3D;&quot;panel panel-border-narrow&quot;&gt;
+
+		&lt;p&gt;It&#x27;s on the first page of the confirmation letter we sent you, in the top right corner.&lt;/p&gt;
+
+	&lt;/div&gt;
+
+&lt;/details&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="ui-item-group" id="help-text.inline-help-text">
+			<div class="ui-item-heading-group" data-ui-toggle="labels">
+				<h3 class="heading-small ui-item-heading">Inline Help Text</h3>
+				<div class="ui-item-controls">
+					<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#ui-icon-notes" />
+						</svg>
+					</span>
+					<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#ui-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>Inline help text is short, clear text positioned immediately next to the part of the page it relates to.</p>
+<p>Use inline help text for help that’s relevant to the majority of users.</p>
+<p>You should place inline help for form fields between the label and the field so sighted users and screenreaders can read it before they get to the field itself.</p>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label-bold" for="nationality">
+    What is your nationality
+    <span class="form-hint">
+        As shown on your current passport
+    </span>
+</label>
+<input class="form-control" id="nationality" type="text" name="nationality">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label-bold&quot; for&#x3D;&quot;nationality&quot;&gt;
+    What is your nationality
+    &lt;span class&#x3D;&quot;form-hint&quot;&gt;
+        As shown on your current passport
+    &lt;/span&gt;
+&lt;/label&gt;
+&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;nationality&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;nationality&quot;&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="ui-item-group" id="names">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">Names</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#ui-icon-notes" />
+				</svg>
+			</span>
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>Make sure fields are long enough and support all the characters needed to accommodate 95% of the names you need to capture</p>
+<p><strong>Use a single name field where possible</strong></p>
+<p>Use a single name field because it can accommodate the broadest range of name types and requires less effort for users to understand.</p>
+<p><strong>The problem with multiple name fields</strong></p>
+<p>Multiple name fields mean there’s more risk that:</p>
+<ul>
+<li>a person’s name won’t fit the format you’ve chosen</li>
+<li>users will enter their names in the wrong order</li>
+<li>users will try to enter their full name in the first field</li>
+</ul>
+<p><strong>Labelling name fields</strong></p>
+<p>For single name fields, use ‘Your full name’.</p>
+<p>For multiple name fields, use:</p>
+<ul>
+<li>‘First name’</li>
+<li>‘Last name’</li>
+</ul>
+<p>If you can’t use a single name field and many of your users aren’t from the UK, use these labels:</p>
+<ul>
+<li>‘Given names’</li>
+<li>‘Family name’</li>
+</ul>
+<p>Don’t use a ‘middle name’ field unless you have to, and make sure it’s optional. You don’t need to mark it as optional.</p>
+<p>Make it clear whether you need someone’s common name or their full legal name.</p>
+<p><strong>Avoid asking for people’s title</strong></p>
+<p>You shouldn’t ask users for their title.</p>
+<p>It’s extra work for users and you’re forcing them to potentially reveal their gender and marital status, which they may not want to do.</p>
+<p>There are ways to address people in correspondence without using title, for example by using their name.</p>
+<p>If you have to use a title field, make it an optional free-text field and not a drop-down list. Predicting the range of titles your users will have is impossible, and you’ll always end up upsetting someone.</p>
+<p>Remember to deal with the name data sensibly in any resulting correspondence.</p>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label" for="full-name-f1">Full name</label>
+<input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label&quot; for&#x3D;&quot;full-name-f1&quot;&gt;Full name&lt;/label&gt;
+&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;full-name-f1&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;full-name-f1&quot;&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="ui-item-group" id="national-insurance-numbers">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">National Insurance Numbers</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#ui-icon-notes" />
+				</svg>
+			</span>
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>Use a single text field labelled ‘National Insurance number’, like this:</p>
+<p>You should also:</p>
+<ul>
+<li>allow for 13 characters - National Insurance numbers are often spaced in pairs</li>
+<li>avoid using ‘NINO’ or ‘NI number’ as the label</li>
+<li>avoid using ‘AB 12 34 56 C’ as an example (it belongs to a real person) - use ‘QQ 12 34 56 C’ instead</li>
+</ul>
+
+</div>
+<div class="ui-item-preview">
+	<label class="form-label-bold" for="ni-number">
+    National Insurance number
+    <span class="form-hint">
+        It's on your National Insurance card, benefit letter, payslip or P60.
+        <br>
+        For example, ‘QQ 12 34 56 C’.
+    </span>
+</label>
+<input class="form-control" id="ni-number" type="text" name="ni-number">
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;label class&#x3D;&quot;form-label-bold&quot; for&#x3D;&quot;ni-number&quot;&gt;
+    National Insurance number
+    &lt;span class&#x3D;&quot;form-hint&quot;&gt;
+        It&#x27;s on your National Insurance card, benefit letter, payslip or P60.
+        &lt;br&gt;
+        For example, ‘QQ 12 34 56 C’.
+    &lt;/span&gt;
+&lt;/label&gt;
+&lt;input class&#x3D;&quot;form-control&quot; id&#x3D;&quot;ni-number&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;ni-number&quot;&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+<div class="ui-item-group" id="progress-indicators">
+
+	<div class="ui-item-heading-group" data-ui-toggle="labels">
+		<h2 class="heading-small ui-item-heading">Progress Indicators</h2>
+		<div class="ui-item-controls">
+			<span class="ui-control ui-icon" data-ui-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#ui-icon-notes" />
+				</svg>
+			</span>
+			<span class="ui-control ui-icon ui-icon--code" data-ui-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#ui-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="ui-item-notes" data-ui-toggle="notes">
+	<p>First, test your service without any progress indicators. Many services are simple enough that users don’t need them.</p>
+<p>Try improving the order, type or number of questions before adding a progress indicator.</p>
+<p>If people still have problems then try adding a simple step or question indicator.</p>
+<p>This approach is compact and usually enough to give people the confidence to continue.</p>
+<p>Only include the total number of questions if you can do so reliably. If the total number changes as the user continues through the service, make sure you update the indicator.</p>
+
+</div>
+<div class="ui-item-preview">
+	<h1 class="form-title heading-large">
+	<span class="section-progress">Question 3 of 9</span> Your details
+</h1>
+</div>
+<div class="ui-item-code ui-item-hidden" data-ui-toggle="code">
+	<pre class="language-markup"><code class="language-markup">&lt;h1 class&#x3D;&quot;form-title heading-large&quot;&gt;
+	&lt;span class&#x3D;&quot;section-progress&quot;&gt;Question 3 of 9&lt;/span&gt; Your details
+&lt;/h1&gt;</code></pre>
+</div>
+
+
+</div>
+
+
+	</main>
+
+
+		</div>
+		<script src="assets/ui/scripts/ui.js"></script>
+
+	<!-- toolkit scripts -->
+		<script src="assets/patterns/scripts/app.js"></script>
+	<!-- /toolkit scripts -->
+
+	<!-- if no GOVUK-namespaced module has loaded we can assume JS has failed and remove the class !-->
+	<!-- <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script> -->
+</body>
+</html>

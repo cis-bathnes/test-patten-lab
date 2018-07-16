@@ -1,0 +1,84 @@
+---
+title: Overview | BATHNES Digital Toolkit
+fabricator: true
+---
+<div class="ui-typeset">
+  <h1 class="heading-large">BATHNES Digital Toolkit</h1>
+  <p>A digital toolkit for Bath and North East Somerset Council, created to enable internal and external developers to create high quality experiences more easily.</p>
+  <p>This toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts. It contains real working examples, code snippets, documentation, and style guidelines.</p>
+  <h3 class="heading-medium">Usage</h3>
+  <p>The toolkit is based around the following elements, in order of granularity:</p>
+  <ul class="list list-bullet">
+  	<li><strong>Styles</strong>: The core parts of the design and brand; colour, logos, layouts, typography</li>
+  	<li><strong>Components</strong>: Groups of elements that can be used in a design</li>
+  	<li><strong>Patterns</strong>: Design solutions to common problems</li>
+  	<li><strong>Templates</strong>: Example page templates</li>
+  </ul>
+  <p>To update or make changes run <code>npm install</code> in the root folder on your local machine will output changes from the <code>src</code> folder to the <code>dist folder</code>. The <code>dist</code> folder can then be pushed to a live server.</p>
+  <h3 class="heading-medium">Help</h3>
+  <p>For help in using the toolkit please see the <a href="docs.html">Documentation</a></p>
+  <p>For more information, support etc. contact <a href="mailto:cis@bathnes.gov.uk?subject=query%20from%20the%20B&amp;NES%20toolkit">cis@bathnes.gov.uk</a></p>
+  <hr>
+  <h4 class="heading-medium">Why not just a link to CSS and JS files?</h4>
+  <p>Because by providing a design system made up of styles, compononents and patterns we can create high quality web sites that to a standard. They will look similar, work the same and provide people using it with a familiar experience regardles of the touchpoint. It will also speed up development as you can copy HTML from this toolkit and drop it into your designs. It's been tested in multiple browsers, devices and for accessibility to <a href="https://www.w3.org/TR/WCAG20/">AA level</a>.</p>
+  <hr>
+  <h4>How is this used by https://style.bathnes.gov.uk/?</h4>
+  <p><a href="https://style.bathnes.gov.uk/">https://style.bathnes.gov.uk/</a> is the publicly available online reference site for this toolkit. It shows the contents of the <code>dist</code> folder.</p>
+  <hr>
+  <h4>Folder structure</h4>
+  <p>Within the repo we have the following folder structure:</p>
+  <ul>
+    <li><strong>dist</strong> - holds the processed code for the public toolkit and should be uploaded to <a href="https://style.bathnes.gov.uk/">https://style.bathnes.gov.uk</a></li>
+    <li><strong>govuk_elements</strong> - <a href="https://github.com/alphagov/govuk_elements">The GovUK Elements</a> added as a GIT submodule</li>
+    <li><strong>govuk_frontend_toolkit</strong> - The <a href="https://github.com/alphagov/govuk_frontend_toolkit">GovUK Frontend Toolkit</a> added as a GIT submodule</li>
+    <li><strong>node_modules</strong> - holds node files used to work the toolkit when editing it. Updated by running <code>npm install</code></li>
+    <li><strong>src</strong> - the working folder for the toolkit</li>
+  </ul>
+  <p>To update or edit the toolkit you'll need to run <code>npm install</code> and work out of the src folder. Lets look at its contents:</p>
+  <ul>
+    <li><strong>assets</strong>
+      <ul>
+        <li><strong>patterns</strong>
+          <ul>
+            <li><strong>images</strong> - holds images for the toolkit</li>
+            <li><strong>scripts</strong> - holds JavaScript used in the toolkit
+              <ul>
+                <li><strong>app.js</strong> - file used for JS, also imports JS from the GovUK Elements and Frontend Toolkit repos. Outputs to the dist folder for inclusion in projects.</li>
+              </ul>
+            </li>
+            <li><strong>styles</strong>
+              <ul>
+                <li><strong>components</strong> - SCSS files for components</li>
+                <li><strong>core</strong> - core SCSS files for accessibility, colour, and forms that builds upon the GovUK assets</li>
+                <li><strong>design-patterns</strong> - SCSS files for specific design patterns</li>
+              </ul>
+              <li><strong>screen.scss</strong> - files used to pull together all SCSS files including those from the GovUK Elements and Frontend Toolkit. Outputs to the dist folder for inclusion in projects.</li>
+            </li>
+          </ul>
+        </li>
+        <li><strong>ui</strong> - contains SCSS and JS for the toolkit framework including the navigation menu and style used to present and explain the styles, components and patterns within.</li>
+      </ul>
+    </li>
+    <li><strong>Data</strong> - holds .yml files to store data models in.</li>
+    <li><strong>Docs</strong> - contains Markdown files to appear in the docs section of the toolkit.</li>
+    <li><strong>Materials - contains all HTML for the toolkit, split into the following:</strong>
+      <ul>
+        <li><strong>01-styles</strong> - holds all HTML for styles including colours, layouts, logos and typography</li>
+        <li><strong>02-components</strong> - holds all HTML for components</li>
+        <li><strong>03-patterns</strong> - holds all HTML for patterns</li>
+      </ul>
+    </li>
+    <li><strong>Views</strong> - contains full HTML pages for the toolkit
+      <ul>
+        <li><strong>layouts</strong> - holds page layouts for the toolkit (default.html) plus commercial and hero HTML pages</li>
+        <li><strong>templates</strong> - holds HTML templates we've included from GovUK assets</li>
+        <li><strong>01-styles.html</strong> - page that shows all styles</li>
+        <li><strong>02-components.html</strong> - page that shows all components</li>
+        <li><strong>03-patterns.html</strong> - page that shows all patterns</li>
+        <li><strong>docs.html</strong> - page that shows all docs</li>
+        <li><strong>index.html</strong> - toolkit homepage (this page)</li>
+        <li><strong>templates.html</strong> - page that shows all the standalone templates</li>
+      </ul>
+    </li>
+  </ul>
+</div>

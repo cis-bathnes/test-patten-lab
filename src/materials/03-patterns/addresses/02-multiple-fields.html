@@ -1,0 +1,47 @@
+---
+notes: |
+    Only use multiple address fields when you know which regions the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside the UK.
+
+    **Advantages of multiple fields**
+
+    Multiple fields mean:
+    - you can easily extract and use specific parts of an address (for example, street names or postcodes)
+    - you can give help for individual fields
+    - you can validate each part of the address separately
+    - users can complete the form using their browser’s auto-complete function
+
+    **Disadvantages of multiple fields**
+
+    Multiple fields have these disadvantages:
+    - it’s hard to find a single format that works for all addresses
+    - there’s no guarantee that users will use the fields the way you think they will
+    - users can’t easily paste addresses from their clipboard
+---
+<form>
+    <fieldset>
+        <legend>
+            <h1 class="heading-medium">Home address</h1>
+        </legend>
+        <div class="form-group-related">
+            <fieldset>
+                <legend class="form-label">Building and Street</legend>
+                <label for="building-street-f1" class="visually-hidden">Address Line 1</label>
+                <input class="form-control" id="building-street-f1" type="text" name="building-street-f1">
+                <label for="building-street-f2" class="visually-hidden">Address Line 2</label>
+                <input class="form-control" id="building-street-f2" type="text" name="building-street-f2">
+            </fieldset>
+        </div>
+        <div class="form-group-related">
+            <label class="form-label" for="town-city-f1">Town or City</label>
+            <input class="form-control" id="town-city-f1" type="text" name="town-city-f1">
+        </div>
+        <div class="form-group-related">
+            <label class="form-label" for="county-f1">County (optional)</label>
+            <input class="form-control" id="county-f1" type="text" name="county-f1">
+        </div>
+        <div class="form-group-related">
+            <label class="form-label" for="postcode-f1">Postcode</label>
+            <input class="form-control form-control-1-4" id="postcode-f1" type="text" name="postcode-f1">
+        </div>
+    </fieldset>
+</form>
